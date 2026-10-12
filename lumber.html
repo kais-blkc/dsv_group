@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Пиломатериалы — DSV Group</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="js/scale.js"></script>
+</head>
+<body>
+  <header class="header" id="header" data-always="true">
+    <picture class="header__logo header__light">
+      <source media="(max-width: 1023px)" srcset="assets/icons/logo-m.svg">
+      <img src="assets/icons/logo.svg" alt="">
+    </picture>
+    <picture class="header__logo header__dark">
+      <source media="(max-width: 1023px)" srcset="assets/icons/logo-m-dark.svg">
+      <img src="assets/icons/logo-dark.svg" alt="">
+    </picture>
+    <a class="header__logo-link" href="index.html" aria-label="DSV Group — на главную"></a>
+
+    <div class="container header__container">
+      <a class="header__call" href="tel:88007750553" aria-label="Позвонить">
+        <img class="header__light" src="assets/icons/phone-m.svg" alt="">
+        <img class="header__dark" src="assets/icons/phone-m-dark.svg" alt="">
+      </a>
+      <p class="header__slogan">Произвели и доставили по всей России<br>более 3000 домов и бань с 2018г</p>
+      <a class="header__phone" href="tel:88007750553">8 (800) 775-05-53</a>
+      <button class="header__burger" type="button" aria-label="Открыть меню" aria-controls="menu" data-menu-open>
+        <picture class="header__light">
+          <source media="(max-width: 1023px)" srcset="assets/icons/burger-m.svg">
+          <img src="assets/icons/burger.svg" alt="">
+        </picture>
+        <picture class="header__dark">
+          <source media="(max-width: 1023px)" srcset="assets/icons/burger-m-dark.svg">
+          <img src="assets/icons/burger-dark.svg" alt="">
+        </picture>
+      </button>
+    </div>
+  </header>
+
+  <div class="menu" id="menu" aria-hidden="true">
+    <div class="menu__overlay" data-menu-close></div>
+    <div class="menu__panel" role="dialog" aria-label="Меню">
+      <button class="menu__close" type="button" aria-label="Закрыть меню" data-menu-close>
+        <img src="assets/icons/close.svg" alt="">
+      </button>
+
+      <nav class="menu__nav">
+        <a class="menu__link" href="index.html">Главная</a>
+
+        <div class="menu__group">
+          <button class="menu__toggle" type="button" aria-expanded="true">
+            Бани
+            <img class="menu__chevron" src="assets/icons/chevron.svg" alt="">
+          </button>
+          <div class="menu__sub-wrap">
+            <div class="menu__sub">
+              <a class="menu__sublink" href="bani-bochki.html">Бани-бочки</a>
+              <a class="menu__sublink" href="karkas-bani.html">Каркасные бани</a>
+              <a class="menu__sublink" href="options.html">Доп. опции</a>
+              <a class="menu__sublink" href="bani-bochki.html#credit">Рассрочка</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu__group">
+          <button class="menu__toggle" type="button" aria-expanded="true">
+            Каркасные дома
+            <img class="menu__chevron" src="assets/icons/chevron.svg" alt="">
+          </button>
+          <div class="menu__sub-wrap">
+            <div class="menu__sub">
+              <a class="menu__sublink" href="karkas.html#projects">Проекты домов</a>
+              <a class="menu__sublink" href="options.html">Доп. опции</a>
+              <a class="menu__sublink" href="bani-bochki.html#credit">Рассрочка</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu__group">
+          <button class="menu__toggle" type="button" aria-expanded="true">
+            Модульные дома
+            <img class="menu__chevron" src="assets/icons/chevron.svg" alt="">
+          </button>
+          <div class="menu__sub-wrap">
+            <div class="menu__sub">
+              <a class="menu__sublink" href="modular.html#projects">Проекты домов</a>
+              <a class="menu__sublink" href="modular.html#example">Комплектация</a>
+              <a class="menu__sublink" href="bani-bochki.html#credit">Рассрочка</a>
+            </div>
+          </div>
+        </div>
+
+        <a class="menu__link" href="franchise.html">Франшиза</a>
+
+        <div class="menu__group">
+          <button class="menu__toggle" type="button" aria-expanded="true">
+            Производство
+            <img class="menu__chevron" src="assets/icons/chevron.svg" alt="">
+          </button>
+          <div class="menu__sub-wrap">
+            <div class="menu__sub">
+              <a class="menu__sublink" href="production.html">Наше производство</a>
+              <a class="menu__sublink" href="lumber.html">Пиломатериалы</a>
+              <a class="menu__sublink" href="components.html">Комплектующие</a>
+            </div>
+          </div>
+        </div>
+
+        <a class="menu__link" href="index.html#works">Наши работы</a>
+        <a class="menu__link" href="reviews.html">Отзывы</a>
+        <a class="menu__link" href="contacts.html">Контакты</a>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+    <section class="cp">
+      <div class="container">
+        <nav class="breadcrumbs breadcrumbs--light" aria-label="Хлебные крошки">
+          <div class="container">
+            <ol class="breadcrumbs__list">
+              <li><a href="index.html">Главная</a></li>
+              <li aria-hidden="true">—</li>
+              <li aria-current="page">Пиломатериалы</li>
+            </ol>
+          </div>
+        </nav>
+        <div class="cp__grid">
+          <h1 class="cp__title">Консультация по <span>пиломатериалам</span></h1>
+          <p class="cp__text">Оставьте свои контактные данные, менеджер перезвонит в течение 10 минут</p>
+          <img class="cp__photo" src="assets/img/consult/lumber.jpg" alt="Пиломатериалы">
+        </div>
+      </div>
+    </section>
+
+    <section class="cp-list">
+      <div class="container">
+        <h2 class="cp-list__title">Во время консультации вы</h2>
+        <ul class="cp-list__items">
+            <li class="cp-list__item">Узнаете, какие пиломатериалы подойдут именно вам</li>
+            <li class="cp-list__item">Подберёте оптимальные пиломатериалы под ваши требования и пожелания</li>
+            <li class="cp-list__item">Поймёте, почему наши пиломатериалы безупречного качества</li>
+            <li class="cp-list__item">Убедитесь, что работать с нами выгодно и безопасно</li>
+            <li class="cp-list__item">Узнаете, на какие акции можете рассчитывать</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="page-form" id="cta">
+      <img class="page-form__branch" src="assets/img/branch.png" alt="" loading="lazy">
+      <img class="page-form__cone" src="assets/img/cone.png" alt="" loading="lazy">
+      <div class="container">
+        <form class="franchise-cta__card" action="#" method="post">
+          <h2 class="franchise-cta__title">Остались вопросы?</h2>
+          <p class="franchise-cta__text">Наши специалисты всегда на связи в рабочее время. Оставьте заявку, они ответят на вопросы и подберут оптимальное решение</p>
+          <div class="franchise-cta__fields">
+            <input class="consult__input" type="tel" name="phone" aria-label="Телефон" placeholder="+7 (000) 000-00-00" autocomplete="tel" required>
+            <button class="consult__submit btn-accent" type="submit">Получить консультацию</button>
+            <label class="consult__agree">
+              <img src="assets/icons/checkbox.svg" alt="" loading="lazy">
+              <p>Нажимая кнопку, вы даёте согласие<br class="br-mobile"> на обработку персональных данных<br class="br-mobile"> согласно политике конфиденциальности</p>
+            </label>
+          </div>
+          <img class="franchise-cta__avatar" src="assets/img/consultant.png" alt="Специалист DSV Group" loading="lazy">
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contacts-footer">
+    <picture class="footer__logo">
+      <source media="(max-width: 1023px)" srcset="assets/icons/logo-footer-m.svg">
+      <img src="assets/icons/logo-footer.svg" alt="DSV Group" loading="lazy">
+    </picture>
+    <p class="footer__copyright">© 2024 DSV Group</p>
+    <div class="container footer__container">
+      <p class="footer__hours">Звоните, мы на связи<br>пн–вс с 9:00 до 18:00 мск</p>
+
+      <div class="footer__contact">
+        <div class="footer__contact-row">
+          <a href="tel:88007750553">8 800 775-05-53</a>
+          <a href="mailto:mail@dsv-group.ru">mail@dsv-group.ru</a>
+        </div>
+        <p class="footer__contact-label">Приезжайте на производство</p>
+        <p class="footer__contact-address">г. Ульяновск, ул. Шофёров, 1</p>
+      </div>
+
+      <div class="footer__social">
+        <p class="footer__social-text">Подписывайтесь на нас в соцсетях</p>
+        <div class="footer__social-list">
+          <a href="#" aria-label="Telegram"><img src="assets/icons/telegram.svg" alt="" loading="lazy"></a>
+          <a href="#" aria-label="YouTube"><img src="assets/icons/youtube.svg" alt="" loading="lazy"></a>
+          <a href="#" aria-label="VK"><img src="assets/icons/vk.svg" alt="" loading="lazy"></a>
+        </div>
+      </div>
+
+      <div class="footer__menu">
+        <div class="footer__menu-col footer__menu-col--about">
+          <p class="footer__menu-title">О компании</p>
+          <ul class="footer__menu-list">
+            <li><a href="production.html">Производство</a></li>
+            <li><a href="index.html#works">Наши работы</a></li>
+            <li><a href="reviews.html">Отзывы</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="franchise.html">Франшиза</a></li>
+          </ul>
+        </div>
+        <div class="footer__menu-col footer__menu-col--services">
+          <p class="footer__menu-title">Услуги</p>
+          <ul class="footer__menu-list">
+            <li><a href="bani-bochki.html">Бани</a></li>
+            <li><a href="karkas.html">Каркасные дома</a></li>
+            <li><a href="modular.html">Модульные дома</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__legal">
+        <div class="footer__legal-row">
+          <div class="footer__reg">
+            <span class="footer__reg-ip">ИП Илларионов А.А.</span>
+            <span class="footer__reg-numbers">
+              <span class="footer__reg-ogrn">ОГРН 1217300004162</span>
+              <span>ИНН 732719218706</span>
+            </span>
+          </div>
+          <span>г. Ульяновск, ул. Шофёров, 1</span>
+        </div>
+        <div class="footer__legal-row footer__legal-row--links">
+          <a href="#">Политика конфиденциальности</a>
+          <span>Сайт не является публичной офертой и носит информационный характер</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/imask@7"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

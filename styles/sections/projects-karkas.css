@@ -1,0 +1,49 @@
+/* Карточки проектов каркасных домов: компактнее и без кнопки «Смотреть больше» */
+.projects--karkas {
+  padding-bottom: 0;
+}
+
+.projects--karkas .projects-slider {
+  margin-top: 47px;
+
+  @media (max-width: 1023px) {
+    margin-top: 20px;
+  }
+}
+
+/* Кнопка «Смотреть больше» есть только в мобильном макете */
+.projects__more--mobile {
+  display: none;
+
+  @media (max-width: 1023px) {
+    display: flex;
+  }
+}
+
+.projects--karkas .project-card {
+  height: 631px;
+}
+
+.projects--karkas .project-card__head {
+  height: 555px;
+}
+
+.projects--karkas .project-card__specs {
+  gap: 10px;
+}
+
+.projects--karkas .project-card__img {
+  top: 4px;
+  left: -10px;
+  width: 350px;
+  height: 232px;
+}
+
+.projects--karkas .project-card__img--wide {
+  left: -20px;
+}
+
+.projects--karkas .project-card__img--shifted {
+  top: 14px;
+  height: 212px;
+}

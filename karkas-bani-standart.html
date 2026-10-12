@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Каркасная баня Standart 6х2.3х2.5 м — DSV Group</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="js/scale.js"></script>
+</head>
+<body>
+  <header class="header" id="header" data-always="true">
+    <picture class="header__logo header__light">
+      <source media="(max-width: 1023px)" srcset="assets/icons/logo-m.svg">
+      <img src="assets/icons/logo.svg" alt="">
+    </picture>
+    <picture class="header__logo header__dark">
+      <source media="(max-width: 1023px)" srcset="assets/icons/logo-m-dark.svg">
+      <img src="assets/icons/logo-dark.svg" alt="">
+    </picture>
+    <a class="header__logo-link" href="index.html" aria-label="DSV Group — на главную"></a>
+
+    <div class="container header__container">
+      <a class="header__call" href="tel:88007750553" aria-label="Позвонить">
+        <img class="header__light" src="assets/icons/phone-m.svg" alt="">
+        <img class="header__dark" src="assets/icons/phone-m-dark.svg" alt="">
+      </a>
+      <p class="header__slogan">Произвели и доставили по всей России<br>более 3000 домов и бань с 2018г</p>
+      <a class="header__phone" href="tel:88007750553">8 (800) 775-05-53</a>
+      <button class="header__burger" type="button" aria-label="Открыть меню" aria-controls="menu" data-menu-open>
+        <picture class="header__light">
+          <source media="(max-width: 1023px)" srcset="assets/icons/burger-m.svg">
+          <img src="assets/icons/burger.svg" alt="">
+        </picture>
+        <picture class="header__dark">
+          <source media="(max-width: 1023px)" srcset="assets/icons/burger-m-dark.svg">
+          <img src="assets/icons/burger-dark.svg" alt="">
+        </picture>
+      </button>
+    </div>
+  </header>
+
+  <div class="menu" id="menu" aria-hidden="true">
+    <div class="menu__overlay" data-menu-close></div>
+    <div class="menu__panel" role="dialog" aria-label="Меню">
+      <button class="menu__close" type="button" aria-label="Закрыть меню" data-menu-close>
+        <img src="assets/icons/close.svg" alt="">
+      </button>
+
+      <nav class="menu__nav">
+        <a class="menu__link" href="index.html">Главная</a>
+
+        <div class="menu__group">
+          <button class="menu__toggle" type="button" aria-expanded="true">
+            Бани
+            <img class="menu__chevron" src="assets/icons/chevron.svg" alt="">
+          </button>
+          <div class="menu__sub-wrap">
+            <div class="menu__sub">
+              <a class="menu__sublink" href="bani-bochki.html">Бани-бочки</a>
+              <a class="menu__sublink" href="karkas-bani.html">Каркасные бани</a>
+              <a class="menu__sublink" href="options.html">Доп. опции</a>
+              <a class="menu__sublink" href="bani-bochki.html#credit">Рассрочка</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu__group">
+          <button class="menu__toggle" type="button" aria-expanded="true">
+            Каркасные дома
+            <img class="menu__chevron" src="assets/icons/chevron.svg" alt="">
+          </button>
+          <div class="menu__sub-wrap">
+            <div class="menu__sub">
+              <a class="menu__sublink" href="karkas.html#projects">Проекты домов</a>
+              <a class="menu__sublink" href="options.html">Доп. опции</a>
+              <a class="menu__sublink" href="bani-bochki.html#credit">Рассрочка</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu__group">
+          <button class="menu__toggle" type="button" aria-expanded="true">
+            Модульные дома
+            <img class="menu__chevron" src="assets/icons/chevron.svg" alt="">
+          </button>
+          <div class="menu__sub-wrap">
+            <div class="menu__sub">
+              <a class="menu__sublink" href="modular.html#projects">Проекты домов</a>
+              <a class="menu__sublink" href="modular.html#example">Комплектация</a>
+              <a class="menu__sublink" href="bani-bochki.html#credit">Рассрочка</a>
+            </div>
+          </div>
+        </div>
+
+        <a class="menu__link" href="franchise.html">Франшиза</a>
+
+        <div class="menu__group">
+          <button class="menu__toggle" type="button" aria-expanded="true">
+            Производство
+            <img class="menu__chevron" src="assets/icons/chevron.svg" alt="">
+          </button>
+          <div class="menu__sub-wrap">
+            <div class="menu__sub">
+              <a class="menu__sublink" href="production.html">Наше производство</a>
+              <a class="menu__sublink" href="lumber.html">Пиломатериалы</a>
+              <a class="menu__sublink" href="components.html">Комплектующие</a>
+            </div>
+          </div>
+        </div>
+
+        <a class="menu__link" href="index.html#works">Наши работы</a>
+        <a class="menu__link" href="reviews.html">Отзывы</a>
+        <a class="menu__link" href="contacts.html">Контакты</a>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+    <section class="dt">
+      <div class="container">
+        <nav class="breadcrumbs breadcrumbs--light" aria-label="Хлебные крошки">
+          <div class="container">
+            <ol class="breadcrumbs__list">
+              <li><a href="index.html">Главная</a></li>
+              <li aria-hidden="true">—</li>
+              <li><a href="karkas-bani.html">Каркасные бани</a></li>
+              <li aria-hidden="true">—</li>
+              <li aria-current="page">Standart 6х2.3х2.5 м</li>
+            </ol>
+          </div>
+        </nav>
+        <h1 class="dt__title">Каркасная баня Standart 6х2.3х2.5 м</h1>
+
+        <div class="dt__grid">
+          <div class="dt-photos">
+            <a class="dt-photos__item dt-photos__item--1" href="assets/img/detail/ph-main.jpg" data-fancybox="dt" data-caption="Каркасная баня Standart 6х2.3х2.5 м"><picture><source media="(max-width: 1023px)" srcset="assets/img/detail/m-1.jpg"><img src="assets/img/detail/ph-main.jpg" alt="Каркасная баня Standart"></picture></a>
+            <a class="dt-photos__item dt-photos__item--2" href="assets/img/detail/ph-side.jpg" data-fancybox="dt" data-caption="Каркасная баня Standart 6х2.3х2.5 м"><picture><source media="(max-width: 1023px)" srcset="assets/img/detail/m-2.jpg"><img src="assets/img/detail/ph-side.jpg" alt="Каркасная баня Standart"></picture><span class="dt-photos__more dt-photos__more--d" data-more-d></span></a>
+            <a class="dt-photos__item dt-photos__item--3" href="assets/img/detail/m-3.jpg" data-fancybox="dt" data-caption="Каркасная баня Standart 6х2.3х2.5 м"><img src="assets/img/detail/m-3.jpg" alt="Каркасная баня Standart"><span class="dt-photos__more" data-more-m></span></a>
+            <a class="dt-photos__extra" href="assets/img/detail/m-1.jpg" data-fancybox="dt" hidden></a><a class="dt-photos__extra" href="assets/img/detail/m-2.jpg" data-fancybox="dt" hidden></a>
+          </div>
+
+          <div class="dt-mid">
+            <div class="dt-badges">
+              <div class="dt-badge dt-badge--credit">
+                <p>Можно взять <b>в рассрочку под 0%</b> или <b>в кредит</b></p>
+                <img src="assets/img/bochki/zero.png" alt="">
+              </div>
+              <div class="dt-badge dt-badge--pay">
+                <p>Оплата <b>после установки</b> на участке</p>
+                <img src="assets/img/bochki/coin.png" alt="">
+              </div>
+            </div>
+            <div class="dt-price">
+              <p class="dt-price__value">720 000 ₽</p>
+              <p class="dt-price__sub">в базовой комплектации</p>
+              <a class="btn-accent dt-price__btn" href="#cta" data-modal-open="consult">Получить консультацию</a>
+            </div>
+          </div>
+
+          <div class="dt-specs">
+            <h2 class="dt-specs__title">Характеристики</h2>
+            <dl class="dt-specs__list">
+            <div class="dt-specs__row"><dt>Зашивка стен, потолока парной</dt><dd>вагонка лиственница</dd></div>
+            <div class="dt-specs__row"><dt>Зашивка стен, потолока др.помещений</dt><dd>вагонка хвоя</dd></div>
+            <div class="dt-specs__row"><dt>Чистовой пол</dt><dd>доска пола лиственница</dd></div>
+            <div class="dt-specs__row"><dt>Форма</dt><dd>Стандарт</dd></div>
+            <div class="dt-specs__row"><dt>Вместимость</dt><dd>до 10 человек</dd></div>
+            <div class="dt-specs__row"><dt>Количество отделений</dt><dd>2 или 3</dd></div>
+            </dl>
+          </div>
+
+          <p class="dt-note">Базовая комплектация включает в себя все необходимое наполнение для комфортной эксплуатации бани сразу после установки!</p>
+        </div>
+      </div>
+    </section>
+    <section class="dt-comp section-padding">
+      <div class="container">
+        <h2 class="bb-h2 section-title--underlined bb-h2--comp">
+          Исключительный уровень комфорта<br class="br-desktop"> уже в стандартной комплектации
+          <picture class="section-title__line" style="--ul-top:47px;--ul-left:5px;--ul-w:961px;--ul-top-m:62px;--ul-left-m:0px;--ul-w-m:263px"><img src="assets/icons/title-underline.svg" alt="" loading="lazy"></picture>
+        </h2>
+        <div class="dt-acc" data-acc>
+          <div class="dt-cat is-open" style="--row:1">
+            <button class="dt-cat__btn" type="button" aria-expanded="true" aria-controls="dt-panel-frame" id="dt-tab-frame"><img src="assets/img/detail/cat-frame.png" alt="" loading="lazy"><span>Каркас и фундамент</span><i aria-hidden="true"></i></button>
+            <div class="dt-cat__panel" id="dt-panel-frame" role="region" aria-labelledby="dt-tab-frame">
+              <div class="dt-cat__inner">
+                <h3 class="dt-cat__title">Каркас и фундамент</h3>
+                <ul class="dt-cat__list"><li class="accent-bar">Каркас из сухой, строганой сосновой доски 9 × 5 (гарантия ровной геометрии, не выгнет со временем, не разойдутся углы)</li><li class="accent-bar">Брусок сухой, строганый 2 × 0 для создания вентилируемого фасада</li><li class="accent-bar">Укосины из сухой, строганой доски 14 × 0 (усиление несущей способности каркаса)</li><li class="accent-bar">Антисептическая обработка деревянных элементов каркаса премиальной защитой для дерева от грибка и плесени (значительно повышает срок службы изделия)</li><li class="accent-bar">Бетонные блоки в необходимом количестве для установки бани</li></ul>
+              </div>
+            </div>
+          </div>
+          <div class="dt-cat" style="--row:2">
+            <button class="dt-cat__btn" type="button" aria-expanded="false" aria-controls="dt-panel-outer" id="dt-tab-outer"><img src="assets/img/detail/cat-outer.png" alt="" loading="lazy"><span>Внешняя отделка</span><i aria-hidden="true"></i></button>
+            <div class="dt-cat__panel" id="dt-panel-outer" role="region" aria-labelledby="dt-tab-outer">
+              <div class="dt-cat__inner">
+                <h3 class="dt-cat__title">Внешняя отделка</h3>
+                <p class="dt-cat__empty">Состав этого раздела уточняйте у менеджера — подготовим подробный перечень под вашу модель.</p>
+              </div>
+            </div>
+          </div>
+          <div class="dt-cat" style="--row:3">
+            <button class="dt-cat__btn" type="button" aria-expanded="false" aria-controls="dt-panel-doors" id="dt-tab-doors"><img src="assets/img/detail/cat-doors.png" alt="" loading="lazy"><span>Двери</span><i aria-hidden="true"></i></button>
+            <div class="dt-cat__panel" id="dt-panel-doors" role="region" aria-labelledby="dt-tab-doors">
+              <div class="dt-cat__inner">
+                <h3 class="dt-cat__title">Двери</h3>
+                <p class="dt-cat__empty">Состав этого раздела уточняйте у менеджера — подготовим подробный перечень под вашу модель.</p>
+              </div>
+            </div>
+          </div>
+          <div class="dt-cat" style="--row:4">
+            <button class="dt-cat__btn" type="button" aria-expanded="false" aria-controls="dt-panel-windows" id="dt-tab-windows"><img src="assets/img/detail/cat-windows.png" alt="" loading="lazy"><span>Окна</span><i aria-hidden="true"></i></button>
+            <div class="dt-cat__panel" id="dt-panel-windows" role="region" aria-labelledby="dt-tab-windows">
+              <div class="dt-cat__inner">
+                <h3 class="dt-cat__title">Окна</h3>
+                <p class="dt-cat__empty">Состав этого раздела уточняйте у менеджера — подготовим подробный перечень под вашу модель.</p>
+              </div>
+            </div>
+          </div>
+          <div class="dt-cat" style="--row:5">
+            <button class="dt-cat__btn" type="button" aria-expanded="false" aria-controls="dt-panel-oven" id="dt-tab-oven"><img src="assets/img/detail/cat-oven.png" alt="" loading="lazy"><span>Печь и оборудование</span><i aria-hidden="true"></i></button>
+            <div class="dt-cat__panel" id="dt-panel-oven" role="region" aria-labelledby="dt-tab-oven">
+              <div class="dt-cat__inner">
+                <h3 class="dt-cat__title">Печь и оборудование</h3>
+                <p class="dt-cat__empty">Состав этого раздела уточняйте у менеджера — подготовим подробный перечень под вашу модель.</p>
+              </div>
+            </div>
+          </div>
+          <div class="dt-cat" style="--row:6">
+            <button class="dt-cat__btn" type="button" aria-expanded="false" aria-controls="dt-panel-inner" id="dt-tab-inner"><img src="assets/img/detail/cat-inner.png" alt="" loading="lazy"><span>Внутренняя отделка</span><i aria-hidden="true"></i></button>
+            <div class="dt-cat__panel" id="dt-panel-inner" role="region" aria-labelledby="dt-tab-inner">
+              <div class="dt-cat__inner">
+                <h3 class="dt-cat__title">Внутренняя отделка</h3>
+                <p class="dt-cat__empty">Состав этого раздела уточняйте у менеджера — подготовим подробный перечень под вашу модель.</p>
+              </div>
+            </div>
+          </div>
+          <div class="dt-cat" style="--row:7">
+            <button class="dt-cat__btn" type="button" aria-expanded="false" aria-controls="dt-panel-electro" id="dt-tab-electro"><img src="assets/img/detail/cat-electro.png" alt="" loading="lazy"><span>Электрика</span><i aria-hidden="true"></i></button>
+            <div class="dt-cat__panel" id="dt-panel-electro" role="region" aria-labelledby="dt-tab-electro">
+              <div class="dt-cat__inner">
+                <h3 class="dt-cat__title">Электрика</h3>
+                <p class="dt-cat__empty">Состав этого раздела уточняйте у менеджера — подготовим подробный перечень под вашу модель.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bb-opts dt-opts section-padding">
+      <div class="container">
+        <h2 class="bb-h2 section-title--underlined bb-h2--dopts">
+          Выберите доп. опции,<br class="br-desktop"> чтобы собрать идеальную баню<br class="br-desktop"> под свои желания
+          <picture class="section-title__line" style="--ul-top:52px;--ul-left:273px;--ul-w:307px;--ul-top-m:118px;--ul-left-m:1px;--ul-w-m:213px"><img src="assets/icons/title-underline.svg" alt="" loading="lazy"></picture>
+        </h2>
+        <p class="dt-opts__side">Самые популярные опции для этой модели бани</p>
+        <div class="bb-opts__list">
+          <article class="bb-opt">
+            <div class="bb-opt__photo" data-modal-open="consult">
+              <img src="assets/img/karkas-b/opt1.jpg" alt="Козырёк торцевой" loading="lazy">
+              <a class="bb-opt__btn" href="#cta" data-modal-open="consult">Получить консультацию <img src="assets/icons/arrow-up-right-light.svg" alt="" loading="lazy"></a>
+            </div>
+            <h3 class="bb-opt__name">Козырёк торцевой</h3>
+            <p class="bb-opt__price">32 000 ₽</p>
+          </article>
+          <article class="bb-opt">
+            <div class="bb-opt__photo" data-modal-open="consult">
+              <img src="assets/img/karkas-b/opt2.jpg" alt="Внешнее освещение" loading="lazy">
+              <a class="bb-opt__btn" href="#cta" data-modal-open="consult">Получить консультацию <img src="assets/icons/arrow-up-right-light.svg" alt="" loading="lazy"></a>
+            </div>
+            <h3 class="bb-opt__name">Внешнее освещение</h3>
+            <p class="bb-opt__price">от 2500 ₽</p>
+          </article>
+          <article class="bb-opt">
+            <div class="bb-opt__photo" data-modal-open="consult">
+              <img src="assets/img/karkas-b/opt3.jpg" alt="Водонагреватель со смесителем и комплектом труб" loading="lazy">
+              <a class="bb-opt__btn" href="#cta" data-modal-open="consult">Получить консультацию <img src="assets/icons/arrow-up-right-light.svg" alt="" loading="lazy"></a>
+            </div>
+            <h3 class="bb-opt__name">Водонагреватель со смесителем и комплектом труб</h3>
+            <p class="bb-opt__price">48 000 ₽</p>
+          </article>
+          <article class="bb-opt">
+            <div class="bb-opt__photo" data-modal-open="consult">
+              <img src="assets/img/karkas-b/opt4.jpg" alt="Столик с лавками" loading="lazy">
+              <a class="bb-opt__btn" href="#cta" data-modal-open="consult">Получить консультацию <img src="assets/icons/arrow-up-right-light.svg" alt="" loading="lazy"></a>
+            </div>
+            <h3 class="bb-opt__name">Столик с лавками</h3>
+            <p class="bb-opt__price">8 000 ₽</p>
+          </article>
+          <article class="bb-opt">
+            <div class="bb-opt__photo" data-modal-open="consult">
+              <img src="assets/img/karkas-b/opt5.jpg" alt="Замена межкомнатной двери на стеклянную" loading="lazy">
+              <a class="bb-opt__btn" href="#cta" data-modal-open="consult">Получить консультацию <img src="assets/icons/arrow-up-right-light.svg" alt="" loading="lazy"></a>
+            </div>
+            <h3 class="bb-opt__name">Замена межкомнатной двери на стеклянную</h3>
+            <p class="bb-opt__price">10 000 ₽</p>
+          </article>
+        </div>
+        <a class="bb-opts__btn btn-outline" href="options.html">Смотреть все опции</a>
+      </div>
+    </section>
+    <section class="page-form page-form--after-faq dt-form" id="cta">
+      <img class="page-form__branch" src="assets/img/branch.png" alt="" loading="lazy">
+      <img class="page-form__cone" src="assets/img/cone.png" alt="" loading="lazy">
+      <div class="container">
+        <form class="franchise-cta__card" action="#" method="post">
+          <h2 class="franchise-cta__title">Остались вопросы?</h2>
+          <p class="franchise-cta__text">Наши специалисты всегда на связи в рабочее время. Оставьте заявку, они ответят на вопросы и подберут оптимальное решение</p>
+          <div class="franchise-cta__fields">
+            <input class="consult__input" type="tel" name="phone" aria-label="Телефон" placeholder="+7 (000) 000-00-00" autocomplete="tel" required>
+            <button class="consult__submit btn-accent" type="submit">Получить консультацию</button>
+            <label class="consult__agree">
+              <img src="assets/icons/checkbox.svg" alt="" loading="lazy">
+              <p>Нажимая кнопку, вы даёте согласие<br class="br-mobile"> на обработку персональных данных<br class="br-mobile"> согласно политике конфиденциальности</p>
+            </label>
+          </div>
+          <img class="franchise-cta__avatar" src="assets/img/consultant.png" alt="Специалист DSV Group" loading="lazy">
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contacts-footer">
+    <picture class="footer__logo">
+      <source media="(max-width: 1023px)" srcset="assets/icons/logo-footer-m.svg">
+      <img src="assets/icons/logo-footer.svg" alt="DSV Group" loading="lazy">
+    </picture>
+    <p class="footer__copyright">© 2024 DSV Group</p>
+    <div class="container footer__container">
+      <p class="footer__hours">Звоните, мы на связи<br>пн–вс с 9:00 до 18:00 мск</p>
+
+      <div class="footer__contact">
+        <div class="footer__contact-row">
+          <a href="tel:88007750553">8 800 775-05-53</a>
+          <a href="mailto:mail@dsv-group.ru">mail@dsv-group.ru</a>
+        </div>
+        <p class="footer__contact-label">Приезжайте на производство</p>
+        <p class="footer__contact-address">г. Ульяновск, ул. Шофёров, 1</p>
+      </div>
+
+      <div class="footer__social">
+        <p class="footer__social-text">Подписывайтесь на нас в соцсетях</p>
+        <div class="footer__social-list">
+          <a href="#" aria-label="Telegram"><img src="assets/icons/telegram.svg" alt="" loading="lazy"></a>
+          <a href="#" aria-label="YouTube"><img src="assets/icons/youtube.svg" alt="" loading="lazy"></a>
+          <a href="#" aria-label="VK"><img src="assets/icons/vk.svg" alt="" loading="lazy"></a>
+        </div>
+      </div>
+
+      <div class="footer__menu">
+        <div class="footer__menu-col footer__menu-col--about">
+          <p class="footer__menu-title">О компании</p>
+          <ul class="footer__menu-list">
+            <li><a href="production.html">Производство</a></li>
+            <li><a href="index.html#works">Наши работы</a></li>
+            <li><a href="reviews.html">Отзывы</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="franchise.html">Франшиза</a></li>
+          </ul>
+        </div>
+        <div class="footer__menu-col footer__menu-col--services">
+          <p class="footer__menu-title">Услуги</p>
+          <ul class="footer__menu-list">
+            <li><a href="bani-bochki.html">Бани</a></li>
+            <li><a href="karkas.html">Каркасные дома</a></li>
+            <li><a href="modular.html">Модульные дома</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__legal">
+        <div class="footer__legal-row">
+          <div class="footer__reg">
+            <span class="footer__reg-ip">ИП Илларионов А.А.</span>
+            <span class="footer__reg-numbers">
+              <span class="footer__reg-ogrn">ОГРН 1217300004162</span>
+              <span>ИНН 732719218706</span>
+            </span>
+          </div>
+          <span>г. Ульяновск, ул. Шофёров, 1</span>
+        </div>
+        <div class="footer__legal-row footer__legal-row--links">
+          <a href="#">Политика конфиденциальности</a>
+          <span>Сайт не является публичной офертой и носит информационный характер</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" id="modal-consult" role="dialog" aria-modal="true" aria-labelledby="modal-consult-title" hidden>
+    <div class="modal__overlay" data-modal-close></div>
+    <form class="modal__box modal__box--form" action="#" method="post" novalidate>
+      <button class="modal__close" type="button" data-modal-close aria-label="Закрыть"><img src="assets/icons/modal-close.svg" alt="" loading="lazy"></button>
+      <h2 class="modal__title" id="modal-consult-title">Получить<br class="br-mobile"> консультацию</h2>
+      <p class="modal__text">Оставьте свои контактные данные, менеджер перезвонит в ближайшее время</p>
+      <input class="modal__input" type="tel" name="phone" aria-label="Телефон" placeholder="+7 (000) 000-00-00" autocomplete="tel" required>
+      <p class="modal__error" data-modal-error role="alert" hidden></p>
+      <button class="btn-accent modal__btn" type="submit">Получить консультацию</button>
+      <label class="modal__agree">
+        <img src="assets/icons/checkbox-gold.svg" alt="" loading="lazy">
+        <p>Нажимая кнопку, вы даёте согласие на обработку персональных данных согласно политике конфиденциальности</p>
+      </label>
+      <div class="modal__done" data-modal-done hidden>
+        <p class="modal__done-title">Спасибо за заявку!</p>
+        <p class="modal__done-text">Менеджер перезвонит вам в ближайшее время.</p>
+      </div>
+    </form>
+  </div>
+
+  <div class="modal" id="modal-3d" role="dialog" aria-modal="true" aria-label="Модель в 3D" hidden>
+    <div class="modal__overlay" data-modal-close></div>
+    <div class="modal__box modal__box--3d">
+      <button class="modal__close" type="button" data-modal-close aria-label="Закрыть"><img src="assets/icons/modal-close.svg" alt="" loading="lazy"></button>
+      <img class="modal__model" src="assets/img/modal/model-3d.jpg" alt="Каркасная баня, вид в 3D" loading="lazy">
+      <button class="modal__ar" type="button" data-modal-open="ar"><img src="assets/icons/cube-ar.svg" alt="" loading="lazy">Смотреть в пространстве</button>
+      <p class="modal__note">*Для смартфонов и планшетов с поддержкой дополненной реальности</p>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-ar" role="dialog" aria-modal="true" aria-labelledby="modal-ar-title" hidden>
+    <div class="modal__overlay" data-modal-close></div>
+    <div class="modal__box modal__box--ar">
+      <button class="modal__close" type="button" data-modal-close aria-label="Закрыть"><img src="assets/icons/modal-close.svg" alt="" loading="lazy"></button>
+      <h2 class="modal__title" id="modal-ar-title">Смотреть<br> в пространстве</h2>
+      <p class="modal__text">Наведите камеру телефона или планшета на QR&#8209;код, чтобы посмотреть на предмет в интерьере с помощью дополненной реальности.</p>
+      <div class="modal__qr">
+        <img src="assets/img/modal/qr.png" alt="QR-код для просмотра модели в дополненной реальности" loading="lazy">
+        <p class="modal__note">*Для смартфонов и планшетов с поддержкой дополненной реальности</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/imask@7"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

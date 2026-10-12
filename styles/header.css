@@ -1,0 +1,184 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  width: 100%;
+  height: 94px;
+  overflow: hidden;
+  font-family: var(--font-header);
+  font-weight: var(--font-weight-medium);
+  line-height: 122%;
+  color: var(--color-white);
+  background-color: var(--color-header-overlay);
+  backdrop-filter: blur(5px);
+  border-bottom: 1px solid transparent;
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base);
+
+  @media (max-width: 1023px) {
+    height: 56px;
+    background-color: transparent;
+    backdrop-filter: none;
+  }
+}
+
+/* Шапка после прокрутки: светлая подложка, тёмный текст и тёмные варианты иконок */
+.header.is-scrolled {
+  color: var(--color-text-muted);
+  background-color: var(--color-bg);
+  backdrop-filter: none;
+  border-bottom-color: rgba(34, 34, 34, 0.5);
+}
+
+.header__light,
+.header__dark {
+  display: block;
+}
+
+.header__dark,
+.header.is-scrolled .header__light {
+  display: none;
+}
+
+.header.is-scrolled .header__dark {
+  display: block;
+}
+
+/* SVG логотипа шире экрана: внутри него и логотип, и линия на всю ширину шапки */
+.header__logo {
+  position: absolute;
+  top: 24px;
+  left: calc(50% - 1126.8px);
+  width: 2249.47px;
+  height: 70px;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+  }
+
+  @media (max-width: 1023px) {
+    top: 9px;
+    left: calc(50% - 205.8px);
+    width: 406.5px;
+    height: 48px;
+  }
+}
+
+.header__logo.header__dark {
+  @media (max-width: 1023px) {
+    left: calc(50% - 195px);
+    width: 390px;
+  }
+}
+
+/* Кликабельная область логотипа поверх широкой картинки */
+.header__logo-link {
+  position: absolute;
+  top: 24px;
+  left: calc(50% - 106px);
+  z-index: 1;
+  width: 212px;
+  height: 70px;
+
+  @media (max-width: 1023px) {
+    top: 9px;
+    left: calc(50% - 77px);
+    width: 158px;
+    height: 48px;
+  }
+}
+
+.header__container {
+  position: relative;
+  height: 100%;
+}
+
+.header__slogan {
+  position: absolute;
+  top: 27px;
+  left: 0;
+  width: 374px;
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
+
+.header__phone {
+  position: absolute;
+  top: 34px;
+  right: 312px;
+  font-size: var(--font-size-phone);
+  white-space: nowrap;
+  transition: color var(--transition-base);
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
+
+.header__phone:hover {
+  color: var(--color-accent);
+}
+
+.header__phone:active {
+  color: var(--color-accent-active);
+}
+
+/* Иконка телефона — только в мобильной версии */
+.header__call {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  display: none;
+  width: 32px;
+  height: 32px;
+  transition: opacity var(--transition-base), transform var(--transition-base);
+
+  @media (max-width: 1023px) {
+    display: block;
+  }
+}
+
+.header__call:hover {
+  opacity: 0.7;
+}
+
+.header__call:active {
+  opacity: 1;
+  transform: scale(0.92);
+}
+
+.header__burger {
+  position: absolute;
+  top: 25px;
+  right: 3px;
+  width: 46px;
+  height: 46px;
+  transition: opacity var(--transition-base), transform var(--transition-base);
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 1023px) {
+    top: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.header__burger:hover {
+  opacity: 0.7;
+}
+
+.header__burger:active {
+  opacity: 1;
+  transform: scale(0.92);
+}

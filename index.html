@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DSV Group — бани, каркасные и модульные дома</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="js/scale.js"></script>
+</head>
+<body>
+  <header class="header" id="header">
+    <picture class="header__logo header__light">
+      <source media="(max-width: 1023px)" srcset="assets/icons/logo-m.svg">
+      <img src="assets/icons/logo.svg" alt="">
+    </picture>
+    <picture class="header__logo header__dark">
+      <source media="(max-width: 1023px)" srcset="assets/icons/logo-m-dark.svg">
+      <img src="assets/icons/logo-dark.svg" alt="">
+    </picture>
+    <a class="header__logo-link" href="index.html" aria-label="DSV Group — на главную"></a>
+
+    <div class="container header__container">
+      <a class="header__call" href="tel:88007750553" aria-label="Позвонить">
+        <img class="header__light" src="assets/icons/phone-m.svg" alt="">
+        <img class="header__dark" src="assets/icons/phone-m-dark.svg" alt="">
+      </a>
+      <p class="header__slogan">Произвели и доставили по всей России<br>более 3000 домов и бань с 2018г</p>
+      <a class="header__phone" href="tel:88007750553">8 (800) 775-05-53</a>
+      <button class="header__burger" type="button" aria-label="Открыть меню" aria-controls="menu" data-menu-open>
+        <picture class="header__light">
+          <source media="(max-width: 1023px)" srcset="assets/icons/burger-m.svg">
+          <img src="assets/icons/burger.svg" alt="">
+        </picture>
+        <picture class="header__dark">
+          <source media="(max-width: 1023px)" srcset="assets/icons/burger-m-dark.svg">
+          <img src="assets/icons/burger-dark.svg" alt="">
+        </picture>
+      </button>
+    </div>
+  </header>
+
+  <div class="menu" id="menu" aria-hidden="true">
+    <div class="menu__overlay" data-menu-close></div>
+    <div class="menu__panel" role="dialog" aria-label="Меню">
+      <button class="menu__close" type="button" aria-label="Закрыть меню" data-menu-close>
+        <img src="assets/icons/close.svg" alt="">
+      </button>
+
+      <nav class="menu__nav">
+        <a class="menu__link" href="index.html">Главная</a>
+
+        <div class="menu__group">
+          <button class="menu__toggle" type="button" aria-expanded="true">
+            Бани
+            <img class="menu__chevron" src="assets/icons/chevron.svg" alt="">
+          </button>
+          <div class="menu__sub-wrap">
+            <div class="menu__sub">
+              <a class="menu__sublink" href="bani-bochki.html">Бани-бочки</a>
+              <a class="menu__sublink" href="karkas-bani.html">Каркасные бани</a>
+              <a class="menu__sublink" href="options.html">Доп. опции</a>
+              <a class="menu__sublink" href="bani-bochki.html#credit">Рассрочка</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu__group">
+          <button class="menu__toggle" type="button" aria-expanded="true">
+            Каркасные дома
+            <img class="menu__chevron" src="assets/icons/chevron.svg" alt="">
+          </button>
+          <div class="menu__sub-wrap">
+            <div class="menu__sub">
+              <a class="menu__sublink" href="karkas.html#projects">Проекты домов</a>
+              <a class="menu__sublink" href="options.html">Доп. опции</a>
+              <a class="menu__sublink" href="bani-bochki.html#credit">Рассрочка</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu__group">
+          <button class="menu__toggle" type="button" aria-expanded="true">
+            Модульные дома
+            <img class="menu__chevron" src="assets/icons/chevron.svg" alt="">
+          </button>
+          <div class="menu__sub-wrap">
+            <div class="menu__sub">
+              <a class="menu__sublink" href="modular.html#projects">Проекты домов</a>
+              <a class="menu__sublink" href="modular.html#example">Комплектация</a>
+              <a class="menu__sublink" href="bani-bochki.html#credit">Рассрочка</a>
+            </div>
+          </div>
+        </div>
+
+        <a class="menu__link" href="franchise.html">Франшиза</a>
+
+        <div class="menu__group">
+          <button class="menu__toggle" type="button" aria-expanded="true">
+            Производство
+            <img class="menu__chevron" src="assets/icons/chevron.svg" alt="">
+          </button>
+          <div class="menu__sub-wrap">
+            <div class="menu__sub">
+              <a class="menu__sublink" href="production.html">Наше производство</a>
+              <a class="menu__sublink" href="lumber.html">Пиломатериалы</a>
+              <a class="menu__sublink" href="components.html">Комплектующие</a>
+            </div>
+          </div>
+        </div>
+
+        <a class="menu__link" href="index.html#works">Наши работы</a>
+        <a class="menu__link" href="reviews.html">Отзывы</a>
+        <a class="menu__link" href="contacts.html">Контакты</a>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__container">
+        <div class="swiper hero-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide hero-slide hero-slide--main">
+              <img class="hero-slide__shadow" src="assets/icons/hero-shadow.svg" alt="">
+              <div class="hero-slide__man">
+                <img src="assets/img/hero-man.png" alt="">
+              </div>
+              <img class="hero-slide__badge" src="assets/icons/brand-badge.svg" alt="Бренд года 2022, Ульяновск">
+            </div>
+
+            <div class="swiper-slide hero-slide">
+              <img class="hero-slide__bg" src="assets/img/slide-2.jpg" alt="">
+              <div class="hero-slide__shade hero-slide__shade--desktop"></div>
+              <div class="hero-slide__inner">
+                <div class="hero-slide__info">
+                  <p class="hero-slide__title">Бани</p>
+                  <p class="hero-slide__price"><span>от</span><span>195 000 ₽</span></p>
+                </div>
+                <a class="hero-slide__btn btn-accent" href="bani-bochki.html">Подробнее</a>
+              </div>
+            </div>
+
+            <div class="swiper-slide hero-slide">
+              <picture>
+                <source media="(max-width: 1023px)" srcset="assets/img/slide-3-m.jpg">
+                <img class="hero-slide__bg hero-slide__bg--wide" src="assets/img/slide-3.jpg" alt="">
+              </picture>
+              <div class="hero-slide__shade"></div>
+              <div class="hero-slide__inner">
+                <div class="hero-slide__info">
+                  <p class="hero-slide__title">Модульные дома</p>
+                  <p class="hero-slide__price"><span>от</span><span>1 200 000 ₽</span></p>
+                </div>
+                <a class="hero-slide__btn btn-accent" href="modular.html">Подробнее</a>
+              </div>
+            </div>
+
+            <div class="swiper-slide hero-slide">
+              <img class="hero-slide__bg hero-slide__bg--left" src="assets/img/slide-4.jpg" alt="">
+              <div class="hero-slide__shade"></div>
+              <div class="hero-slide__inner">
+                <div class="hero-slide__info">
+                  <p class="hero-slide__title">Каркасные дома</p>
+                  <p class="hero-slide__price"><span>от</span><span>5 600 000 ₽</span></p>
+                </div>
+                <a class="hero-slide__btn btn-accent" href="karkas.html">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination hero-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories section-padding">
+      <div class="container categories__container">
+        <img class="categories__decor" src="assets/img/branch-decor.png" alt="" loading="lazy">
+        <h2 class="categories__title section-title">Производим<br class="br-mobile"> бани,<br class="br-desktop"> каркасные<br class="br-mobile"> и модульные дома</h2>
+        <p class="categories__text section-text">От заготовки леса до монтажа<br class="br-mobile"> на участке — всё сделаем сами,<br class="br-mobile"> на одном производстве<br class="br-mobile"> в Ульяновске. Выберите<br class="br-mobile"> направление, чтобы узнать<br class="br-mobile"> подробности</p>
+
+        <div class="categories__cards">
+          <a class="category-card" href="bani-bochki.html">
+            <div class="category-card__photo">
+              <img class="category-card__img--bani" src="assets/img/category-bani.jpg" alt="Баня-бочка" loading="lazy">
+            </div>
+            <div class="category-card__body">
+              <div class="category-card__head">
+                <h3 class="category-card__title">Бани</h3>
+                <p class="price-badge"><span>от</span><span>195 000 ₽</span></p>
+              </div>
+              <p class="category-card__text">Бани-бочки и каркасные бани.<br class="br-desktop"> Готовое изделие с завода — привозим<br class="br-desktop"> и устанавливаем на участке за день.</p>
+            </div>
+          </a>
+
+          <a class="category-card category-card--tall" href="modular.html">
+            <div class="category-card__photo">
+              <img class="category-card__img--modular" src="assets/img/category-modular.jpg" alt="Модульный дом" loading="lazy">
+            </div>
+            <div class="category-card__body category-card__body--shifted">
+              <div class="category-card__head">
+                <h3 class="category-card__title">Модульные дома</h3>
+                <p class="price-badge"><span>от</span><span>1 200 000 ₽</span></p>
+              </div>
+              <p class="category-card__text">Собираем на производстве, доставляем на участок готовыми блоками.</p>
+            </div>
+          </a>
+
+          <a class="category-card" href="karkas.html">
+            <div class="category-card__photo">
+              <img class="category-card__img--karkas" src="assets/img/category-karkas.jpg" alt="Каркасный дом" loading="lazy">
+            </div>
+            <div class="category-card__body">
+              <div class="category-card__head">
+                <h3 class="category-card__title">Каркасные дома</h3>
+                <p class="price-badge"><span>от</span><span>5 600 000 ₽</span></p>
+              </div>
+              <p class="category-card__text">Строим на вашем участке<br class="br-desktop"> по собственным технологическим<br class="br-desktop"> картам.</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="categories__also">
+          <p class="categories__also-title">Также производим</p>
+          <ul class="categories__also-list">
+            <li>
+              <a class="categories__also-item" href="lumber.html">
+                <img src="assets/img/thumb-lumber.jpg" alt="" loading="lazy">
+                <span>Пиломатериалы</span>
+              </a>
+            </li>
+            <li>
+              <a class="categories__also-item" href="components.html">
+                <img src="assets/img/thumb-components.jpg" alt="" loading="lazy">
+                <span>Комплектующие</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="production section-padding">
+      <div class="container production__grid">
+        <h2 class="production__title section-title section-title--underlined">
+          DSV Group — компания полного цикла
+          <picture class="section-title__line">
+            <source media="(max-width: 1023px)" srcset="assets/icons/underline-production-m.svg">
+            <img src="assets/icons/title-underline.svg" alt="" loading="lazy">
+          </picture>
+        </h2>
+        <p class="production__text section-text">Несём ответственность за сроки<br> и качество на каждом этапе:<br class="br-mobile"> от закупки<br class="br-desktop"> леса до сдачи объекта<br class="br-mobile"> на участке</p>
+
+        <ul class="production__advantages">
+          <li class="advantage">
+            <span class="advantage__icon advantage__icon--tree"><img src="assets/icons/advantage-tree.svg" alt="" loading="lazy"></span>
+            <span>
+              <span class="advantage__text--desktop">Сами отбираем лучший кедр зимней заготовке в Красноярском крае</span>
+              <span class="advantage__text--mobile">Сами отбираем лучший кедр зимней заготовки в Красноярском крае</span>
+            </span>
+          </li>
+          <li class="advantage">
+            <span class="advantage__icon advantage__icon--sun"><img src="assets/icons/advantage-sun.svg" alt="" loading="lazy"></span>
+            <span>
+              <span class="advantage__text--desktop">Сушим пиломатериал до 10‑12% влажности в итальянских камерах</span>
+              <span class="advantage__text--mobile">Бережно сушим пиломатериал до 10‑12% влажности в итальянских сушильных камерах</span>
+            </span>
+          </li>
+          <li class="advantage">
+            <span class="advantage__icon advantage__icon--board"><img src="assets/icons/advantage-board.svg" alt="" loading="lazy"></span>
+            <span>
+              <span class="advantage__text--desktop">Отбираем для работы качественные доски правильной геометрии</span>
+              <span class="advantage__text--mobile">Отбираем только качественные доски правильной геометрии</span>
+            </span>
+          </li>
+          <li class="advantage">
+            <span class="advantage__icon advantage__icon--saw"><img src="assets/icons/advantage-saw.svg" alt="" loading="lazy"></span>
+            <span>Используем высокоточное профессиональное оборудование</span>
+          </li>
+          <li class="advantage">
+            <span class="advantage__icon advantage__icon--masters"><img src="assets/icons/advantage-masters.svg" alt="" loading="lazy"></span>
+            <span>35 мастеров с опытом более<br class="br-mobile"> 10 лет<br class="br-desktop"> в строительстве домов и бань</span>
+          </li>
+          <li class="advantage">
+            <span class="advantage__icon advantage__icon--full"><img src="assets/icons/advantage-area.svg" alt="" loading="lazy"></span>
+            <span>Производственные<br class="br-mobile"> площади<br class="br-desktop"> более 2000 м²</span>
+          </li>
+          <li class="advantage">
+            <span class="advantage__icon advantage__icon--full"><img src="assets/icons/advantage-modular.svg" alt="" loading="lazy"></span>
+            <span>Модульные дома собираем<br> на собственном производстве<br> и доставляем на участок в высокой<br> заводской готовности</span>
+          </li>
+          <li class="advantage">
+            <span class="advantage__icon advantage__icon--full"><img src="assets/icons/advantage-house.svg" alt="" loading="lazy"></span>
+            <span>Каркасные дома строим на участке<br> клиента по собственным<br> технологическим картам<br> и под контролем технического отдела</span>
+          </li>
+        </ul>
+
+        <div class="production__photos">
+          <a href="assets/img/production-1-full.jpg" data-fancybox="production" data-caption="Производство DSV Group"><img src="assets/img/production-1.jpg" alt="Производство" loading="lazy"></a>
+          <a href="assets/img/production-3-full.jpg" data-fancybox="production" data-caption="Производство DSV Group"><img src="assets/img/production-3.jpg" alt="Производство" loading="lazy"></a>
+          <a href="assets/img/production-2-full.jpg" data-fancybox="production" data-caption="Производство DSV Group"><img src="assets/img/production-2.jpg" alt="Производство" loading="lazy"></a>
+          <a href="assets/img/production-4-full.jpg" data-fancybox="production" data-caption="Производство DSV Group"><img src="assets/img/production-4.jpg" alt="Производство" loading="lazy"></a>
+        </div>
+
+        <a class="production__btn btn-outline" href="production.html">Подробнее о производстве</a>
+      </div>
+    </section>
+
+    <section class="works section-padding" id="works">
+      <div class="container">
+        <h2 class="works__title section-title section-title--underlined">
+          3 000+ домов и бань построили и установили по всей России
+          <picture class="section-title__line">
+            <source media="(max-width: 1023px)" srcset="assets/icons/underline-works-m.svg">
+            <img src="assets/icons/underline-works.svg" alt="" loading="lazy">
+          </picture>
+        </h2>
+
+        <div class="works__grid">
+          <a class="works-card works-card--wide" href="#">
+            <img class="works-card__img works-card__img--1" src="assets/img/works-1.jpg" alt="Модульный дом" loading="lazy">
+            <span class="works-card__more">Подробнее <img src="assets/icons/arrow-up-right.svg" alt="" loading="lazy"></span>
+          </a>
+          <a class="works-card" href="#">
+            <img class="works-card__img works-card__img--4" src="assets/img/works-4.jpg" alt="Баня-сруб" loading="lazy">
+            <span class="works-card__more">Подробнее <img src="assets/icons/arrow-up-right.svg" alt="" loading="lazy"></span>
+          </a>
+          <a class="works-card" href="#">
+            <img class="works-card__img works-card__img--5" src="assets/img/works-5.jpg" alt="Модульный дом" loading="lazy">
+            <span class="works-card__more">Подробнее <img src="assets/icons/arrow-up-right.svg" alt="" loading="lazy"></span>
+          </a>
+          <a class="works-card" href="#">
+            <img class="works-card__img works-card__img--2" src="assets/img/works-2.jpg" alt="Баня" loading="lazy">
+            <span class="works-card__more">Подробнее <img src="assets/icons/arrow-up-right.svg" alt="" loading="lazy"></span>
+          </a>
+          <a class="works-card" href="#">
+            <img class="works-card__img works-card__img--3" src="assets/img/works-3.jpg" alt="Модульный дом" loading="lazy">
+            <span class="works-card__more">Подробнее <img src="assets/icons/arrow-up-right.svg" alt="" loading="lazy"></span>
+          </a>
+          <a class="works-card works-card--wide" href="#">
+            <img class="works-card__img works-card__img--6" src="assets/img/works-6.jpg" alt="Баня-бочка" loading="lazy">
+            <span class="works-card__more">Подробнее <img src="assets/icons/arrow-up-right.svg" alt="" loading="lazy"></span>
+          </a>
+        </div>
+
+        <a class="works__btn btn-accent" href="#">Смотреть наши работы</a>
+      </div>
+    </section>
+
+    <section class="reviews section-padding" id="reviews">
+      <div class="container reviews__container">
+        <h2 class="reviews__title section-title section-title--underlined">
+          Клиенты ценят нас<br> за качество и сервис
+          <picture class="section-title__line">
+            <source media="(max-width: 1023px)" srcset="assets/icons/underline-reviews-m.svg">
+            <img src="assets/icons/underline-reviews.svg" alt="" loading="lazy">
+          </picture>
+        </h2>
+        <div class="reviews__leaf"><img src="assets/img/leaf.png" alt="" loading="lazy"></div>
+
+        <div class="reviews__note">
+          <p class="reviews__note-title">Внимание!</p>
+          <p class="reviews__note-text accent-bar">Клиенты, которые заказывали<br class="br-mobile"> у нас каркасный или модульный дом,<br class="br-mobile"> чаще всего отмечают одно и то же:<br class="br-mobile"> они видели процесс сборки своими<br class="br-mobile"> глазами ещё до того, как дом<br class="br-mobile"> приехал на участок — и получили<br class="br-mobile"> именно то, что заказывали.<br class="br-mobile"> А после покупки нашей бани друзья<br class="br-mobile"> и родственники будут вставать<br class="br-mobile"> к вам в очередь, чтобы попариться.<br> Именно так утверждают наши<br class="br-mobile"> заказчики в своих отзывах</p>
+          <div class="reviews__ratings">
+            <div class="rating">
+              <span class="rating__logo rating__logo--avito"><img src="assets/img/avito.png" alt="" loading="lazy"></span>
+              <span class="rating__body"><span class="rating__value">5.0</span><span class="rating__name">Авито</span></span>
+            </div>
+            <div class="rating">
+              <span class="rating__logo rating__logo--2gis"><img src="assets/img/2gis.png" alt="" loading="lazy"></span>
+              <span class="rating__body"><span class="rating__value">4.9</span><span class="rating__name">2ГИС</span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="reviews__list">
+          <article class="review">
+            <div class="review__video" data-youtube="aqz-KE-bpKQ" data-title="Видеоотзыв: Вера Александровна"><img class="review__photo" src="assets/img/review-vera.jpg" alt="Видеоотзыв: Вера Александровна" loading="lazy"><button class="review__play" type="button" aria-label="Смотреть видеоотзыв: Вера Александровна"></button></div>
+            <h3 class="review__name">Вера Александровна</h3>
+            <div class="review__comment">
+              <img src="assets/icons/comment.svg" alt="" loading="lazy">
+              <p class="review__text review__text--vera">Очень нравится париться. Получаешь настоящее удовольствие. Баня очень украшает участок, быстро топится, доставляет только удовольствие</p>
+            </div>
+          </article>
+          <article class="review">
+            <div class="review__video" data-youtube="aqz-KE-bpKQ" data-title="Видеоотзыв: Валерий"><img class="review__photo" src="assets/img/review-valery.jpg" alt="Видеоотзыв: Валерий" loading="lazy"><button class="review__play" type="button" aria-label="Смотреть видеоотзыв: Валерий"></button></div>
+            <h3 class="review__name">Валерий</h3>
+            <div class="review__comment">
+              <img src="assets/icons/comment.svg" alt="" loading="lazy">
+              <p class="review__text review__text--valery">Хотелось посмотреть баню наяву, приехали на производство, посмотрели, все подошло, устроило, ничего лишнего</p>
+            </div>
+          </article>
+        </div>
+
+        <a class="reviews__btn btn-accent" href="reviews.html">Смотреть больше отзывов</a>
+      </div>
+    </section>
+
+    <section class="consult section-padding" id="contacts">
+      <div class="container consult__container">
+        <h2 class="consult__title section-title section-title--underlined">
+          Работаем<br> с сертифицированным сибирским кедром
+          <picture class="section-title__line">
+            <source media="(max-width: 1023px)" srcset="assets/icons/underline-cedar-m.svg">
+            <img src="assets/icons/underline-cedar.svg" alt="" loading="lazy">
+          </picture>
+        </h2>
+
+        <div class="consult__visual">
+          <img class="consult__branch" src="assets/img/branch.png" alt="" loading="lazy">
+          <div class="consult__certificate">
+            <img src="assets/img/certificate.png" alt="Сертификат соответствия на сибирский кедр" loading="lazy">
+          </div>
+          <button class="consult__zoom" type="button" aria-label="Увеличить сертификат"><img src="assets/icons/zoom.svg" alt="" loading="lazy"></button>
+          <img class="consult__cone" src="assets/img/cone.png" alt="" loading="lazy">
+        </div>
+
+        <form class="consult__form" action="#" method="post">
+          <h3 class="consult__form-title">Остались вопросы?</h3>
+          <p class="consult__form-text">Наши специалисты всегда на связи<br class="br-mobile"> в рабочее время. Оставьте заявку,<br class="br-mobile"> они ответят на вопросы и подберут<br class="br-mobile"> оптимальное решение</p>
+          <img class="consult__avatar" src="assets/img/consultant.png" alt="Специалист DSV Group" loading="lazy">
+          <div class="consult__fields">
+            <input class="consult__input" aria-label="Телефон" type="tel" name="phone" placeholder="+7 (000) 000-00-00" autocomplete="tel" required>
+            <button class="consult__submit btn-accent" type="submit">Получить консультацию</button>
+            <label class="consult__agree">
+              <img src="assets/icons/checkbox.svg" alt="" loading="lazy">
+              <p>Нажимая кнопку, вы даёте согласие<br class="br-mobile"> на обработку персональных данных<br class="br-mobile"> согласно политике конфиденциальности</p>
+            </label>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contacts-footer">
+    <picture class="footer__logo">
+      <source media="(max-width: 1023px)" srcset="assets/icons/logo-footer-m.svg">
+      <img src="assets/icons/logo-footer.svg" alt="DSV Group" loading="lazy">
+    </picture>
+    <p class="footer__copyright">© 2024 DSV Group</p>
+    <div class="container footer__container">
+      <p class="footer__hours">Звоните, мы на связи<br>пн–вс с 9:00 до 18:00 мск</p>
+
+      <div class="footer__contact">
+        <div class="footer__contact-row">
+          <a href="tel:88007750553">8 800 775-05-53</a>
+          <a href="mailto:mail@dsv-group.ru">mail@dsv-group.ru</a>
+        </div>
+        <p class="footer__contact-label">Приезжайте на производство</p>
+        <p class="footer__contact-address">г. Ульяновск, ул. Шофёров, 1</p>
+      </div>
+
+      <div class="footer__social">
+        <p class="footer__social-text">Подписывайтесь на нас в соцсетях</p>
+        <div class="footer__social-list">
+          <a href="#" aria-label="Telegram"><img src="assets/icons/telegram.svg" alt="" loading="lazy"></a>
+          <a href="#" aria-label="YouTube"><img src="assets/icons/youtube.svg" alt="" loading="lazy"></a>
+          <a href="#" aria-label="VK"><img src="assets/icons/vk.svg" alt="" loading="lazy"></a>
+        </div>
+      </div>
+
+      <div class="footer__menu">
+        <div class="footer__menu-col footer__menu-col--about">
+          <p class="footer__menu-title">О компании</p>
+          <ul class="footer__menu-list">
+            <li><a href="production.html">Производство</a></li>
+            <li><a href="index.html#works">Наши работы</a></li>
+            <li><a href="reviews.html">Отзывы</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="franchise.html">Франшиза</a></li>
+          </ul>
+        </div>
+        <div class="footer__menu-col footer__menu-col--services">
+          <p class="footer__menu-title">Услуги</p>
+          <ul class="footer__menu-list">
+            <li><a href="bani-bochki.html">Бани</a></li>
+            <li><a href="karkas.html">Каркасные дома</a></li>
+            <li><a href="modular.html">Модульные дома</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__legal">
+        <div class="footer__legal-row">
+          <div class="footer__reg">
+            <span class="footer__reg-ip">ИП Илларионов А.А.</span>
+            <span class="footer__reg-numbers">
+              <span class="footer__reg-ogrn">ОГРН 1217300004162</span>
+              <span>ИНН 732719218706</span>
+            </span>
+          </div>
+          <span>г. Ульяновск, ул. Шофёров, 1</span>
+        </div>
+        <div class="footer__legal-row footer__legal-row--links">
+          <a href="#">Политика конфиденциальности</a>
+          <span>Сайт не является публичной офертой и носит информационный характер</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" id="modal-consult" role="dialog" aria-modal="true" aria-labelledby="modal-consult-title" hidden>
+    <div class="modal__overlay" data-modal-close></div>
+    <form class="modal__box modal__box--form" action="#" method="post" novalidate>
+      <button class="modal__close" type="button" data-modal-close aria-label="Закрыть"><img src="assets/icons/modal-close.svg" alt="" loading="lazy"></button>
+      <h2 class="modal__title" id="modal-consult-title">Получить<br class="br-mobile"> консультацию</h2>
+      <p class="modal__text">Оставьте свои контактные данные, менеджер перезвонит в ближайшее время</p>
+      <input class="modal__input" type="tel" name="phone" aria-label="Телефон" placeholder="+7 (000) 000-00-00" autocomplete="tel" required>
+      <p class="modal__error" data-modal-error role="alert" hidden></p>
+      <button class="btn-accent modal__btn" type="submit">Получить консультацию</button>
+      <label class="modal__agree">
+        <img src="assets/icons/checkbox-gold.svg" alt="" loading="lazy">
+        <p>Нажимая кнопку, вы даёте согласие на обработку персональных данных согласно политике конфиденциальности</p>
+      </label>
+      <div class="modal__done" data-modal-done hidden>
+        <p class="modal__done-title">Спасибо за заявку!</p>
+        <p class="modal__done-text">Менеджер перезвонит вам в ближайшее время.</p>
+      </div>
+    </form>
+  </div>
+
+  <div class="modal" id="modal-3d" role="dialog" aria-modal="true" aria-label="Модель в 3D" hidden>
+    <div class="modal__overlay" data-modal-close></div>
+    <div class="modal__box modal__box--3d">
+      <button class="modal__close" type="button" data-modal-close aria-label="Закрыть"><img src="assets/icons/modal-close.svg" alt="" loading="lazy"></button>
+      <img class="modal__model" src="assets/img/modal/model-3d.jpg" alt="Каркасная баня, вид в 3D" loading="lazy">
+      <button class="modal__ar" type="button" data-modal-open="ar"><img src="assets/icons/cube-ar.svg" alt="" loading="lazy">Смотреть в пространстве</button>
+      <p class="modal__note">*Для смартфонов и планшетов с поддержкой дополненной реальности</p>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-ar" role="dialog" aria-modal="true" aria-labelledby="modal-ar-title" hidden>
+    <div class="modal__overlay" data-modal-close></div>
+    <div class="modal__box modal__box--ar">
+      <button class="modal__close" type="button" data-modal-close aria-label="Закрыть"><img src="assets/icons/modal-close.svg" alt="" loading="lazy"></button>
+      <h2 class="modal__title" id="modal-ar-title">Смотреть<br> в пространстве</h2>
+      <p class="modal__text">Наведите камеру телефона или планшета на QR&#8209;код, чтобы посмотреть на предмет в интерьере с помощью дополненной реальности.</p>
+      <div class="modal__qr">
+        <img src="assets/img/modal/qr.png" alt="QR-код для просмотра модели в дополненной реальности" loading="lazy">
+        <p class="modal__note">*Для смартфонов и планшетов с поддержкой дополненной реальности</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/imask@7"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

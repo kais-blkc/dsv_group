@@ -1,0 +1,175 @@
+.projects__container {
+  position: relative;
+}
+
+.projects__title {
+  max-width: 989px;
+
+  @media (max-width: 1023px) {
+    max-width: 311px;
+  }
+}
+
+.projects__title .section-title__line {
+  top: 50px;
+  left: 2px;
+  width: 226px;
+  height: 12px;
+
+  @media (max-width: 1023px) {
+    top: 26px;
+    left: 1px;
+    width: 125px;
+    height: 8px;
+  }
+}
+
+/* Подсказка про свайп — только в мобильной версии */
+.projects__swipe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+  width: 34px;
+  height: 34px;
+
+  @media (max-width: 1023px) {
+    display: block;
+  }
+}
+
+.projects-slider {
+  /* на десктопе слайдер продолжается до правого края окна */
+  margin-top: 47px;
+  margin-right: calc(680px - var(--vw) / 2);
+  overflow: hidden;
+
+  @media (max-width: 1023px) {
+    margin-top: 20px;
+    margin-right: 0;
+  }
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 325px;
+  height: 680px;
+}
+
+.project-card__head {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 604px;
+}
+
+.project-card__photo {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+  background-color: var(--color-white);
+  border-radius: var(--radius-m);
+}
+
+.project-card__img {
+  position: absolute;
+  top: 4px;
+  left: 40px;
+  width: 250px;
+  height: 232px;
+  object-fit: cover;
+}
+
+.project-card__img--photo {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.project-card__badge {
+  position: absolute;
+  top: 12px;
+  left: 264px;
+  padding: 16px 4px;
+  background-color: #333333;
+  border-radius: var(--radius-s);
+  backdrop-filter: blur(2px);
+
+  img {
+    display: block;
+    width: 46px;
+    height: 22px;
+  }
+}
+
+.project-card__consult {
+  position: absolute;
+  top: 191px;
+  left: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 293px;
+  padding: 4px 10px 6px;
+  font-size: 18px;
+  line-height: 125%;
+  color: var(--color-white);
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: var(--radius-s);
+  backdrop-filter: blur(2px);
+  transition: background-color var(--transition-base);
+}
+
+.project-card__consult:hover {
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+.project-card__title {
+  margin-top: 16px;
+  font-weight: var(--font-weight-medium);
+  font-size: 24px;
+  line-height: 125%;
+}
+
+.project-card__specs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+  font-size: 20px;
+  line-height: 125%;
+}
+
+.project-card__specs dt {
+  font-weight: var(--font-weight-light);
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.project-card__specs dd {
+  margin-top: 2px;
+}
+
+.project-card__price {
+  font-weight: var(--font-weight-medium);
+  font-size: 36px;
+  line-height: 100%;
+}
+
+.project-card__btn {
+  width: 100%;
+  font-weight: var(--font-weight-regular);
+}
+
+.projects__more {
+  margin: 50px auto 0;
+
+  @media (max-width: 1023px) {
+    margin-top: 30px;
+    border-color: rgba(0, 0, 0, 0.2);
+    border-radius: var(--radius-l);
+  }
+}

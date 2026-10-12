@@ -1,0 +1,45 @@
+:root {
+  /* Ширина окна для элементов «на весь экран». При масштабировании (см. js/scale.js) равна логической ширине макета */
+  --vw: 100vw;
+
+  /* Цвета */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-bg: #f7fafe;
+  --color-dark: #1d1d1d;
+  --color-accent: #e8b036;
+  --color-green: #899d4e;
+  --color-green-hover: #7a8d44;
+  --color-green-active: #6b7c3a;
+  --color-accent-hover: #f0c04f;
+  --color-accent-active: #cf9a22;
+  --color-border: #e0e0e0;
+  --color-border-strong: rgba(0, 0, 0, 0.5);
+  --color-header-overlay: rgba(0, 0, 0, 0.2);
+
+  /* Шрифты */
+  --font-main: 'Geologica', sans-serif;
+  --font-header: 'Montserrat', sans-serif;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-size-text: 16px;
+  --font-size-phone: 24px;
+
+  /* Радиусы */
+  --radius-s: 4px;
+  --radius-m: 8px;
+  --radius-l: 12px;
+
+  /* Отступы секций */
+  --section-padding: 110px;
+
+  /* Transitions */
+  --transition-base: 0.3s ease;
+
+  /* Брейкпоинты (справочник): десктоп от 1024px (макет 1920), мобильная версия до 1023px (макет 390) */
+  --color-text-muted: #4d4d4e;
+  --color-menu-bg: #f8f8f8;
+  --color-line: rgba(255, 255, 255, 0.15);
+}

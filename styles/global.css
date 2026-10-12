@@ -1,0 +1,312 @@
+body {
+  font-family: var(--font-main);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-text);
+  line-height: 120%;
+  color: var(--color-black);
+  background-color: var(--color-bg);
+  overflow-x: clip;
+}
+
+body.is-locked {
+  overflow: hidden;
+}
+
+a,
+button,
+input {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Фокус с клавиатуры */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1360px;
+  margin-inline: auto;
+
+  @media (max-width: 1023px) {
+    padding-inline: 16px;
+  }
+}
+
+/* Расстояние между секциями задаём только сверху, чтобы отступы не складывались */
+.section-padding {
+  padding-top: var(--section-padding);
+
+  @media (max-width: 1023px) {
+    padding-top: 56px;
+  }
+}
+
+/* Ручные переносы строк из макета: отдельные для десктопа и мобильной версии */
+.br-mobile {
+  display: none;
+
+  @media (max-width: 1023px) {
+    display: inline;
+  }
+}
+
+.br-desktop {
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
+
+.section-title {
+  font-weight: var(--font-weight-medium);
+  font-size: 52px;
+  line-height: 100%;
+
+  @media (max-width: 1023px) {
+    font-size: 28px;
+    line-height: 107%;
+  }
+}
+
+.section-text {
+  font-weight: var(--font-weight-light);
+  font-size: 20px;
+  line-height: 125%;
+}
+
+/* Жёлтая плашка с ценой */
+.price-badge {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 6px;
+  padding: 4px 16px 5px;
+  font-weight: var(--font-weight-medium);
+  font-size: 24px;
+  line-height: 120%;
+  white-space: nowrap;
+  background-color: var(--color-accent);
+  border-radius: var(--radius-m);
+  backdrop-filter: blur(2px);
+
+  @media (max-width: 1023px) {
+    font-size: 20px;
+    line-height: 125%;
+
+    span:first-child {
+      font-size: 18px;
+    }
+  }
+}
+
+/* Кнопка с обводкой */
+.btn-outline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 358px;
+  height: 56px;
+  padding: 8px 20px 10px;
+  font-size: 18px;
+  line-height: 125%;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-m);
+  transition:
+    background-color var(--transition-base),
+    color var(--transition-base),
+    transform var(--transition-base);
+
+  @media (max-width: 1023px) {
+    width: 100%;
+  }
+}
+
+.btn-outline:hover {
+  color: var(--color-white);
+  background-color: var(--color-black);
+}
+
+.btn-outline:active {
+  color: var(--color-white);
+  background-color: #333333;
+  transform: scale(0.98);
+}
+
+/* Жёлтая кнопка */
+.btn-accent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 358px;
+  height: 56px;
+  padding: 8px 20px 10px;
+  font-weight: var(--font-weight-medium);
+  font-size: 18px;
+  line-height: 125%;
+  background-color: var(--color-accent);
+  border-radius: var(--radius-m);
+  transition:
+    background-color var(--transition-base),
+    transform var(--transition-base);
+  color: var(--color-black);
+
+  @media (max-width: 1023px) {
+    width: 100%;
+  }
+}
+
+.btn-accent:hover {
+  background-color: var(--color-accent-hover);
+}
+
+.btn-accent:active {
+  background-color: var(--color-accent-active);
+  transform: scale(0.98);
+}
+
+/* Заголовок секции с рукописным подчёркиванием (SVG позиционируется в модификаторе секции) */
+.section-title--underlined {
+  position: relative;
+}
+
+.section-title__line {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+  }
+}
+
+/* Рукописное подчёркивание «прочерчивается» слева направо при появлении заголовка в окне.
+   Состояния ставит js/main.js: .is-ready (JS жив → прячем) и .is-visible (дошли до экрана → показываем). */
+.section-title__line {
+  clip-path: inset(-10px -10px -10px -10px);
+  transition: clip-path 0.9s cubic-bezier(0.65, 0, 0.35, 1) 0.15s;
+}
+
+.section-title__line.is-ready:not(.is-visible) {
+  clip-path: inset(-10px 100% -10px 0);
+}
+
+/* Зелёная кнопка (CTA на странице проектов) */
+.btn-green {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 56px;
+  padding: 10px 20px;
+  font-size: 18px;
+  line-height: 125%;
+  color: var(--color-white);
+  background-color: var(--color-green);
+  border-radius: var(--radius-m);
+  transition: background-color var(--transition-base), transform var(--transition-base);
+}
+
+.btn-green:hover {
+  background-color: var(--color-green-hover);
+}
+
+.btn-green:active {
+  background-color: var(--color-green-active);
+  transform: scale(0.98);
+}
+
+/* Кнопка «Загрузить еще» (светлая, с рамкой) */
+.btn-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 359px;
+  height: 56px;
+  margin: 50px auto 0;
+  padding: 10px 16px 8px;
+  font-size: 18px;
+  line-height: 125%;
+  background-color: var(--color-bg);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius-l);
+  transition: border-color var(--transition-base), transform var(--transition-base);
+
+  @media (max-width: 1023px) {
+    width: 100%;
+    margin-top: 40px;
+  }
+}
+
+.btn-more:hover {
+  border-color: rgba(0, 0, 0, 0.5);
+}
+
+.btn-more:active {
+  transform: scale(0.98);
+}
+
+/* Фильтр-чипы (страницы «Наши проекты» и «Дополнительные опции») */
+.chip {
+  padding: 15px 16px;
+  font-weight: var(--font-weight-regular);
+  font-size: 20px;
+  line-height: 125%;
+  color: var(--color-black);
+  background-color: var(--color-bg);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius-l);
+  transition: background-color var(--transition-base), border-color var(--transition-base), transform var(--transition-base);
+
+  @media (max-width: 1023px) {
+    padding: 15px 15px 17px;
+    font-size: 18px;
+  }
+}
+
+.chip:hover {
+  border-color: rgba(0, 0, 0, 0.5);
+}
+
+.chip:active {
+  transform: scale(0.97);
+}
+
+.chip.is-active {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.chip.is-active:hover {
+  background-color: var(--color-accent-hover);
+}
+
+/* Жёлтая вертикальная черта слева от блока (границу-пробел задаёт border-left: Npx solid transparent и --bar-w).
+   При появлении в окне «вырастает» сверху вниз; состояния ставит js/main.js (.is-ready / .is-visible). */
+.accent-bar {
+  position: relative;
+}
+
+.accent-bar::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(var(--bar-w, 6px) * -1);
+  width: var(--bar-w, 6px);
+  content: "";
+  background-color: var(--color-accent);
+  transform-origin: top;
+  transition: transform 0.7s cubic-bezier(0.65, 0, 0.35, 1) 0.1s;
+}
+
+.accent-bar.is-ready:not(.is-visible)::before {
+  transform: scaleY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .accent-bar::before {
+    transition: none;
+  }
+}

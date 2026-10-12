@@ -1,0 +1,378 @@
+.reviews__container {
+  position: relative;
+}
+
+.reviews__title {
+  max-width: 550px;
+
+  @media (max-width: 1023px) {
+    max-width: 295px;
+  }
+}
+
+.reviews__title .section-title__line {
+  top: 104px;
+  left: 70px;
+  width: 471px;
+  height: 8px;
+
+  @media (max-width: 1023px) {
+    top: 59px;
+    left: 0;
+    width: 292px;
+    height: 8px;
+  }
+}
+
+.reviews__leaf {
+  position: absolute;
+  top: 39px;
+  left: 1262.7px;
+  width: 65.6px;
+  height: 76.4px;
+  overflow: hidden;
+  transform: rotate(83.92deg);
+  pointer-events: none;
+
+  img {
+    position: absolute;
+    top: -260.39%;
+    left: -693.61%;
+    width: 951.14%;
+    max-width: none;
+    height: 391.37%;
+
+    @media (max-width: 1023px) {
+      top: -340.82%;
+      left: -495.67%;
+      width: 1086.88%;
+      height: 597.94%;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    top: 229.8px;
+    left: calc(50% + 35.4px);
+    width: 61px;
+    height: 53.1px;
+    transform: rotate(61.63deg);
+  }
+}
+
+/* Карточка «Внимание!»: слева заголовок и рейтинги, справа текст */
+.reviews__note {
+  display: grid;
+  grid-template-columns: 471px 829px;
+  grid-template-areas:
+    "title text"
+    "ratings text";
+  align-content: start;
+  min-height: 175px;
+  margin-top: 47px;
+  padding: 30px;
+  position: relative;
+  z-index: 1;
+  background-color: var(--color-white);
+  border-radius: var(--radius-l);
+
+  @media (max-width: 1023px) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "text"
+      "ratings";
+    min-height: 0;
+    margin-top: 26px;
+    padding: 20px;
+  }
+}
+
+.reviews__note-title {
+  grid-area: title;
+  font-weight: var(--font-weight-medium);
+  font-size: 24px;
+  line-height: 115%;
+
+  @media (max-width: 1023px) {
+    font-size: 20px;
+  }
+}
+
+.reviews__note-text {
+  grid-area: text;
+  padding-right: 10px;
+  padding-left: 16px;
+  font-weight: var(--font-weight-light);
+  font-size: 18px;
+  line-height: 125%;
+  --bar-w: 6px;
+  border-left: 6px solid transparent;
+
+  @media (max-width: 1023px) {
+    padding-right: 0;
+    margin-top: 16px;
+    font-size: 16px;
+  }
+}
+
+.reviews__ratings {
+  grid-area: ratings;
+  display: flex;
+  gap: 12px;
+  margin-top: 31px;
+
+  @media (max-width: 1023px) {
+    gap: 10px;
+    margin-top: 40px;
+  }
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 186px;
+  height: 56px;
+  padding: 10px 12px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+
+  @media (max-width: 1023px) {
+    flex: 1;
+    gap: 8px;
+    width: auto;
+    height: auto;
+    padding: 8px 12px;
+    border-width: 0.63px;
+    border-radius: var(--radius-m);
+  }
+}
+
+.rating__logo {
+  position: relative;
+  flex-shrink: 0;
+  width: 36.4px;
+  height: 36.4px;
+  overflow: hidden;
+
+  @media (max-width: 1023px) {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.rating__logo img {
+  position: absolute;
+  left: 0;
+  max-width: none;
+}
+
+.rating__logo--avito img {
+  top: 6.45%;
+  width: 343.18%;
+  height: 87.09%;
+}
+
+.rating__logo--2gis img {
+  top: -0.1%;
+  width: 354.76%;
+  height: 100.19%;
+}
+
+.rating__body {
+  display: flex;
+  align-items: center;
+  gap: 14.5px;
+
+  @media (max-width: 1023px) {
+    gap: 12px;
+  }
+}
+
+.rating__value {
+  font-weight: var(--font-weight-medium);
+  font-size: 29.1px;
+  line-height: 120%;
+  color: var(--color-accent);
+
+  @media (max-width: 1023px) {
+    font-size: 24px;
+  }
+}
+
+.rating__name {
+  font-weight: var(--font-weight-light);
+  font-size: 19.4px;
+  line-height: 120%;
+  opacity: 0.5;
+
+  @media (max-width: 1023px) {
+    font-size: 16px;
+  }
+}
+
+.reviews__list {
+  display: grid;
+  grid-template-columns: repeat(2, 670px);
+  gap: 20px;
+  margin-top: 50px;
+
+  @media (max-width: 1023px) {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    margin-top: 16px;
+  }
+}
+
+.review__photo {
+  width: 100%;
+  height: 378px;
+  object-fit: cover;
+  border-radius: var(--radius-l);
+
+  @media (max-width: 1023px) {
+    height: 202px;
+    border-radius: var(--radius-m);
+  }
+}
+
+.review__name {
+  margin-top: 22px;
+  font-weight: var(--font-weight-medium);
+  font-size: 20px;
+  line-height: 125%;
+
+  @media (max-width: 1023px) {
+    margin-top: 15px;
+    line-height: 120%;
+  }
+}
+
+.review__comment {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-top: 15px;
+
+  @media (max-width: 1023px) {
+    justify-content: space-between;
+    gap: 7px;
+    margin-top: 12px;
+  }
+}
+
+.review__comment img {
+  flex-shrink: 0;
+  width: 36.9px;
+  height: 36.9px;
+
+  @media (max-width: 1023px) {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.review__text {
+  min-height: 74px;
+  font-weight: var(--font-weight-light);
+  font-size: 16px;
+  line-height: 125%;
+
+  @media (max-width: 1023px) {
+    flex: 1;
+    min-height: 0;
+  }
+}
+
+.review__text--vera {
+  max-width: 536px;
+}
+
+.review__text--valery {
+  max-width: 512px;
+}
+
+.reviews__btn {
+  margin: 50px auto 0;
+
+  @media (max-width: 1023px) {
+    margin-top: 16px;
+  }
+}
+
+/* Видеоотзыв: постер + кнопка play; по клику подставляется YouTube iframe */
+.review__video {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-l);
+
+  @media (max-width: 1023px) {
+    border-radius: var(--radius-m);
+  }
+}
+
+.review__video iframe {
+  display: block;
+  width: 100%;
+  height: 378px;
+  border: 0;
+
+  @media (max-width: 1023px) {
+    height: 202px;
+  }
+}
+
+.review__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 88px;
+  height: 64px;
+  /* background-color: rgba(33, 33, 33, 0.8); */
+  background-color: #f00;
+  border-radius: 14px;
+  transform: translate(-50%, -48%);
+  transition: all 0.2s ease;
+
+  /* filter: brightness(0.5); */
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: "";
+    border-style: solid;
+    border-width: 10px 0 10px 18px;
+    border-color: transparent transparent transparent var(--color-white);
+    transform: translate(-40%, -50%);
+  }
+}
+
+/* при наведении на весь видеоотзыв кнопка слегка тускнеет */
+.review__video:hover .review__play,
+.review__play:focus-visible {
+  opacity: 0.8;
+  filter: brightness(0.5);
+  /* filter: drop-shadow(0 0 2px var(--color-white)); */
+}
+
+.review__play:active {
+  transform: translate(-50%, -50%) scale(0.96);
+}
+
+.review__play:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 3px;
+}
+
+.review__video:hover .review__photo {
+  transform: scale(1.02);
+}
+
+.review__photo {
+  transition: transform 0.5s ease;
+}
+
+.review__video:not(:has(iframe)) {
+  cursor: pointer;
+}

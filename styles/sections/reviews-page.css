@@ -1,0 +1,320 @@
+/* ===== Страница «Отзывы» ===== */
+
+.rv {
+  position: relative;
+  overflow-x: clip;
+  padding-top: 205px;
+
+  @media (max-width: 1023px) {
+    padding-top: 136px;
+  }
+}
+
+.rv__title {
+  font-weight: var(--font-weight-medium);
+  font-size: 52px;
+  line-height: 100%;
+  color: var(--color-accent);
+
+  @media (max-width: 1023px) {
+    font-size: 36px;
+  }
+}
+
+/* Подзаголовок блока с рукописным подчёркиванием */
+.rv__subtitle {
+  margin-top: 50px;
+  font-weight: var(--font-weight-medium);
+  font-size: 36px;
+  line-height: 100%;
+
+  @media (max-width: 1023px) {
+    margin-top: 20px;
+    font-size: 28px;
+    line-height: 114%;
+  }
+
+  .section-title__line {
+    top: 34px;
+    left: 362px;
+    width: 376px;
+    height: 9px;
+
+    @media (max-width: 1023px) {
+      top: 62px;
+      left: 0;
+      width: 292px;
+      height: 6px;
+    }
+  }
+}
+
+.rv__subtitle--vk {
+  margin-top: 0;
+
+  .section-title__line {
+    left: 4px;
+    width: 220px;
+
+    @media (max-width: 1023px) {
+      top: 27px;
+      left: -1px;
+      width: 177px;
+    }
+  }
+}
+
+.rv__container .reviews__leaf {
+  top: 306.5px;
+  left: calc(50% + 268.6px);
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
+
+/* Карточка «Внимание!» без белой подложки на мобильной */
+.reviews__note--plain {
+  @media (max-width: 1023px) {
+    min-height: 0;
+    margin-top: 34px;
+    padding: 0;
+    background: none;
+    border-radius: 0;
+  }
+
+  .reviews__note-title {
+    @media (max-width: 1023px) {
+      font-size: 20px;
+      line-height: 125%;
+    }
+  }
+
+  .reviews__ratings {
+    @media (max-width: 1023px) {
+      margin-top: 20px;
+    }
+  }
+}
+
+/* ----- списки отзывов ----- */
+.rv-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  margin-top: 50px;
+
+  @media (max-width: 1023px) {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 40px;
+  }
+
+  /* на мобильной и планшете показываем только первые карточки (как в макете) */
+  > :nth-child(n + 3) {
+    @media (max-width: 1023px) {
+      display: none;
+    }
+  }
+}
+
+.rv-list--vk {
+  margin-top: 57px;
+
+  @media (max-width: 1023px) {
+    margin-top: 30px;
+  }
+
+  > :nth-child(n + 2) {
+    @media (max-width: 1023px) {
+      display: none;
+    }
+  }
+}
+
+.rv-more {
+  @media (max-width: 1023px) {
+    margin-top: 30px;
+  }
+}
+
+.rv-vk,
+.rv-video {
+  padding-top: 104px;
+
+  @media (max-width: 1023px) {
+    padding-top: 56px;
+  }
+}
+
+.reviews__list--page {
+  margin-top: 0;
+
+  @media (max-width: 1023px) {
+    gap: 30px;
+  }
+}
+
+/* ----- карточка отзыва ----- */
+.rv-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.rv-card__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.rv-card__user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rv-card__avatar {
+  position: relative;
+  flex-shrink: 0;
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+  }
+}
+
+.rv-card__avatar--2gis img {
+  top: -0.1%;
+  width: 354.76%;
+  height: 100.19%;
+}
+
+.rv-card__avatar--vk img {
+  top: -4.35%;
+  left: -4.35%;
+  width: 108.7%;
+  height: 108.7%;
+}
+
+.rv-card__name {
+  font-family: var(--font-header);
+  font-weight: var(--font-weight-semibold);
+  font-size: 18px;
+  line-height: 140%;
+  white-space: nowrap;
+}
+
+.rv-card__date {
+  font-family: var(--font-header);
+  font-weight: var(--font-weight-medium);
+  font-size: 16px;
+  line-height: 125%;
+  color: #9a9a9a;
+  white-space: nowrap;
+}
+
+.rv-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  margin-top: 9px;
+}
+
+.rv-card__stars {
+  flex-shrink: 0;
+  width: 80px;
+  height: 12px;
+}
+
+.rv-card__subject {
+  overflow: hidden;
+  font-weight: var(--font-weight-light);
+  font-size: 16px;
+  line-height: 125%;
+  color: rgba(0, 0, 0, 0.5);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rv-card__text {
+  display: -webkit-box;
+  margin: 13px 0 -1px;
+  overflow: hidden;
+  font-weight: var(--font-weight-light);
+  font-size: 16px;
+  line-height: 125%;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+}
+
+.rv-card--lg .rv-card__text {
+  margin-bottom: 9px;
+  font-size: 18px;
+  -webkit-line-clamp: 4;
+
+  @media (max-width: 1023px) {
+    margin-bottom: -1px;
+    font-size: 16px;
+    -webkit-line-clamp: 5;
+  }
+}
+
+.rv-card.is-open .rv-card__text {
+  display: block;
+  margin-bottom: 1px;
+}
+
+.rv-card__more {
+  display: flex;
+  align-items: flex-start;
+  gap: 2px;
+  margin-top: 1px;
+  font-weight: var(--font-weight-light);
+  font-size: 16px;
+  line-height: 22px;
+  color: rgba(0, 0, 0, 0.5);
+  transition: color var(--transition-base);
+
+  img {
+    width: 22px;
+    height: 22px;
+    transform: rotate(-90deg);
+    transition: transform var(--transition-base);
+  }
+}
+
+.rv-card--lg .rv-card__more {
+  font-size: 18px;
+
+  @media (max-width: 1023px) {
+    font-size: 16px;
+  }
+}
+
+.rv-card__more:hover {
+  color: var(--color-black);
+}
+
+.rv-card__more:active {
+  color: var(--color-accent-active);
+}
+
+.rv-card__more:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: var(--radius-s);
+}
+
+.rv-card.is-open .rv-card__more img {
+  transform: rotate(90deg);
+}

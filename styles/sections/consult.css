@@ -1,0 +1,323 @@
+.consult {
+  overflow-x: clip;
+  padding-top: 39px;
+  padding-bottom: 87px;
+
+  @media (max-width: 1023px) {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+}
+
+.consult__container {
+  position: relative;
+  min-height: 638px;
+
+  @media (max-width: 1023px) {
+    min-height: 0;
+  }
+}
+
+.consult__title {
+  position: relative;
+  z-index: 1;
+  max-width: 687px;
+  padding-top: 71px;
+
+  @media (max-width: 1023px) {
+    max-width: 358px;
+    padding-top: 0;
+  }
+}
+
+.consult__title .section-title__line {
+  top: 223.5px;
+  left: 0.5px;
+  width: 498px;
+  height: 12px;
+
+  @media (max-width: 1023px) {
+    top: 89px;
+    left: 0;
+    width: 269px;
+    height: 8px;
+  }
+}
+
+/* Декор и сертификат: на десктопе лежат под заголовком и формой, в мобильной версии идут между ними */
+.consult__visual {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  @media (max-width: 1023px) {
+    position: relative;
+    height: 451px;
+    margin: 20px -16px 0;
+  }
+}
+
+.consult__branch {
+  position: absolute;
+  top: 363px;
+  left: 517px;
+  width: 346px;
+  max-width: none;
+  height: 273px;
+  transform: rotate(166.24deg) scaleY(-1);
+
+  @media (max-width: 1023px) {
+    top: 260px;
+    left: calc(50% - 306px);
+    width: 222px;
+    height: 175px;
+    transform: scaleX(-1);
+  }
+}
+
+.consult__certificate {
+  position: absolute;
+  top: 29px;
+  left: 718px;
+  width: 648px;
+  height: 620px;
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    top: -16.19%;
+    left: -44.08%;
+    width: 192.4%;
+    max-width: none;
+    height: 133.92%;
+  }
+
+  @media (max-width: 1023px) {
+    top: 0;
+    left: calc(50% - 239px);
+    width: 471px;
+    height: 451px;
+  }
+}
+
+.consult__zoom {
+  position: absolute;
+  top: 240px;
+  left: 276px;
+  width: 88px;
+  height: 88px;
+  pointer-events: auto;
+  transition: transform var(--transition-base);
+
+  img {
+    position: static;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 1023px) {
+    top: 177px;
+    left: calc(50% - 36px);
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.consult__zoom:hover {
+  transform: scale(1.1);
+}
+
+.consult__zoom:active {
+  transform: scale(0.95);
+}
+
+.consult__cone {
+  position: absolute;
+  top: 23.9px;
+  left: 1215.4px;
+  width: 130px;
+  max-width: none;
+  height: 153px;
+  opacity: 0.8;
+  transform: rotate(-138.55deg);
+
+  @media (max-width: 1023px) {
+    top: -59px;
+    left: calc(50% + 112.4px);
+  }
+}
+
+.consult__form {
+  position: relative;
+  z-index: 1;
+  width: 670px;
+  height: 331px;
+  margin-top: 57px;
+  color: var(--color-white);
+  background-color: #2b2b2b;
+  border-radius: var(--radius-l);
+
+  @media (max-width: 1023px) {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    margin: 0 -16px;
+    padding: 30px 24px 32px;
+    border-radius: var(--radius-m);
+  }
+}
+
+.consult__form-title {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  font-weight: var(--font-weight-medium);
+  font-size: 36px;
+  line-height: 100%;
+
+  @media (max-width: 1023px) {
+    position: static;
+    font-size: 28px;
+    line-height: 107%;
+  }
+}
+
+.consult__form-text {
+  position: absolute;
+  top: 87px;
+  left: 40px;
+  width: 438px;
+  font-weight: var(--font-weight-light);
+  font-size: 18px;
+  line-height: 125%;
+
+  @media (max-width: 1023px) {
+    position: static;
+    width: auto;
+    margin-top: 6px;
+    font-size: 16px;
+  }
+}
+
+.consult__avatar {
+  position: absolute;
+  top: 49px;
+  left: 534px;
+  width: 106px;
+  height: 106px;
+  border-radius: 50%;
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
+
+.consult__fields {
+  position: absolute;
+  top: 185px;
+  left: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 10px;
+  width: 590px;
+
+  @media (max-width: 1023px) {
+    position: static;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 10px;
+    width: auto;
+    margin-top: 10px;
+  }
+}
+
+.consult__input {
+  width: 290px;
+  height: 56px;
+  padding: 16px 24px;
+  font: inherit;
+  font-size: 18px;
+  color: var(--color-white);
+  background: none;
+  border: 1px solid var(--color-white);
+  border-radius: var(--radius-m);
+  outline: none;
+  transition: border-color var(--transition-base);
+
+  @media (max-width: 1023px) {
+    width: 100%;
+    font-size: 20px;
+  }
+}
+
+.consult__input::placeholder {
+  color: #686868;
+}
+
+.consult__input:hover {
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.consult__input:focus {
+  border-color: var(--color-accent);
+}
+
+.consult__submit {
+  width: 290px;
+  color: var(--color-black);
+
+  @media (max-width: 1023px) {
+    width: 100%;
+    font-weight: var(--font-weight-regular);
+    font-size: 20px;
+  }
+}
+
+.consult__agree {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+
+  @media (max-width: 1023px) {
+    gap: 8px;
+    margin-top: 4px;
+  }
+}
+
+.consult__agree img {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+}
+
+.consult__agree p {
+  width: 456px;
+  font-weight: var(--font-weight-light);
+  font-size: 14px;
+  line-height: 120%;
+  color: rgba(255, 255, 255, 0.5);
+
+  @media (max-width: 1023px) {
+    width: auto;
+  }
+}
+
+/* Подсказка телефона поверх пустого поля: «+7» белым */
+.phone-hint {
+  position: absolute;
+  z-index: 1;
+  display: none;
+  align-items: center;
+  gap: 0.3em;
+  font-family: inherit;
+  color: #686868;
+  white-space: nowrap;
+  pointer-events: none;
+
+  b {
+    font-weight: inherit;
+    color: var(--color-white);
+  }
+}

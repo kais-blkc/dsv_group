@@ -1,0 +1,145 @@
+/* Первый экран «Франшизы»: тёмное фото, золотой заголовок, блок дохода */
+.franchise-hero {
+  position: relative;
+  height: 950px;
+  overflow: hidden;
+  color: var(--color-white);
+  background: var(--color-black) url("../../assets/img/franchise/hero.jpg")
+    center / cover no-repeat;
+
+  @media (max-width: 1400px) {
+    height: 854px;
+  }
+
+  @media (max-width: 1023px) {
+    height: 854px;
+    background-image: url("../../assets/img/franchise/hero-m.jpg");
+    background-position: calc(var(--vw) / 2 - 195px - 93px) -120px;
+    background-size: 551px 974px;
+  }
+}
+
+/* Контент идёт колонкой по потоку; кнопка и рейтинги прижаты к низу общей строкой (margin-top: auto) */
+.franchise-hero__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-top: 245px;
+  padding-bottom: 110px;
+
+  @media (max-width: 1023px) {
+    padding-top: 129px;
+    padding-bottom: 16px;
+  }
+}
+
+.franchise-hero__title {
+  max-width: 620px;
+  font-weight: var(--font-weight-medium);
+  font-size: 52px;
+  line-height: 100%;
+  color: var(--color-accent);
+
+  @media (max-width: 1023px) {
+    max-width: none;
+    font-size: 36px;
+    line-height: 111%;
+  }
+}
+
+.franchise-hero__subtitle {
+  max-width: 527px;
+  margin-top: 20px;
+  font-weight: var(--font-weight-medium);
+  font-size: 36px;
+  line-height: 111%;
+
+  @media (max-width: 1023px) {
+    max-width: none;
+    margin-top: 10px;
+    font-size: 24px;
+    line-height: 115%;
+  }
+}
+
+.franchise-hero__income {
+  align-self: flex-start;
+  width: 420px;
+  margin-top: 50px;
+  padding-left: 21px;
+  --bar-w: 5px;
+  border-left: 5px solid transparent;
+
+  @media (max-width: 1023px) {
+    width: 100%;
+    margin-top: 41px;
+  }
+}
+
+.franchise-hero__income-label {
+  font-size: 20px;
+  line-height: 120%;
+}
+
+.franchise-hero__income-value {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  margin-top: 4px;
+  font-weight: var(--font-weight-medium);
+  font-size: 36px;
+  line-height: 120%;
+  color: var(--color-accent);
+  white-space: nowrap;
+
+  @media (max-width: 1023px) {
+    gap: 10px;
+    font-size: 24px;
+
+    span:first-child {
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.franchise-hero__text {
+  max-width: 606px;
+  margin-top: 110px;
+  font-weight: var(--font-weight-light);
+  font-size: 20px;
+  line-height: 125%;
+
+  @media (max-width: 1023px) {
+    max-width: 235px;
+    margin-top: 31px;
+    font-size: 16px;
+  }
+}
+
+/* Нижняя строка: кнопка слева, рейтинги справа; на мобильной — колонкой */
+.franchise-hero__bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: auto;
+
+  @media (max-width: 1023px) {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
+  }
+}
+
+.franchise-hero__btn {
+  padding-inline: 20px;
+  white-space: nowrap;
+
+  @media (max-width: 1023px) {
+    width: 100%;
+    font-weight: var(--font-weight-regular);
+  }
+}

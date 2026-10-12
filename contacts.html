@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Контакты — DSV Group</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="js/scale.js"></script>
+</head>
+<body>
+  <header class="header" id="header" data-always="true">
+    <picture class="header__logo header__light">
+      <source media="(max-width: 1023px)" srcset="assets/icons/logo-m.svg">
+      <img src="assets/icons/logo.svg" alt="">
+    </picture>
+    <picture class="header__logo header__dark">
+      <source media="(max-width: 1023px)" srcset="assets/icons/logo-m-dark.svg">
+      <img src="assets/icons/logo-dark.svg" alt="">
+    </picture>
+    <a class="header__logo-link" href="index.html" aria-label="DSV Group — на главную"></a>
+
+    <div class="container header__container">
+      <a class="header__call" href="tel:88007750553" aria-label="Позвонить">
+        <img class="header__light" src="assets/icons/phone-m.svg" alt="">
+        <img class="header__dark" src="assets/icons/phone-m-dark.svg" alt="">
+      </a>
+      <p class="header__slogan">Произвели и доставили по всей России<br>более 3000 домов и бань с 2018г</p>
+      <a class="header__phone" href="tel:88007750553">8 (800) 775-05-53</a>
+      <button class="header__burger" type="button" aria-label="Открыть меню" aria-controls="menu" data-menu-open>
+        <picture class="header__light">
+          <source media="(max-width: 1023px)" srcset="assets/icons/burger-m.svg">
+          <img src="assets/icons/burger.svg" alt="">
+        </picture>
+        <picture class="header__dark">
+          <source media="(max-width: 1023px)" srcset="assets/icons/burger-m-dark.svg">
+          <img src="assets/icons/burger-dark.svg" alt="">
+        </picture>
+      </button>
+    </div>
+  </header>
+
+  <div class="menu" id="menu" aria-hidden="true">
+    <div class="menu__overlay" data-menu-close></div>
+    <div class="menu__panel" role="dialog" aria-label="Меню">
+      <button class="menu__close" type="button" aria-label="Закрыть меню" data-menu-close>
+        <img src="assets/icons/close.svg" alt="">
+      </button>
+
+      <nav class="menu__nav">
+        <a class="menu__link" href="index.html">Главная</a>
+
+        <div class="menu__group">
+          <button class="menu__toggle" type="button" aria-expanded="true">
+            Бани
+            <img class="menu__chevron" src="assets/icons/chevron.svg" alt="">
+          </button>
+          <div class="menu__sub-wrap">
+            <div class="menu__sub">
+              <a class="menu__sublink" href="bani-bochki.html">Бани-бочки</a>
+              <a class="menu__sublink" href="karkas-bani.html">Каркасные бани</a>
+              <a class="menu__sublink" href="options.html">Доп. опции</a>
+              <a class="menu__sublink" href="bani-bochki.html#credit">Рассрочка</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu__group">
+          <button class="menu__toggle" type="button" aria-expanded="true">
+            Каркасные дома
+            <img class="menu__chevron" src="assets/icons/chevron.svg" alt="">
+          </button>
+          <div class="menu__sub-wrap">
+            <div class="menu__sub">
+              <a class="menu__sublink" href="karkas.html#projects">Проекты домов</a>
+              <a class="menu__sublink" href="options.html">Доп. опции</a>
+              <a class="menu__sublink" href="bani-bochki.html#credit">Рассрочка</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu__group">
+          <button class="menu__toggle" type="button" aria-expanded="true">
+            Модульные дома
+            <img class="menu__chevron" src="assets/icons/chevron.svg" alt="">
+          </button>
+          <div class="menu__sub-wrap">
+            <div class="menu__sub">
+              <a class="menu__sublink" href="modular.html#projects">Проекты домов</a>
+              <a class="menu__sublink" href="modular.html#example">Комплектация</a>
+              <a class="menu__sublink" href="bani-bochki.html#credit">Рассрочка</a>
+            </div>
+          </div>
+        </div>
+
+        <a class="menu__link" href="franchise.html">Франшиза</a>
+
+        <div class="menu__group">
+          <button class="menu__toggle" type="button" aria-expanded="true">
+            Производство
+            <img class="menu__chevron" src="assets/icons/chevron.svg" alt="">
+          </button>
+          <div class="menu__sub-wrap">
+            <div class="menu__sub">
+              <a class="menu__sublink" href="production.html">Наше производство</a>
+              <a class="menu__sublink" href="lumber.html">Пиломатериалы</a>
+              <a class="menu__sublink" href="components.html">Комплектующие</a>
+            </div>
+          </div>
+        </div>
+
+        <a class="menu__link" href="index.html#works">Наши работы</a>
+        <a class="menu__link" href="reviews.html">Отзывы</a>
+        <a class="menu__link" href="contacts.html">Контакты</a>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+    <section class="ct">
+      <div class="container">
+        <nav class="breadcrumbs breadcrumbs--light" aria-label="Хлебные крошки">
+          <div class="container">
+            <ol class="breadcrumbs__list">
+              <li><a href="index.html">Главная</a></li>
+              <li aria-hidden="true">—</li>
+              <li aria-current="page">Контакты</li>
+            </ol>
+          </div>
+        </nav>
+        <h1 class="ct__title">Контакты</h1>
+
+        <div class="ct__top">
+          <dl class="ct-address">
+            <div class="ct-address__item">
+              <dt>Адрес производства</dt>
+              <dd>г. Ульяновск, ул. Шофёров, 1</dd>
+            </div>
+            <div class="ct-address__item">
+              <dt>Ждём вас ежедневно</dt>
+              <dd>С 9:00 до 18:00 мск</dd>
+            </div>
+          </dl>
+          <div class="ct-caption">
+            <h2 class="ct-caption__title">DSV Group – производственная компания полного цикла</h2>
+            <p class="ct-caption__text">Строим бани, каркасные и модульные дома на собственной площадке в Ульяновске. Работаем с 2018 года: сами отбираем лес, сушим пиломатериал и собираем готовые изделия — без посредников и субподрядчиков. Доставляем по всей России.</p>
+          </div>
+          <ul class="ct-bullets">
+            <li class="ct-bar accent-bar">Посмотрите различные комплектации и подберёте необходимое именно вам</li>
+            <li class="ct-bar accent-bar">Потрогаете кедровые бани-бочки и стильные каркасные бани, ощутите качество шлифовки и неповторимый запах</li>
+            <li class="ct-bar accent-bar">Посидите внутри бани или дома, проверите, удобно вам будет отдыхать всей семьёй</li>
+            <li class="ct-bar accent-bar">Убедитесь в качестве материалов, сборки и профессионализме мастеров</li>
+          </ul>
+        </div>
+
+        <div class="ct__bottom">
+          <div class="ct-map">
+            <img class="ct-map__img" src="assets/img/contacts/map.png" alt="Карта: г. Ульяновск, ул. Шофёров, 1">
+            <div class="ct-map__foot">
+              <p class="ct-map__note">Обязательно запишитесь на экскурсию, на производстве действует пропускной режим</p>
+              <a class="btn-accent" href="#cta">Записаться на экскурсию</a>
+            </div>
+          </div>
+          <div class="ct-photos">
+            <div class="ct-photos__row">
+            <a class="ct-photos__item" href="assets/img/contacts/ph1a.jpg" data-fancybox="ct-prod" data-caption="Производство DSV Group"><img src="assets/img/contacts/ph1a.jpg" alt="Производство DSV Group"></a>
+            <a class="ct-photos__item" href="assets/img/contacts/ph1b.jpg" data-fancybox="ct-prod" data-caption="Производство DSV Group"><img src="assets/img/contacts/ph1b.jpg" alt="Производство DSV Group"></a>
+            </div>
+            <button class="btn-outline ct-photos__more" type="button" data-gallery="ct-prod">Показать ещё</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ct ct--expo">
+      <div class="container">
+        <h2 class="ct__title">Приходите на нашу выставку</h2>
+
+        <div class="ct__top ct__top--expo">
+          <dl class="ct-address">
+            <div class="ct-address__item">
+              <dt>Адрес выставки</dt>
+              <dd>У строительного гипермаркета «Мегастрой» г. Ульяновск, просп. Созидателей, 116</dd>
+            </div>
+          </dl>
+          <ul class="ct-bullets ct-bullets--col">
+            <li class="ct-bar accent-bar">Возле «Мегастроя» всегда есть наша баня. Снаружи вы можете посмотреть её в любое время</li>
+            <li class="ct-bar accent-bar">Если баня подойдёт вам по размерам и комплектации, можете забрать её прямо с выставки и не ждать, пока сделают баню для вас</li>
+          </ul>
+          <div class="ct-final accent-bar">
+            <p>Если хотите посидеть внутри, проверить, насколько вам будет в ней комфортно отдыхать, созвонитесь с нашим менеджером, чтобы он открыл баню и рассказал все детали производства</p>
+            <a class="btn-accent" href="tel:88007750553">Созвониться с менеджером</a>
+          </div>
+        </div>
+
+        <div class="ct__bottom">
+          <div class="ct-map">
+            <img class="ct-map__img" src="assets/img/contacts/map.png" alt="Карта: Мегастрой, просп. Созидателей, 116" loading="lazy">
+            <div class="ct-map__foot ct-map__foot--btn">
+              <a class="btn-accent" href="#cta">Записаться на выставку</a>
+            </div>
+          </div>
+          <div class="ct-photos">
+            <div class="ct-photos__row">
+            <a class="ct-photos__item ct-photos__item--zoom" style="--w:128.74%; --h:171.65%; --l:-12.92%; --t:-35.64%" href="assets/img/contacts/ph2a.jpg" data-fancybox="ct-expo" data-caption="Выставка DSV Group"><img src="assets/img/contacts/ph2a.jpg" alt="Выставка DSV Group" loading="lazy"></a>
+            <a class="ct-photos__item ct-photos__item--zoom" style="--w:108.05%; --h:144.06%; --l:-2.5%; --t:-22.03%" href="assets/img/contacts/ph2b.jpg" data-fancybox="ct-expo" data-caption="Выставка DSV Group"><img src="assets/img/contacts/ph2b.jpg" alt="Выставка DSV Group" loading="lazy"></a>
+            </div>
+            <button class="btn-outline ct-photos__more" type="button" data-gallery="ct-expo">Показать ещё</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-form" id="cta">
+      <img class="page-form__branch" src="assets/img/branch.png" alt="" loading="lazy">
+      <img class="page-form__cone" src="assets/img/cone.png" alt="" loading="lazy">
+      <div class="container">
+        <form class="franchise-cta__card" action="#" method="post">
+          <h2 class="franchise-cta__title">Остались вопросы?</h2>
+          <p class="franchise-cta__text">Наши специалисты всегда на связи в рабочее время. Оставьте заявку, они ответят на вопросы и подберут оптимальное решение</p>
+          <div class="franchise-cta__fields">
+            <input class="consult__input" type="tel" name="phone" aria-label="Телефон" placeholder="+7 (000) 000-00-00" autocomplete="tel" required>
+            <button class="consult__submit btn-accent" type="submit">Получить консультацию</button>
+            <label class="consult__agree">
+              <img src="assets/icons/checkbox.svg" alt="" loading="lazy">
+              <p>Нажимая кнопку, вы даёте согласие<br class="br-mobile"> на обработку персональных данных<br class="br-mobile"> согласно политике конфиденциальности</p>
+            </label>
+          </div>
+          <img class="franchise-cta__avatar" src="assets/img/consultant.png" alt="Специалист DSV Group" loading="lazy">
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contacts-footer">
+    <picture class="footer__logo">
+      <source media="(max-width: 1023px)" srcset="assets/icons/logo-footer-m.svg">
+      <img src="assets/icons/logo-footer.svg" alt="DSV Group" loading="lazy">
+    </picture>
+    <p class="footer__copyright">© 2024 DSV Group</p>
+    <div class="container footer__container">
+      <p class="footer__hours">Звоните, мы на связи<br>пн–вс с 9:00 до 18:00 мск</p>
+
+      <div class="footer__contact">
+        <div class="footer__contact-row">
+          <a href="tel:88007750553">8 800 775-05-53</a>
+          <a href="mailto:mail@dsv-group.ru">mail@dsv-group.ru</a>
+        </div>
+        <p class="footer__contact-label">Приезжайте на производство</p>
+        <p class="footer__contact-address">г. Ульяновск, ул. Шофёров, 1</p>
+      </div>
+
+      <div class="footer__social">
+        <p class="footer__social-text">Подписывайтесь на нас в соцсетях</p>
+        <div class="footer__social-list">
+          <a href="#" aria-label="Telegram"><img src="assets/icons/telegram.svg" alt="" loading="lazy"></a>
+          <a href="#" aria-label="YouTube"><img src="assets/icons/youtube.svg" alt="" loading="lazy"></a>
+          <a href="#" aria-label="VK"><img src="assets/icons/vk.svg" alt="" loading="lazy"></a>
+        </div>
+      </div>
+
+      <div class="footer__menu">
+        <div class="footer__menu-col footer__menu-col--about">
+          <p class="footer__menu-title">О компании</p>
+          <ul class="footer__menu-list">
+            <li><a href="production.html">Производство</a></li>
+            <li><a href="index.html#works">Наши работы</a></li>
+            <li><a href="reviews.html">Отзывы</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="franchise.html">Франшиза</a></li>
+          </ul>
+        </div>
+        <div class="footer__menu-col footer__menu-col--services">
+          <p class="footer__menu-title">Услуги</p>
+          <ul class="footer__menu-list">
+            <li><a href="bani-bochki.html">Бани</a></li>
+            <li><a href="karkas.html">Каркасные дома</a></li>
+            <li><a href="modular.html">Модульные дома</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__legal">
+        <div class="footer__legal-row">
+          <div class="footer__reg">
+            <span class="footer__reg-ip">ИП Илларионов А.А.</span>
+            <span class="footer__reg-numbers">
+              <span class="footer__reg-ogrn">ОГРН 1217300004162</span>
+              <span>ИНН 732719218706</span>
+            </span>
+          </div>
+          <span>г. Ульяновск, ул. Шофёров, 1</span>
+        </div>
+        <div class="footer__legal-row footer__legal-row--links">
+          <a href="#">Политика конфиденциальности</a>
+          <span>Сайт не является публичной офертой и носит информационный характер</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" id="modal-consult" role="dialog" aria-modal="true" aria-labelledby="modal-consult-title" hidden>
+    <div class="modal__overlay" data-modal-close></div>
+    <form class="modal__box modal__box--form" action="#" method="post" novalidate>
+      <button class="modal__close" type="button" data-modal-close aria-label="Закрыть"><img src="assets/icons/modal-close.svg" alt="" loading="lazy"></button>
+      <h2 class="modal__title" id="modal-consult-title">Получить<br class="br-mobile"> консультацию</h2>
+      <p class="modal__text">Оставьте свои контактные данные, менеджер перезвонит в ближайшее время</p>
+      <input class="modal__input" type="tel" name="phone" aria-label="Телефон" placeholder="+7 (000) 000-00-00" autocomplete="tel" required>
+      <p class="modal__error" data-modal-error role="alert" hidden></p>
+      <button class="btn-accent modal__btn" type="submit">Получить консультацию</button>
+      <label class="modal__agree">
+        <img src="assets/icons/checkbox-gold.svg" alt="" loading="lazy">
+        <p>Нажимая кнопку, вы даёте согласие на обработку персональных данных согласно политике конфиденциальности</p>
+      </label>
+      <div class="modal__done" data-modal-done hidden>
+        <p class="modal__done-title">Спасибо за заявку!</p>
+        <p class="modal__done-text">Менеджер перезвонит вам в ближайшее время.</p>
+      </div>
+    </form>
+  </div>
+
+  <div class="modal" id="modal-3d" role="dialog" aria-modal="true" aria-label="Модель в 3D" hidden>
+    <div class="modal__overlay" data-modal-close></div>
+    <div class="modal__box modal__box--3d">
+      <button class="modal__close" type="button" data-modal-close aria-label="Закрыть"><img src="assets/icons/modal-close.svg" alt="" loading="lazy"></button>
+      <img class="modal__model" src="assets/img/modal/model-3d.jpg" alt="Каркасная баня, вид в 3D" loading="lazy">
+      <button class="modal__ar" type="button" data-modal-open="ar"><img src="assets/icons/cube-ar.svg" alt="" loading="lazy">Смотреть в пространстве</button>
+      <p class="modal__note">*Для смартфонов и планшетов с поддержкой дополненной реальности</p>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-ar" role="dialog" aria-modal="true" aria-labelledby="modal-ar-title" hidden>
+    <div class="modal__overlay" data-modal-close></div>
+    <div class="modal__box modal__box--ar">
+      <button class="modal__close" type="button" data-modal-close aria-label="Закрыть"><img src="assets/icons/modal-close.svg" alt="" loading="lazy"></button>
+      <h2 class="modal__title" id="modal-ar-title">Смотреть<br> в пространстве</h2>
+      <p class="modal__text">Наведите камеру телефона или планшета на QR&#8209;код, чтобы посмотреть на предмет в интерьере с помощью дополненной реальности.</p>
+      <div class="modal__qr">
+        <img src="assets/img/modal/qr.png" alt="QR-код для просмотра модели в дополненной реальности" loading="lazy">
+        <p class="modal__note">*Для смартфонов и планшетов с поддержкой дополненной реальности</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/imask@7"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

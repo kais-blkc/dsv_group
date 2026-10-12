@@ -1,0 +1,364 @@
+/* Первый экран внутренней страницы: фото, хлебные крошки, заголовок, цена, преимущества и рейтинги */
+.page-hero {
+  position: relative;
+  height: 950px;
+  overflow: hidden;
+  color: var(--color-white);
+  background-color: var(--color-black);
+
+  @media (max-width: 1023px) {
+    height: 854px;
+  }
+}
+
+/* Модульные дома: фото с запечённым затемнением слева */
+.page-hero--modular {
+  background-image: url("../../assets/img/slide-3.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media (max-width: 1023px) {
+    background-image:
+      linear-gradient(
+        -1.18deg,
+        #000 9.83%,
+        rgba(0, 0, 0, 0.651) 21.23%,
+        rgba(0, 0, 0, 0.405) 25.35%,
+        rgba(0, 0, 0, 0) 35.45%
+      ),
+      linear-gradient(
+        178.82deg,
+        #000 33.33%,
+        rgba(0, 0, 0, 0.677) 54.41%,
+        rgba(0, 0, 0, 0.405) 58.8%,
+        rgba(0, 0, 0, 0) 64.35%
+      ),
+      url("../../assets/img/modular/hero-m.jpg");
+    background-position: center -338px;
+    background-size: max(418px, 100%) 1192px;
+  }
+}
+
+/* Каркасные дома: градиент накладывается поверх фото в самом CSS */
+.page-hero--karkas {
+  background-image:
+    linear-gradient(
+      90.2deg,
+      #000 16.13%,
+      rgba(0, 0, 0, 0.651) 26.3%,
+      rgba(0, 0, 0, 0.405) 33.98%,
+      rgba(0, 0, 0, 0) 51.45%
+    ),
+    url("../../assets/img/slide-4.jpg");
+  background-position:
+    calc(var(--vw) / 2 - 960px) 0,
+    calc(var(--vw) / 2 - 960px + 387px) 0;
+  background-size:
+    2474px 1059px,
+    2139px 1059px;
+  background-repeat: no-repeat;
+
+  @media (max-width: 1023px) {
+    background-image:
+      linear-gradient(
+        179.09deg,
+        #000 2.78%,
+        rgba(0, 0, 0, 0.405) 23.93%,
+        rgba(0, 0, 0, 0) 41.4%
+      ),
+      linear-gradient(
+        -0.9deg,
+        #000 21.54%,
+        rgba(0, 0, 0, 0.651) 28.13%,
+        rgba(0, 0, 0, 0.405) 33.12%,
+        rgba(0, 0, 0, 0) 44.46%
+      ),
+      url("../../assets/img/karkas/hero-m.jpg");
+    background-position:
+      center,
+      center,
+      calc(var(--vw) / 2 - 195px - 108px) -180px;
+    background-size:
+      100% 100%,
+      100% 100%,
+      606px 854px;
+  }
+}
+
+.page-hero__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-top: 245px;
+
+  @media (max-width: 1023px) {
+    padding-top: 129px;
+  }
+}
+
+.breadcrumbs {
+  position: absolute;
+  top: 93px;
+  left: 50%;
+  width: var(--vw);
+  height: 42px;
+  margin-left: calc(var(--vw) / -2);
+  font-weight: var(--font-weight-light);
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(34, 34, 34, 0.6);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+
+  @media (max-width: 1023px) {
+    top: 57px;
+    font-size: 14px;
+  }
+}
+
+.breadcrumbs__list {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 100%;
+  padding-left: 1px;
+  white-space: nowrap;
+
+  a {
+    transition: color var(--transition-base);
+  }
+
+  a:hover {
+    color: var(--color-white);
+  }
+
+  a:active {
+    color: var(--color-accent);
+  }
+}
+
+.page-hero__title {
+  max-width: 620px;
+  font-weight: var(--font-weight-medium);
+  font-size: 52px;
+  line-height: 100%;
+
+  @media (max-width: 1023px) {
+    max-width: none;
+    font-size: 36px;
+    line-height: 111%;
+  }
+}
+
+.page-hero__price {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+  font-weight: var(--font-weight-medium);
+  font-size: 36px;
+  line-height: 120%;
+  color: var(--color-accent);
+  white-space: nowrap;
+
+  @media (max-width: 1023px) {
+    gap: 10px;
+    margin-top: 8px;
+    font-size: 24px;
+
+    span:first-child {
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.page-hero__text {
+  max-width: 606px;
+  margin-top: 32px;
+  font-weight: var(--font-weight-light);
+  font-size: 20px;
+  line-height: 125%;
+
+  @media (max-width: 1023px) {
+    max-width: none;
+    margin-top: 11px;
+    font-size: 16px;
+  }
+}
+
+.page-hero__btn {
+  margin-top: 50px;
+
+  @media (max-width: 1023px) {
+    margin-top: 20px;
+    font-weight: var(--font-weight-regular);
+  }
+}
+
+/* Нижняя строка hero: преимущества слева, рейтинги справа; прижата к низу, на мобильной — колонка */
+.page-hero__bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: auto;
+  padding-bottom: 110px;
+
+  @media (max-width: 1023px) {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+    padding-bottom: 16px;
+  }
+}
+
+.page-hero__adv {
+  display: flex;
+  flex-shrink: 1;
+  gap: 30px;
+  min-width: 0;
+
+  @media (max-width: 1023px) {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+.page-hero__adv-item {
+  flex-shrink: 1;
+  min-width: 0;
+  width: 325px;
+  padding-left: 16px;
+  font-weight: var(--font-weight-light);
+  font-size: 18px;
+  line-height: 125%;
+  --bar-w: 5px;
+  border-left: 5px solid transparent;
+
+  @media (max-width: 1023px) {
+    width: auto;
+    padding-left: 16px;
+    font-size: 16px;
+
+    &:nth-child(n) {
+      width: auto;
+    }
+  }
+}
+
+/* Плашки с рейтингами сервисов */
+.page-hero__maps {
+  display: flex;
+  flex-shrink: 0;
+  gap: 12px;
+  width: 330px;
+
+  @media (max-width: 1023px) {
+    gap: 10px;
+    width: auto;
+  }
+}
+
+.page-hero__map {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 12px;
+  height: 46px;
+  padding: 6px 10px;
+  font-weight: var(--font-weight-medium);
+  font-size: 24px;
+  line-height: 120%;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: var(--radius-s);
+  backdrop-filter: blur(2px);
+}
+
+.page-hero__map-logo {
+  position: relative;
+  flex-shrink: 0;
+  width: 36.4px;
+  height: 36.4px;
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    left: 0;
+    max-width: none;
+  }
+}
+
+.page-hero__map-logo--2gis img {
+  top: -0.1%;
+  width: 354.76%;
+  height: 100.19%;
+}
+
+.page-hero__map-logo--avito {
+  width: 30px;
+  height: 30px;
+
+  img {
+    top: 6.45%;
+    width: 343.18%;
+    height: 87.09%;
+  }
+}
+
+.page-hero__map-logo--yandex img {
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.page-hero--modular .page-hero__adv-item:nth-child(2) {
+  width: 255px;
+}
+
+.page-hero--modular .page-hero__adv-item:nth-child(3) {
+  width: 308px;
+}
+
+.page-hero--karkas .page-hero__adv-item:nth-child(1) {
+  width: 269px;
+}
+
+.page-hero--karkas .page-hero__adv-item:nth-child(2) {
+  width: 307px;
+}
+
+.page-hero--karkas .page-hero__adv-item:nth-child(3) {
+  width: 370px;
+}
+
+.page-hero--karkas .page-hero__text {
+  max-width: 537px;
+}
+
+@media (max-width: 1023px) {
+  .page-hero__adv-item:nth-child(n) {
+    width: auto;
+  }
+
+  .page-hero--karkas .page-hero__text {
+    max-width: none;
+  }
+}
+
+/* Светлая шапка и хлебные крошки: страница без фото-hero */
+.breadcrumbs--light {
+  color: rgba(34, 34, 34, 0.8);
+  background-color: transparent;
+  border-bottom: 1px solid rgba(34, 34, 34, 0.5);
+  backdrop-filter: blur(5px);
+
+  .breadcrumbs__list a:hover {
+    color: var(--color-black);
+  }
+}

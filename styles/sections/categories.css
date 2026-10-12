@@ -1,0 +1,307 @@
+.categories {
+  overflow-x: clip;
+}
+
+.categories__container {
+  position: relative;
+}
+
+/* Еловая ветка на стыке с hero */
+.categories__decor {
+  position: absolute;
+  top: -161px;
+  left: 1312px;
+  width: 428px;
+  height: 374px;
+  object-fit: cover;
+  object-position: bottom;
+  pointer-events: none;
+
+  @media (max-width: 1023px) {
+    top: -56px;
+    right: -126px;
+    left: auto;
+    width: 210px;
+    height: 166px;
+    object-position: center;
+  }
+}
+
+.categories__title {
+  position: relative;
+  max-width: 806px;
+
+  @media (max-width: 1023px) {
+    max-width: 295px;
+  }
+}
+
+.categories__text {
+  position: relative;
+  max-width: 806px;
+  margin-top: 30px;
+
+  @media (max-width: 1023px) {
+    max-width: none;
+    margin-top: 32px;
+  }
+}
+
+.categories__cards {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 40px;
+
+  @media (max-width: 1023px) {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
+    margin-top: 43px;
+  }
+}
+
+.category-card {
+  width: 440px;
+  height: 506px;
+  padding: 16px;
+  background-color: var(--color-white);
+  border-radius: var(--radius-l);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+
+  @media (max-width: 1023px) {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    background: none;
+  }
+}
+
+.category-card:hover {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+
+  /* На мобильной у карточки нет фона и отступов — тень и подъём не нужны, увеличиваем фото */
+  @media (max-width: 1023px) {
+    box-shadow: none;
+    transform: none;
+  }
+}
+
+.category-card:active {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+
+  @media (max-width: 1023px) {
+    box-shadow: none;
+    transform: scale(0.98);
+  }
+}
+
+@media (max-width: 1023px) {
+  .category-card__photo img {
+    transition: transform 0.5s ease;
+  }
+
+  .category-card:hover .category-card__photo img {
+    transform: scale(1.05);
+  }
+
+  .category-card__title {
+    transition: color var(--transition-base);
+  }
+
+  .category-card:hover .category-card__title {
+    color: var(--color-accent-active);
+  }
+}
+
+.category-card--tall {
+  height: 518px;
+
+  @media (max-width: 1023px) {
+    height: auto;
+  }
+}
+
+.category-card__photo {
+  position: relative;
+  height: 288px;
+  overflow: hidden;
+  background-color: var(--color-dark);
+  border-radius: var(--radius-m);
+
+  @media (max-width: 1023px) {
+    height: 200px;
+    border-radius: var(--radius-l);
+  }
+}
+
+.category-card__photo img {
+  position: absolute;
+  max-width: none;
+  object-fit: cover;
+}
+
+.category-card__img--bani {
+  top: -33.33%;
+  left: 0;
+  width: 100%;
+  height: 133.33%;
+
+  @media (max-width: 1023px) {
+    top: -47.5%;
+    height: 147.5%;
+  }
+}
+
+.category-card__img--modular {
+  top: -22%;
+  left: -2.13%;
+  width: 116.3%;
+  height: 164.7%;
+
+  @media (max-width: 1023px) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.category-card__img--karkas {
+  top: -28.1%;
+  left: -7.35%;
+  width: 114.5%;
+  height: 128.1%;
+
+  @media (max-width: 1023px) {
+    top: -31%;
+    left: 0;
+    width: 100%;
+    height: 131%;
+  }
+}
+
+.category-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+/* В макете у карточки «Модульные дома» текст сдвинут: +4px сверху, +8px по бокам */
+.category-card__body--shifted {
+  padding: 4px 8px 0;
+
+  @media (max-width: 1023px) {
+    padding: 0;
+  }
+}
+
+.category-card__head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.category-card__title {
+  font-weight: var(--font-weight-medium);
+  font-size: 28px;
+  line-height: 115%;
+
+  @media (max-width: 1023px) {
+    font-size: 24px;
+  }
+}
+
+.category-card__text {
+  font-weight: var(--font-weight-light);
+  font-size: 20px;
+  line-height: 125%;
+  opacity: 0.6;
+
+  @media (max-width: 1023px) {
+    font-size: 16px;
+  }
+}
+
+.categories__also {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 84px;
+  margin-top: 18px;
+  padding-left: 29px;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-l);
+
+  @media (max-width: 1023px) {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    height: auto;
+    margin-top: 30px;
+    padding: 15px;
+  }
+}
+
+.categories__also-title {
+  width: 430px;
+  font-size: 24px;
+  line-height: 115%;
+
+  @media (max-width: 1023px) {
+    width: auto;
+    font-size: 20px;
+  }
+}
+
+.categories__also-list {
+  display: flex;
+  gap: 20px;
+
+  @media (max-width: 1023px) {
+    flex-direction: column;
+    gap: 14px;
+  }
+}
+
+.categories__also-item {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: 440px;
+  font-size: 20px;
+  line-height: 125%;
+  transition: opacity var(--transition-base), transform var(--transition-base);
+
+  img {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: var(--radius-s);
+
+    @media (max-width: 1023px) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    gap: 16px;
+    width: 100%;
+    font-size: 16px;
+  }
+}
+
+.categories__also-item:hover {
+  opacity: 0.7;
+}
+
+.categories__also-item:active {
+  transform: scale(0.97);
+}

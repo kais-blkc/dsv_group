@@ -1,0 +1,620 @@
+/* ===== Детальная страница модели «Каркасная баня Standart 6х2.3х2.5 м» ===== */
+
+.dt {
+  position: relative;
+  overflow-x: clip;
+  padding-top: 205px;
+
+  @media (max-width: 1023px) {
+    padding-top: 129px;
+  }
+}
+
+.dt__title {
+  max-width: 960px;
+  font-weight: var(--font-weight-medium);
+  font-size: 52px;
+  line-height: 100%;
+
+  @media (max-width: 1023px) {
+    font-size: 32px;
+    line-height: 115%;
+  }
+}
+
+.dt__grid {
+  display: grid;
+  grid-template-columns: 1014px 324px;
+  grid-template-areas:
+    'photos specs'
+    'mid specs'
+    'note .';
+  align-items: start;
+  column-gap: 22px;
+  row-gap: 20px;
+  margin-top: 40px;
+
+  @media (max-width: 1023px) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'photos'
+      'mid'
+      'specs'
+      'note';
+    row-gap: 20px;
+    margin-top: 20px;
+  }
+}
+
+/* ----- фото ----- */
+.dt-photos {
+  grid-area: photos;
+  display: grid;
+  grid-template-columns: 670px 325px;
+  gap: 19px;
+
+  @media (max-width: 1023px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+}
+
+.dt-photos__item {
+  position: relative;
+  display: block;
+  height: 325px;
+  overflow: hidden;
+  cursor: zoom-in;
+  border-radius: var(--radius-l);
+
+  img {
+    position: absolute;
+    max-width: none;
+    transition: transform 0.5s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.03);
+  }
+
+  @media (max-width: 1023px) {
+    height: auto;
+    aspect-ratio: 1;
+  }
+}
+
+.dt-photos__item--1 {
+  img {
+    top: -54%;
+    left: 0;
+    width: 100.9%;
+    height: 208%;
+  }
+
+  @media (max-width: 1023px) {
+    grid-column: 1 / -1;
+    aspect-ratio: 358 / 174;
+
+    img {
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.dt-photos__item--2 {
+  img {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media (max-width: 1023px) {
+    img {
+      top: -10.53%;
+      left: -16.94%;
+      width: 121.07%;
+      height: 121.07%;
+    }
+  }
+}
+
+.dt-photos__item--3 {
+  display: none;
+
+  img {
+    top: -9.67%;
+    left: -15.25%;
+    width: 120.99%;
+    height: 120.99%;
+  }
+
+  @media (max-width: 1023px) {
+    display: block;
+  }
+}
+
+/* «+N» */
+.dt-photos__more {
+  position: absolute;
+  top: 108px;
+  left: 106px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 114px;
+  height: 114px;
+  font-family: var(--font-header);
+  font-weight: 700;
+  font-size: 36px;
+  color: var(--color-white);
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: var(--radius-m);
+  backdrop-filter: blur(5px);
+  pointer-events: none;
+
+  @media (max-width: 1023px) {
+    top: 37px;
+    left: 37px;
+    width: 100px;
+    height: 100px;
+    font-size: 32px;
+    border-radius: var(--radius-l);
+  }
+}
+
+.dt-photos__more--d {
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
+
+.dt-photos__item--3 .dt-photos__more {
+  display: none;
+
+  @media (max-width: 1023px) {
+    display: flex;
+  }
+}
+
+/* ----- бейджи, цена ----- */
+.dt-mid {
+  grid-area: mid;
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+
+  @media (max-width: 1023px) {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+.dt-badges {
+  display: flex;
+  gap: 10px;
+
+  @media (max-width: 1023px) {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.dt-badge {
+  position: relative;
+  width: 227px;
+  height: 181px;
+  padding: 87px 20px 0;
+  color: var(--color-white);
+  background-color: #333;
+  border-radius: var(--radius-m);
+  backdrop-filter: blur(4px);
+
+  p {
+    font-weight: var(--font-weight-medium);
+    font-size: 20px;
+    line-height: 115%;
+  }
+
+  b {
+    font-weight: inherit;
+    color: var(--color-accent);
+  }
+
+  img {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 47px;
+    width: auto;
+  }
+
+  @media (max-width: 1023px) {
+    width: 100%;
+    height: 79px;
+    padding: 16px 90px 0 16px;
+
+    img {
+      top: 16px;
+      right: 16px;
+      left: auto;
+    }
+  }
+}
+
+.dt-badge--pay img {
+  @media (max-width: 1023px) {
+    top: 20px;
+    right: 23px;
+  }
+}
+
+.dt-badge--credit p {
+  width: 173px;
+
+  @media (max-width: 1023px) {
+    width: auto;
+  }
+}
+
+.dt-price {
+  width: 358px;
+  margin-top: 19px;
+
+  @media (max-width: 1023px) {
+    width: 100%;
+    margin-top: 19px;
+  }
+}
+
+.dt-price__value {
+  font-weight: var(--font-weight-medium);
+  font-size: 36px;
+  line-height: 115%;
+}
+
+.dt-price__sub {
+  font-weight: var(--font-weight-light);
+  font-size: 20px;
+  line-height: 125%;
+  color: rgba(0, 0, 0, 0.5);
+
+  @media (max-width: 1023px) {
+    margin-top: -3px;
+  }
+}
+
+.dt-price__btn {
+  margin-top: 20px;
+  font-weight: var(--font-weight-regular);
+
+  @media (max-width: 1023px) {
+    margin-top: 28px;
+  }
+}
+
+/* ----- характеристики ----- */
+.dt-specs {
+  grid-area: specs;
+}
+
+.dt-specs__title {
+  font-weight: var(--font-weight-medium);
+  font-size: 24px;
+  line-height: 125%;
+}
+
+.dt-specs__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 125%;
+
+  dt {
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  dd {
+    margin-top: 4px;
+  }
+
+  @media (max-width: 1023px) {
+    margin-top: 20px;
+  }
+}
+
+.dt-note {
+  grid-area: note;
+  max-width: 706px;
+  font-weight: var(--font-weight-light);
+  font-size: 20px;
+  line-height: 125%;
+  color: rgba(0, 0, 0, 0.5);
+
+  @media (max-width: 1023px) {
+    max-width: none;
+    margin-top: 30px;
+  }
+}
+
+/* ===== Комплектация: вкладки (десктоп) / аккордеон (мобильная) ===== */
+.dt-comp {
+  @media (min-width: 1024px) {
+    padding-top: 110px;
+  }
+}
+
+.bb-h2--comp {
+  max-width: 989px;
+}
+
+.dt-acc {
+  margin-top: 40px;
+
+  @media (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: 785px 455px;
+    grid-template-rows: repeat(7, 63px);
+    column-gap: 120px;
+    row-gap: 0;
+  }
+
+  @media (max-width: 1023px) {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+}
+
+.dt-cat {
+  @media (min-width: 1024px) {
+    display: contents;
+  }
+
+  @media (max-width: 1023px) {
+    margin-bottom: -1px;
+    overflow: hidden;
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-l);
+    transition: border-color var(--transition-base);
+  }
+}
+
+.dt-cat__btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  height: 64px;
+  padding: 16px;
+  font-size: 20px;
+  line-height: 125%;
+  text-align: left;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-l);
+  transition: border-color var(--transition-base), background-color var(--transition-base);
+
+  img {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+  }
+
+  span {
+    flex: 1;
+  }
+
+  i {
+    display: none;
+  }
+
+  &:hover {
+    border-color: rgba(227, 170, 47, 0.6);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+
+  @media (min-width: 1024px) {
+    grid-column: 2;
+    grid-row: var(--row);
+  }
+
+  @media (max-width: 1023px) {
+    height: 64px;
+    border: 0;
+    border-radius: 0;
+
+    i {
+      position: relative;
+      display: block;
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      transition: transform var(--transition-base);
+
+      &::before,
+      &::after {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 20px;
+        height: 2px;
+        content: "";
+        background-color: var(--color-accent);
+        border-radius: 1px;
+      }
+
+      &::after {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+
+.dt-cat.is-open .dt-cat__btn {
+  @media (min-width: 1024px) {
+    border-color: #e3aa2f;
+    z-index: 1;
+    position: relative;
+  }
+}
+
+.dt-cat.is-open .dt-cat__btn i {
+  transform: rotate(45deg);
+}
+
+/* панель с содержимым */
+.dt-cat__panel {
+  @media (min-width: 1024px) {
+    display: none;
+    grid-column: 1;
+    grid-row: 1 / span 7;
+  }
+
+  @media (max-width: 1023px) {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.35s ease;
+  }
+}
+
+.dt-cat.is-open .dt-cat__panel {
+  @media (min-width: 1024px) {
+    display: block;
+  }
+
+  @media (max-width: 1023px) {
+    grid-template-rows: 1fr;
+  }
+}
+
+.dt-cat__inner {
+  @media (max-width: 1023px) {
+    overflow: hidden;
+    padding: 0 16px;
+  }
+}
+
+.dt-cat.is-open .dt-cat__inner {
+  @media (max-width: 1023px) {
+    padding-bottom: 16px;
+  }
+}
+
+.dt-cat__title {
+  display: none;
+  margin-bottom: 20px;
+  font-weight: var(--font-weight-medium);
+  font-size: 24px;
+  line-height: 125%;
+
+  @media (min-width: 1024px) {
+    display: block;
+  }
+}
+
+.dt-cat__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  li {
+    --bar-w: 4px;
+    padding-left: 16px;
+    font-weight: var(--font-weight-light);
+    font-size: 18px;
+    line-height: 125%;
+    border-left: 4px solid transparent;
+  }
+
+  @media (max-width: 1023px) {
+    gap: 16px;
+
+    li {
+      font-size: 16px;
+      line-height: 125%;
+    }
+  }
+}
+
+.dt-cat__empty {
+  font-weight: var(--font-weight-light);
+  font-size: 18px;
+  line-height: 125%;
+  color: rgba(0, 0, 0, 0.5);
+
+  @media (max-width: 1023px) {
+    font-size: 16px;
+  }
+}
+
+/* ===== Допопции ===== */
+.dt-opts .container {
+  position: relative;
+}
+
+.bb-h2--dopts {
+  max-width: 920px;
+}
+
+.dt-opts__side {
+  position: absolute;
+  top: 103px;
+  left: 920px;
+  width: 278px;
+  font-weight: var(--font-weight-light);
+  font-size: 20px;
+  line-height: 125%;
+  color: rgba(0, 0, 0, 0.5);
+
+  @media (max-width: 1023px) {
+    position: static;
+    width: auto;
+    margin-top: 20px;
+    font-size: 20px;
+  }
+}
+
+.dt-opts {
+  @media (min-width: 1024px) {
+    padding-top: 84px;
+  }
+}
+
+.dt-form {
+  padding-top: 110px;
+  padding-bottom: 110px;
+
+  @media (max-width: 1023px) {
+    padding-bottom: 56px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .dt-badge {
+    padding-right: 70px;
+  }
+
+  .dt-price__btn {
+    margin-top: 26px;
+  }
+
+  .dt-specs {
+    margin-top: 28px;
+  }
+
+  .dt-cat__btn {
+    font-size: 20px;
+  }
+}

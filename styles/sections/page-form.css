@@ -1,0 +1,66 @@
+/* Форма «Остались вопросы?» в конце внутренней страницы (ветка, шишка, карточка franchise-cta) */
+.page-form {
+  position: relative;
+  overflow-x: clip;
+  padding-top: 104px;
+  padding-bottom: 104px;
+
+  @media (max-width: 1023px) {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+}
+
+.page-form__branch {
+  position: absolute;
+  top: 106px;
+  left: calc(50% - 750px);
+  z-index: 0;
+  width: 346px;
+  max-width: none;
+  height: 273px;
+  pointer-events: none;
+  transform: rotate(166.24deg) scaleY(-1);
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
+
+.page-form__cone {
+  position: absolute;
+  top: 255px;
+  left: calc(50% + 822px);
+  z-index: 2;
+  width: 130px;
+  max-width: none;
+  height: 153px;
+  opacity: 0.8;
+  pointer-events: none;
+  transform: rotate(-138.55deg);
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
+
+.page-form .franchise-cta__card {
+  z-index: 1;
+}
+
+.franchise-cta__text {
+  position: absolute;
+  top: 82px;
+  left: 40px;
+  width: 385px;
+  font-weight: var(--font-weight-light);
+  font-size: 18px;
+  line-height: 125%;
+
+  @media (max-width: 1023px) {
+    position: static;
+    width: auto;
+    margin-top: 16px;
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,411 @@
+.example__title {
+  max-width: 994px;
+}
+
+.example__title .section-title__line {
+  top: 50px;
+  left: 0;
+  width: 235px;
+  height: 12px;
+
+  @media (max-width: 1023px) {
+    top: 27px;
+    left: 1px;
+    width: 113px;
+    height: 8px;
+  }
+}
+
+/* Карточка объекта: на десктопе элементы стоят по координатам макета, в мобильной версии идут по потоку */
+.example-card {
+  position: relative;
+  height: 645px;
+  margin-top: 47px;
+  overflow: hidden;
+  background-color: var(--color-white);
+  border-radius: var(--radius-l);
+
+  @media (max-width: 1023px) {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin-top: 34px;
+    overflow: visible;
+    background: none;
+  }
+}
+
+.example-card__gallery {
+  position: absolute;
+  top: 181px;
+  left: 40px;
+  width: 592px;
+
+  @media (max-width: 1023px) {
+    position: static;
+    width: auto;
+  }
+}
+
+/* Большой слайдер: фото и планировки, клик открывает Fancybox */
+.example-main {
+  position: relative;
+  height: 273px;
+  overflow: hidden;
+  background-color: var(--color-white);
+  border-radius: var(--radius-m);
+
+  @media (max-width: 1023px) {
+    height: 200px;
+  }
+}
+
+.example-main__slide {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: zoom-in;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.example-main__slide--photo img {
+  object-fit: cover;
+}
+
+.example-main__nav {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: var(--color-white);
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  backdrop-filter: blur(2px);
+  transform: translateY(-50%);
+  transition: background-color var(--transition-base), opacity var(--transition-base);
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  @media (max-width: 1023px) {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.example-main__nav:hover {
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+.example-main__nav:active {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.example-main__nav--prev {
+  left: 12px;
+}
+
+.example-main__nav--next {
+  right: 12px;
+}
+
+.example-main__nav.swiper-button-disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Миниатюры управляют большим слайдером */
+.example-thumbs {
+  margin-top: 16px;
+  overflow: hidden;
+
+  @media (max-width: 1023px) {
+    margin-top: 10px;
+  }
+}
+
+.example-card__thumb {
+  position: relative;
+  width: 135px;
+  height: 135px;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: var(--color-white);
+  border-radius: var(--radius-l);
+  box-shadow: inset 0 0 0 2px transparent;
+  transition: box-shadow var(--transition-base), opacity var(--transition-base);
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Рамка активной миниатюры поверх фото */
+  &::after {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    content: '';
+    border: 2px solid transparent;
+    border-radius: inherit;
+    transition: border-color var(--transition-base);
+    pointer-events: none;
+  }
+
+  @media (max-width: 1023px) {
+    width: auto;
+    height: auto;
+    aspect-ratio: 1;
+    border-radius: var(--radius-m);
+  }
+}
+
+.example-card__thumb:hover {
+  opacity: 0.85;
+}
+
+.example-card__thumb.swiper-slide-thumb-active::after {
+  border-color: var(--color-accent);
+}
+
+.example-card__thumb--plan img {
+  top: 17%;
+  left: 4.83%;
+  width: 90.7%;
+  height: 67.33%;
+  object-fit: fill;
+}
+
+.example-card__thumb--plan-alt img {
+  top: 15.9%;
+  left: 10.94%;
+  width: 78.12%;
+  height: 68.27%;
+  object-fit: fill;
+}
+
+.example-card__name {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  width: 610px;
+  font-weight: var(--font-weight-medium);
+  font-size: 28px;
+  line-height: 125%;
+
+  @media (max-width: 1023px) {
+    position: static;
+    width: auto;
+    margin-top: 20px;
+    font-size: 24px;
+    line-height: 115%;
+  }
+}
+
+.example-card__desc {
+  position: absolute;
+  top: 81px;
+  left: 40px;
+  width: 592px;
+  font-weight: var(--font-weight-light);
+  font-size: 16px;
+  line-height: 125%;
+
+  @media (max-width: 1023px) {
+    position: static;
+    width: auto;
+    margin-top: 12px;
+  }
+}
+
+.example-card__spec {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 285px;
+
+  @media (max-width: 1023px) {
+    position: static;
+    width: auto;
+    margin-top: 15px;
+  }
+}
+
+.example-card__spec dt {
+  font-weight: var(--font-weight-light);
+  font-size: 20px;
+  line-height: 125%;
+  color: rgba(0, 0, 0, 0.5);
+
+  @media (max-width: 1023px) {
+    font-size: 16px;
+  }
+}
+
+.example-card__spec dd {
+  font-size: 24px;
+  line-height: 125%;
+
+  @media (max-width: 1023px) {
+    font-size: 20px;
+  }
+}
+
+.example-card__spec--size {
+  top: 40px;
+  left: 692px;
+
+  @media (max-width: 1023px) {
+    margin-top: 21px;
+  }
+}
+
+.example-card__spec--terrace {
+  top: 133px;
+  left: 692px;
+
+  @media (max-width: 1023px) {
+    margin-top: 20px;
+  }
+}
+
+.example-card__spec--kit {
+  top: 40px;
+  left: 1038px;
+  width: 282px;
+
+  dd {
+    font-size: 20px;
+
+    @media (max-width: 1023px) {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    width: auto;
+    margin-top: 15px;
+  }
+}
+
+.example-card__price {
+  position: absolute;
+  top: 236px;
+  left: 692px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 4px;
+  width: 610px;
+  height: 74px;
+
+  @media (max-width: 1023px) {
+    position: static;
+    width: auto;
+    height: auto;
+    margin-top: 15px;
+  }
+}
+
+.example-card__price-value {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  font-weight: var(--font-weight-medium);
+  font-size: 36px;
+  line-height: 120%;
+  color: var(--color-accent);
+
+  @media (max-width: 1023px) {
+    gap: 10px;
+    font-size: 24px;
+
+    span:first-child {
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.example-card__price-note {
+  font-weight: var(--font-weight-light);
+  font-size: 20px;
+  line-height: 125%;
+
+  @media (max-width: 1023px) {
+    font-size: 16px;
+  }
+}
+
+.example-card__incl {
+  position: absolute;
+  top: 350px;
+  left: 692px;
+  width: 610px;
+
+  @media (max-width: 1023px) {
+    position: static;
+    width: auto;
+    margin-top: 31px;
+  }
+}
+
+.example-card__incl-title {
+  font-weight: var(--font-weight-medium);
+  font-size: 24px;
+  line-height: 125%;
+
+  @media (max-width: 1023px) {
+    font-size: 20px;
+  }
+}
+
+.example-card__incl-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.example-card__incl-list li {
+  padding-left: 22px;
+  font-weight: var(--font-weight-light);
+  font-size: 20px;
+  line-height: 125%;
+  --bar-w: 6px;
+  border-left: 6px solid transparent;
+
+  @media (max-width: 1023px) {
+    padding-left: 12px;
+  }
+}
+
+.example-card__btn {
+  position: absolute;
+  top: 549px;
+  left: 692px;
+  padding-inline: 48px;
+
+  @media (max-width: 1023px) {
+    position: static;
+    margin-top: 30px;
+  }
+}

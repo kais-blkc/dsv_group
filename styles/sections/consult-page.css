@@ -1,0 +1,135 @@
+/* ===== Страницы «Пиломатериалы» и «Комплектующие» (консультация) ===== */
+
+.cp {
+  position: relative;
+  overflow-x: clip;
+  padding-top: 202px;
+
+  @media (max-width: 1023px) {
+    padding-top: 149px;
+  }
+}
+
+/* Заголовок + текст слева, фото справа; на мобильной фото идёт первым */
+.cp__grid {
+  display: grid;
+  grid-template-columns: 1fr 734px;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    'title photo'
+    'text photo';
+  column-gap: 20px;
+
+  @media (max-width: 1023px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      'photo'
+      'title'
+      'text';
+    row-gap: 20px;
+  }
+}
+
+.cp__title {
+  grid-area: title;
+  max-width: 478px;
+  margin-top: 3px;
+  font-weight: var(--font-weight-medium);
+  font-size: 52px;
+  line-height: 100%;
+
+  span {
+    color: var(--color-accent);
+  }
+
+  @media (max-width: 1023px) {
+    max-width: none;
+    margin-top: 0;
+    font-size: 36px;
+  }
+}
+
+.cp__text {
+  grid-area: text;
+  align-self: start;
+  max-width: 418px;
+  margin-top: 30px;
+  font-weight: var(--font-weight-light);
+  font-size: 20px;
+  line-height: 125%;
+
+  @media (max-width: 1023px) {
+    max-width: none;
+    margin-top: 0;
+  }
+}
+
+.cp__photo {
+  grid-area: photo;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: var(--radius-m);
+
+  @media (max-width: 1023px) {
+    height: 128px;
+  }
+}
+
+/* ----- «Во время консультации вы» ----- */
+.cp-list {
+  padding-top: 104px;
+
+  @media (max-width: 1023px) {
+    padding-top: 56px;
+  }
+}
+
+.cp-list__title {
+  font-weight: var(--font-weight-medium);
+  font-size: 36px;
+  line-height: 100%;
+
+  @media (max-width: 1023px) {
+    font-size: 24px;
+    line-height: 115%;
+  }
+}
+
+.cp-list__items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 30px 50px;
+  margin-top: 40px;
+
+  @media (max-width: 1023px) {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 20px;
+    margin-top: 20px;
+  }
+}
+
+.cp-list__item {
+  width: 406px;
+  padding-left: 16px;
+  font-weight: var(--font-weight-light);
+  font-size: 20px;
+  line-height: 125%;
+  --bar-w: 6px;
+  border-left: 6px solid transparent;
+
+  &:nth-child(3) {
+    width: 448px;
+  }
+
+  @media (max-width: 1023px) {
+    width: 100%;
+
+    &:nth-child(3) {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,212 @@
+.cta {
+  padding-bottom: var(--section-padding);
+
+  @media (max-width: 1023px) {
+    padding-bottom: 56px;
+  }
+}
+
+.cta__card {
+  position: relative;
+  height: 346px;
+  overflow: hidden;
+  letter-spacing: 0.01em;
+  color: var(--color-white);
+  background-color: #2a2a2a;
+  border-radius: var(--radius-l);
+
+  @media (max-width: 1023px) {
+    height: 660px;
+    margin-inline: -16px;
+  }
+}
+
+.cta__title {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  width: 586px;
+  font-weight: var(--font-weight-medium);
+  font-size: 32px;
+  line-height: 115%;
+
+  span {
+    color: var(--color-accent);
+  }
+
+  @media (max-width: 1023px) {
+    top: 24px;
+    left: 24px;
+    width: 342px;
+    font-size: 24px;
+    line-height: 125%;
+  }
+}
+
+.cta__text {
+  position: absolute;
+  top: 124px;
+  left: 40px;
+  width: 586px;
+  font-weight: var(--font-weight-light);
+  font-size: 18px;
+  line-height: 125%;
+
+  @media (max-width: 1023px) {
+    top: 131px;
+    left: 24px;
+    width: 342px;
+  }
+}
+
+.cta__fields {
+  position: absolute;
+  top: 200px;
+  left: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 10px;
+  width: 590px;
+
+  @media (max-width: 1023px) {
+    top: 223px;
+    left: 24px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 10px;
+    width: 342px;
+  }
+}
+
+.cta__fields .consult__submit {
+  font-weight: var(--font-weight-regular);
+}
+
+.cta__fields .consult__agree {
+  @media (max-width: 1023px) {
+    margin-top: 2px;
+  }
+}
+
+.cta__grass {
+  position: absolute;
+  top: 254px;
+  left: 0;
+  width: 1563px;
+  max-width: none;
+  height: 174px;
+  pointer-events: none;
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
+
+.cta__house {
+  position: absolute;
+  max-width: none;
+  pointer-events: none;
+}
+
+/* Модульные дома */
+.cta--modular .cta__house {
+  top: -20px;
+  left: 707px;
+  width: 769px;
+  height: 402px;
+  object-fit: cover;
+
+  @media (max-width: 1023px) {
+    top: 425px;
+    left: -95px;
+    width: 512px;
+    height: 267px;
+  }
+}
+
+/* Каркасные дома: фото отражено по горизонтали и обрезано рамкой */
+.cta__house-frame {
+  position: absolute;
+  overflow: hidden;
+  pointer-events: none;
+  transform: scaleX(-1);
+
+  img {
+    position: absolute;
+    max-width: none;
+  }
+}
+
+.cta--karkas .cta__house-frame {
+  top: -111px;
+  left: 513px;
+  width: 847px;
+  height: 797px;
+
+  img {
+    top: -19.6%;
+    left: -50.16%;
+    width: 150.16%;
+    height: 119.6%;
+  }
+
+  @media (max-width: 1023px) {
+    top: 376px;
+    left: -147px;
+    width: 555px;
+    height: 522px;
+  }
+}
+
+.cta__pine {
+  position: absolute;
+  max-width: none;
+  pointer-events: none;
+}
+
+.cta__pine--right {
+  top: 25.4px;
+  left: 1219.4px;
+  width: 280.5px;
+  height: 280.5px;
+  transform: rotate(-30deg);
+
+  @media (max-width: 1023px) {
+    top: 419.5px;
+    left: 314.7px;
+    width: 151px;
+    height: 151px;
+  }
+}
+
+.cta__pine--left {
+  top: -85.4px;
+  left: 637.6px;
+  width: 210.6px;
+  height: 210.6px;
+  transform: rotate(30deg);
+
+  @media (max-width: 1023px) {
+    top: 383.7px;
+    left: -108.4px;
+  }
+}
+
+/* У страницы «Каркасные дома» над формой нет полного отступа секции */
+.cta--karkas.section-padding {
+  padding-top: 94px;
+
+  @media (max-width: 1023px) {
+    padding-top: 56px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .cta--karkas .cta__pine--right {
+    top: 450.5px;
+  }
+
+  .cta--karkas .cta__pine--left {
+    top: 414.7px;
+  }
+}

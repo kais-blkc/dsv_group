@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Каркасные дома — DSV Group</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="js/scale.js"></script>
+</head>
+<body>
+  <header class="header" id="header">
+    <picture class="header__logo header__light">
+      <source media="(max-width: 1023px)" srcset="assets/icons/logo-m.svg">
+      <img src="assets/icons/logo.svg" alt="">
+    </picture>
+    <picture class="header__logo header__dark">
+      <source media="(max-width: 1023px)" srcset="assets/icons/logo-m-dark.svg">
+      <img src="assets/icons/logo-dark.svg" alt="">
+    </picture>
+    <a class="header__logo-link" href="index.html" aria-label="DSV Group — на главную"></a>
+
+    <div class="container header__container">
+      <a class="header__call" href="tel:88007750553" aria-label="Позвонить">
+        <img class="header__light" src="assets/icons/phone-m.svg" alt="">
+        <img class="header__dark" src="assets/icons/phone-m-dark.svg" alt="">
+      </a>
+      <p class="header__slogan">Произвели и доставили по всей России<br>более 3000 домов и бань с 2018г</p>
+      <a class="header__phone" href="tel:88007750553">8 (800) 775-05-53</a>
+      <button class="header__burger" type="button" aria-label="Открыть меню" aria-controls="menu" data-menu-open>
+        <picture class="header__light">
+          <source media="(max-width: 1023px)" srcset="assets/icons/burger-m.svg">
+          <img src="assets/icons/burger.svg" alt="">
+        </picture>
+        <picture class="header__dark">
+          <source media="(max-width: 1023px)" srcset="assets/icons/burger-m-dark.svg">
+          <img src="assets/icons/burger-dark.svg" alt="">
+        </picture>
+      </button>
+    </div>
+  </header>
+
+  <div class="menu" id="menu" aria-hidden="true">
+    <div class="menu__overlay" data-menu-close></div>
+    <div class="menu__panel" role="dialog" aria-label="Меню">
+      <button class="menu__close" type="button" aria-label="Закрыть меню" data-menu-close>
+        <img src="assets/icons/close.svg" alt="">
+      </button>
+
+      <nav class="menu__nav">
+        <a class="menu__link" href="index.html">Главная</a>
+
+        <div class="menu__group">
+          <button class="menu__toggle" type="button" aria-expanded="true">
+            Бани
+            <img class="menu__chevron" src="assets/icons/chevron.svg" alt="">
+          </button>
+          <div class="menu__sub-wrap">
+            <div class="menu__sub">
+              <a class="menu__sublink" href="bani-bochki.html">Бани-бочки</a>
+              <a class="menu__sublink" href="karkas-bani.html">Каркасные бани</a>
+              <a class="menu__sublink" href="options.html">Доп. опции</a>
+              <a class="menu__sublink" href="bani-bochki.html#credit">Рассрочка</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu__group">
+          <button class="menu__toggle" type="button" aria-expanded="true">
+            Каркасные дома
+            <img class="menu__chevron" src="assets/icons/chevron.svg" alt="">
+          </button>
+          <div class="menu__sub-wrap">
+            <div class="menu__sub">
+              <a class="menu__sublink" href="karkas.html#projects">Проекты домов</a>
+              <a class="menu__sublink" href="options.html">Доп. опции</a>
+              <a class="menu__sublink" href="bani-bochki.html#credit">Рассрочка</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu__group">
+          <button class="menu__toggle" type="button" aria-expanded="true">
+            Модульные дома
+            <img class="menu__chevron" src="assets/icons/chevron.svg" alt="">
+          </button>
+          <div class="menu__sub-wrap">
+            <div class="menu__sub">
+              <a class="menu__sublink" href="modular.html#projects">Проекты домов</a>
+              <a class="menu__sublink" href="modular.html#example">Комплектация</a>
+              <a class="menu__sublink" href="bani-bochki.html#credit">Рассрочка</a>
+            </div>
+          </div>
+        </div>
+
+        <a class="menu__link" href="franchise.html">Франшиза</a>
+
+        <div class="menu__group">
+          <button class="menu__toggle" type="button" aria-expanded="true">
+            Производство
+            <img class="menu__chevron" src="assets/icons/chevron.svg" alt="">
+          </button>
+          <div class="menu__sub-wrap">
+            <div class="menu__sub">
+              <a class="menu__sublink" href="production.html">Наше производство</a>
+              <a class="menu__sublink" href="lumber.html">Пиломатериалы</a>
+              <a class="menu__sublink" href="components.html">Комплектующие</a>
+            </div>
+          </div>
+        </div>
+
+        <a class="menu__link" href="index.html#works">Наши работы</a>
+        <a class="menu__link" href="reviews.html">Отзывы</a>
+        <a class="menu__link" href="contacts.html">Контакты</a>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+    <section class="page-hero page-hero--karkas">
+      <div class="container page-hero__container">
+        <nav class="breadcrumbs" aria-label="Хлебные крошки">
+          <div class="container">
+            <ol class="breadcrumbs__list">
+              <li><a href="index.html">Главная</a></li>
+              <li aria-hidden="true">—</li>
+              <li aria-current="page">Каркасные дома</li>
+            </ol>
+          </div>
+        </nav>
+
+        <h1 class="page-hero__title">Каркасные дома</h1>
+        <p class="page-hero__price"><span>от</span><span>5 600 000 ₽</span></p>
+        <p class="page-hero__text">Строим тёплые каркасные дома для постоянного проживания и сезонного отдыха — по нашим типовым проектам или индивидуальному заданию.</p>
+        <a class="page-hero__btn btn-accent" href="#cta">Рассчитать стоимость</a>
+
+        <div class="page-hero__bottom">
+          <ul class="page-hero__adv">
+            <li class="page-hero__adv-item accent-bar">Материал для каждого дома — с собственного производства в Ульяновске</li>
+            <li class="page-hero__adv-item accent-bar">Доска зимней заготовки, просушенная в промышленных сушильных камерах</li>
+            <li class="page-hero__adv-item accent-bar">Строительство на вашем участке по технологическим картам DSV Group и под контролем нашего тех. отдела</li>
+          </ul>
+
+          <ul class="page-hero__maps">
+            <li class="page-hero__map">
+              <span class="page-hero__map-logo page-hero__map-logo--yandex"><img src="assets/img/shared/yandex.png" alt="Яндекс Карты"></span>4.9
+            </li>
+            <li class="page-hero__map">
+              <span class="page-hero__map-logo page-hero__map-logo--2gis"><img src="assets/img/2gis.png" alt="2ГИС"></span>4.9
+            </li>
+            <li class="page-hero__map">
+              <span class="page-hero__map-logo page-hero__map-logo--avito"><img src="assets/img/avito.png" alt="Авито"></span>5.0
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="steps steps--karkas section-padding">
+      <div class="container">
+        <h2 class="steps__title section-title section-title--underlined">
+          От договора до первой<br> прибыли — за 2 месяца
+          <picture class="section-title__line">
+            <source media="(max-width: 1023px)" srcset="assets/icons/underline-steps-karkas-m.svg">
+            <img src="assets/icons/underline-steps-karkas.svg" alt="" loading="lazy">
+          </picture>
+        </h2>
+        <ol class="steps__list">
+          <li class="step">
+            <p class="step__head accent-bar">01</p>
+            <p class="step__text">Замер участка<br class="br-desktop"> и согласование<br class="br-desktop"> проекта</p>
+          </li>
+          <li class="step">
+            <p class="step__head accent-bar">02</p>
+            <p class="step__text">Фундамент, каркас,<br class="br-desktop"> монтаж кровли,<br class="br-desktop"> установка окон и дверей</p>
+          </li>
+          <li class="step">
+            <p class="step__head accent-bar">03</p>
+            <p class="step__text">Утепление и черновая<br class="br-desktop"> отделка на каждом<br class="br-desktop"> этапе работ</p>
+          </li>
+          <li class="step">
+            <p class="step__head accent-bar">04</p>
+            <p class="step__text">Чистовая отделка при<br class="br-desktop"> заказе комплектации<br class="br-desktop"> под ключ</p>
+          </li>
+          <li class="step">
+            <p class="step__head accent-bar">05</p>
+            <p class="step__text">Сдача объекта<br class="br-desktop"> заказчику</p>
+          </li>
+        </ol>
+        <div class="steps__photo"><img src="assets/img/karkas/steps.jpg" alt="Руководитель DSV Group на стройплощадке" loading="lazy"></div>
+      </div>
+    </section>
+
+    <section class="materials section-padding">
+      <div class="container">
+        <h2 class="materials__title section-title section-title--underlined">
+          Из чего строим
+          <picture class="section-title__line">
+            <source media="(max-width: 1023px)" srcset="assets/icons/underline-materials-m.svg">
+            <img src="assets/icons/underline-materials.svg" alt="" loading="lazy">
+          </picture>
+        </h2>
+        <div class="materials__cards">
+          <article class="material-card">
+            <div class="material-card__photo"><img class="material-card__img--1" src="assets/img/karkas/materials-1.jpg" alt="Каркас дома" loading="lazy"></div>
+            <h3 class="material-card__title">Каркас и обшивка</h3>
+            <p class="material-card__text"><span class="br-desktop">Бани-бочки и каркасные бани.<br> Готовое изделие с завода — привозим<br> и устанавливаем на участке за день.</span><span class="br-mobile">Доска зимней заготовки, которая проходит сушку до 10–12% влажности в промышленных сушильных камерах и отбор по геометрии</span></p>
+          </article>
+          <article class="material-card">
+            <div class="material-card__photo"><img class="material-card__img--2" src="assets/img/karkas/materials-2.jpg" alt="Отделка" loading="lazy"></div>
+            <h3 class="material-card__title">Отделка</h3>
+            <p class="material-card__text">Для отделки используем кедр<br class="br-desktop"> и лиственницу — лиственница не гниёт<br class="br-desktop"> и не боится грибка и вредителей,<br class="br-desktop"> поэтому такие дома служат<br class="br-desktop"> десятилетиями.</p>
+          </article>
+          <article class="material-card">
+            <div class="material-card__photo"><img class="material-card__img--3" src="assets/img/karkas/materials-3.jpg" alt="Утеплитель" loading="lazy"></div>
+            <h3 class="material-card__title">Кровельные материалы<br> и утеплители</h3>
+            <p class="material-card__text">Закупаем у проверенных поставщиком<br> и используем на всех объектах одного<br> стандарта, независимо от региона<br class="br-desktop"> доставки</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="techmap section-padding">
+      <div class="container techmap__container">
+        <img class="techmap__branch" src="assets/img/branch.png" alt="" loading="lazy">
+        <h2 class="techmap__title section-title section-title--underlined">
+          Технологическая карта
+          <picture class="section-title__line">
+            <source media="(max-width: 1023px)" srcset="assets/icons/underline-techmap-m.svg">
+            <img src="assets/icons/underline-techmap.svg" alt="" loading="lazy">
+          </picture>
+        </h2>
+        <p class="techmap__text section-text">На каждый проект каркасного дома<br class="br-mobile"> у нас есть техническая карта.<br class="br-mobile"> Бригада<br class="br-desktop"> на участке работает<br class="br-mobile"> по этой карте, а ключевые этапы —<br class="br-mobile"> фундамент, каркас,<br class="br-desktop"> кровлю —<br class="br-mobile"> удалённо проверяет<br class="br-mobile"> наш технический отдел</p>
+
+        <h3 class="techmap__steps-title">Пошаговое описание монтажа:</h3>
+        <ul class="techmap__steps">
+          <li class="accent-bar">Как ставится фундамент</li>
+          <li class="accent-bar">Как собирается каркас</li>
+          <li class="accent-bar">Как крепится кровля</li>
+        </ul>
+        <p class="techmap__result">Так мы даём одинаковый результат<br class="br-desktop"> независимо от того, в каком регионе идёт стройка</p>
+
+        <img class="techmap__image" src="assets/img/karkas/techmap.png" alt="Технологическая карта: монтажная папка с этапами сборки" loading="lazy">
+        <div class="techmap__leaf"><img src="assets/img/leaf.png" alt="" loading="lazy"></div>
+      </div>
+    </section>
+
+    <section class="projects projects--karkas section-padding" id="projects">
+      <div class="container projects__container">
+        <h2 class="projects__title section-title section-title--underlined">
+          Проекты<br class="br-mobile"> и планировки
+          <picture class="section-title__line">
+            <source media="(max-width: 1023px)" srcset="assets/icons/underline-projects-m.svg">
+            <img src="assets/icons/underline-projects.svg" alt="" loading="lazy">
+          </picture>
+        </h2>
+        <img class="projects__swipe" src="assets/icons/swipe.svg" alt="" loading="lazy">
+
+        <div class="swiper projects-slider">
+          <div class="swiper-wrapper">
+          <article class="swiper-slide project-card">
+            <div class="project-card__head">
+              <div>
+                <div class="project-card__photo" data-modal-open="consult">
+                  <img class="project-card__img project-card__img--wide" src="assets/img/karkas/project-1.jpg" alt="Standart 4м, 1.8*2.15*2.15м" loading="lazy">
+                  <button class="project-card__badge" type="button" data-modal-open="3d" aria-label="Смотреть в 3D"><img src="assets/img/shared/logo360.png" alt="360°" loading="lazy"></button>
+                  <button class="project-card__consult" type="button">Получить консультацию <img src="assets/icons/arrow-up-right-light.svg" alt="" loading="lazy"></button>
+                </div>
+                <h3 class="project-card__title">Standart 4м</h3>
+                <dl class="project-card__specs">
+                  <div><dt>Размеры (Д*Ш*В):</dt><dd>1.8*2.15*2.15м</dd></div>
+                  <div><dt>Отделка внутри:</dt><dd>кедр</dd></div>
+                  <div><dt>Отделения:</dt><dd>парилка</dd></div>
+                </dl>
+              </div>
+              <p class="project-card__price">от 225 000 ₽</p>
+            </div>
+            <a class="project-card__btn btn-accent" href="#cta">Узнать подробнее</a>
+          </article>
+          <article class="swiper-slide project-card">
+            <div class="project-card__head">
+              <div>
+                <div class="project-card__photo" data-modal-open="consult">
+                  <img class="project-card__img project-card__img--shifted" src="assets/img/karkas/project-2.jpg" alt="Standart 4м, 2*1.9*2.15м" loading="lazy">
+                  <button class="project-card__badge" type="button" data-modal-open="3d" aria-label="Смотреть в 3D"><img src="assets/img/shared/logo360.png" alt="360°" loading="lazy"></button>
+                  <button class="project-card__consult" type="button">Получить консультацию <img src="assets/icons/arrow-up-right-light.svg" alt="" loading="lazy"></button>
+                </div>
+                <h3 class="project-card__title">Standart 4м</h3>
+                <dl class="project-card__specs">
+                  <div><dt>Размеры (Д*Ш*В):</dt><dd>2*1.9*2.15м</dd></div>
+                  <div><dt>Отделка внутри:</dt><dd>кедр</dd></div>
+                  <div><dt>Отделения:</dt><dd>парилка</dd></div>
+                </dl>
+              </div>
+              <p class="project-card__price">от 265 000 ₽</p>
+            </div>
+            <a class="project-card__btn btn-accent" href="#cta">Узнать подробнее</a>
+          </article>
+          <article class="swiper-slide project-card">
+            <div class="project-card__head">
+              <div>
+                <div class="project-card__photo" data-modal-open="consult">
+                  <img class="project-card__img " src="assets/img/karkas/project-3.jpg" alt="Standart 4м, 3*1.9*2.15м" loading="lazy">
+                  <button class="project-card__badge" type="button" data-modal-open="3d" aria-label="Смотреть в 3D"><img src="assets/img/shared/logo360.png" alt="360°" loading="lazy"></button>
+                  <button class="project-card__consult" type="button">Получить консультацию <img src="assets/icons/arrow-up-right-light.svg" alt="" loading="lazy"></button>
+                </div>
+                <h3 class="project-card__title">Standart 4м</h3>
+                <dl class="project-card__specs">
+                  <div><dt>Размеры (Д*Ш*В):</dt><dd>3*1.9*2.15м</dd></div>
+                  <div><dt>Отделка внутри:</dt><dd>кедр</dd></div>
+                  <div><dt>Отделения:</dt><dd>парилка, комната отдыха</dd></div>
+                </dl>
+              </div>
+              <p class="project-card__price">от 325 000 ₽</p>
+            </div>
+            <a class="project-card__btn btn-accent" href="#cta">Узнать подробнее</a>
+          </article>
+          <article class="swiper-slide project-card">
+            <div class="project-card__head">
+              <div>
+                <div class="project-card__photo" data-modal-open="consult">
+                  <img class="project-card__img " src="assets/img/karkas/project-4.jpg" alt="Standart 4м, 3.5*1.9*2.15м" loading="lazy">
+                  <button class="project-card__badge" type="button" data-modal-open="3d" aria-label="Смотреть в 3D"><img src="assets/img/shared/logo360.png" alt="360°" loading="lazy"></button>
+                  <button class="project-card__consult" type="button">Получить консультацию <img src="assets/icons/arrow-up-right-light.svg" alt="" loading="lazy"></button>
+                </div>
+                <h3 class="project-card__title">Standart 4м</h3>
+                <dl class="project-card__specs">
+                  <div><dt>Размеры (Д*Ш*В):</dt><dd>3.5*1.9*2.15м</dd></div>
+                  <div><dt>Отделка внутри:</dt><dd>кедр</dd></div>
+                  <div><dt>Отделения:</dt><dd>парилка, комната отдыха</dd></div>
+                </dl>
+              </div>
+              <p class="project-card__price">от 345 000 ₽</p>
+            </div>
+            <a class="project-card__btn btn-accent" href="#cta">Узнать подробнее</a>
+          </article>
+          <article class="swiper-slide project-card">
+            <div class="project-card__head">
+              <div>
+                <div class="project-card__photo" data-modal-open="consult">
+                  <img class="project-card__img " src="assets/img/karkas/project-5.jpg" alt="Standart 4м, 4*1.9*2.15м" loading="lazy">
+                  <button class="project-card__badge" type="button" data-modal-open="3d" aria-label="Смотреть в 3D"><img src="assets/img/shared/logo360.png" alt="360°" loading="lazy"></button>
+                  <button class="project-card__consult" type="button">Получить консультацию <img src="assets/icons/arrow-up-right-light.svg" alt="" loading="lazy"></button>
+                </div>
+                <h3 class="project-card__title">Standart 4м</h3>
+                <dl class="project-card__specs">
+                  <div><dt>Размеры (Д*Ш*В):</dt><dd>4*1.9*2.15м</dd></div>
+                  <div><dt>Отделка внутри:</dt><dd>кедр</dd></div>
+                  <div><dt>Отделения:</dt><dd>парилка, комната отдыха</dd></div>
+                </dl>
+              </div>
+              <p class="project-card__price">от 360 000 ₽</p>
+            </div>
+            <a class="project-card__btn btn-accent" href="#cta">Узнать подробнее</a>
+          </article>
+          <article class="swiper-slide project-card">
+            <div class="project-card__head">
+              <div>
+                <div class="project-card__photo" data-modal-open="consult">
+                  <img class="project-card__img " src="assets/img/karkas/project-6.jpg" alt="Баня-бочка 5м, 5*1.9*2.15м" loading="lazy">
+                  <button class="project-card__badge" type="button" data-modal-open="3d" aria-label="Смотреть в 3D"><img src="assets/img/shared/logo360.png" alt="360°" loading="lazy"></button>
+                  <button class="project-card__consult" type="button">Получить консультацию <img src="assets/icons/arrow-up-right-light.svg" alt="" loading="lazy"></button>
+                </div>
+                <h3 class="project-card__title">Баня-бочка 5м</h3>
+                <dl class="project-card__specs">
+                  <div><dt>Размеры (Д*Ш*В):</dt><dd>5*1.9*2.15м</dd></div>
+                  <div><dt>Отделка внутри:</dt><dd>кедр</dd></div>
+                  <div><dt>Отделения:</dt><dd>парилка, моечное, комната отдыха</dd></div>
+                </dl>
+              </div>
+              <p class="project-card__price">от 450 000 ₽</p>
+            </div>
+            <a class="project-card__btn btn-accent" href="#cta">Узнать подробнее</a>
+          </article>
+          <article class="swiper-slide project-card">
+            <div class="project-card__head">
+              <div>
+                <div class="project-card__photo" data-modal-open="consult">
+                  <img class="project-card__img " src="assets/img/karkas/project-7.jpg" alt="Баня-бочка 6м, 6*1.9*2.15м" loading="lazy">
+                  <button class="project-card__badge" type="button" data-modal-open="3d" aria-label="Смотреть в 3D"><img src="assets/img/shared/logo360.png" alt="360°" loading="lazy"></button>
+                  <button class="project-card__consult" type="button">Получить консультацию <img src="assets/icons/arrow-up-right-light.svg" alt="" loading="lazy"></button>
+                </div>
+                <h3 class="project-card__title">Баня-бочка 6м</h3>
+                <dl class="project-card__specs">
+                  <div><dt>Размеры (Д*Ш*В):</dt><dd>6*1.9*2.15м</dd></div>
+                  <div><dt>Отделка внутри:</dt><dd>кедр</dd></div>
+                  <div><dt>Отделения:</dt><dd>парилка, моечное, комната отдыха</dd></div>
+                </dl>
+              </div>
+              <p class="project-card__price">от 485 000 ₽</p>
+            </div>
+            <a class="project-card__btn btn-accent" href="#cta">Узнать подробнее</a>
+          </article>
+          </div>
+        </div>
+
+        <a class="projects__more projects__more--mobile btn-outline" href="#">Смотреть больше</a>
+      </div>
+    </section>
+
+    <section class="cta cta--karkas section-padding" id="cta">
+      <div class="container">
+        <form class="cta__card" action="#" method="post">
+          <img class="cta__grass" src="assets/img/shared/form-grass.png" alt="" loading="lazy">
+          <div class="cta__house-frame"><img src="assets/img/karkas/house.png" alt="" loading="lazy"></div>
+          <img class="cta__pine cta__pine--right" src="assets/img/shared/pine-1.png" alt="" loading="lazy">
+          <img class="cta__pine cta__pine--left" src="assets/img/shared/pine-2.png" alt="" loading="lazy">
+
+          <h2 class="cta__title"><span>Узнайте точную стоимость</span><br> каркасного дома<br class="br-mobile"> под ваш участок</h2>
+          <p class="cta__text">Оставьте заявку — рассчитаем стоимость<br class="br-mobile"> проекта с учётом<br class="br-desktop"> площади<br class="br-mobile"> и комплектации</p>
+          <div class="cta__fields">
+            <input class="consult__input" aria-label="Телефон" type="tel" name="phone" placeholder="+7 (000) 000-00-00" autocomplete="tel" required>
+            <button class="consult__submit btn-accent" type="submit">Получить консультацию</button>
+            <label class="consult__agree">
+              <img src="assets/icons/checkbox.svg" alt="" loading="lazy">
+              <p>Нажимая кнопку, вы даёте согласие<br class="br-mobile"> на обработку персональных данных<br class="br-mobile"> согласно политике конфиденциальности</p>
+            </label>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contacts-footer">
+    <picture class="footer__logo">
+      <source media="(max-width: 1023px)" srcset="assets/icons/logo-footer-m.svg">
+      <img src="assets/icons/logo-footer.svg" alt="DSV Group" loading="lazy">
+    </picture>
+    <p class="footer__copyright">© 2024 DSV Group</p>
+    <div class="container footer__container">
+      <p class="footer__hours">Звоните, мы на связи<br>пн–вс с 9:00 до 18:00 мск</p>
+
+      <div class="footer__contact">
+        <div class="footer__contact-row">
+          <a href="tel:88007750553">8 800 775-05-53</a>
+          <a href="mailto:mail@dsv-group.ru">mail@dsv-group.ru</a>
+        </div>
+        <p class="footer__contact-label">Приезжайте на производство</p>
+        <p class="footer__contact-address">г. Ульяновск, ул. Шофёров, 1</p>
+      </div>
+
+      <div class="footer__social">
+        <p class="footer__social-text">Подписывайтесь на нас в соцсетях</p>
+        <div class="footer__social-list">
+          <a href="#" aria-label="Telegram"><img src="assets/icons/telegram.svg" alt="" loading="lazy"></a>
+          <a href="#" aria-label="YouTube"><img src="assets/icons/youtube.svg" alt="" loading="lazy"></a>
+          <a href="#" aria-label="VK"><img src="assets/icons/vk.svg" alt="" loading="lazy"></a>
+        </div>
+      </div>
+
+      <div class="footer__menu">
+        <div class="footer__menu-col footer__menu-col--about">
+          <p class="footer__menu-title">О компании</p>
+          <ul class="footer__menu-list">
+            <li><a href="production.html">Производство</a></li>
+            <li><a href="index.html#works">Наши работы</a></li>
+            <li><a href="reviews.html">Отзывы</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="franchise.html">Франшиза</a></li>
+          </ul>
+        </div>
+        <div class="footer__menu-col footer__menu-col--services">
+          <p class="footer__menu-title">Услуги</p>
+          <ul class="footer__menu-list">
+            <li><a href="bani-bochki.html">Бани</a></li>
+            <li><a href="karkas.html">Каркасные дома</a></li>
+            <li><a href="modular.html">Модульные дома</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__legal">
+        <div class="footer__legal-row">
+          <div class="footer__reg">
+            <span class="footer__reg-ip">ИП Илларионов А.А.</span>
+            <span class="footer__reg-numbers">
+              <span class="footer__reg-ogrn">ОГРН 1217300004162</span>
+              <span>ИНН 732719218706</span>
+            </span>
+          </div>
+          <span>г. Ульяновск, ул. Шофёров, 1</span>
+        </div>
+        <div class="footer__legal-row footer__legal-row--links">
+          <a href="#">Политика конфиденциальности</a>
+          <span>Сайт не является публичной офертой и носит информационный характер</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" id="modal-consult" role="dialog" aria-modal="true" aria-labelledby="modal-consult-title" hidden>
+    <div class="modal__overlay" data-modal-close></div>
+    <form class="modal__box modal__box--form" action="#" method="post" novalidate>
+      <button class="modal__close" type="button" data-modal-close aria-label="Закрыть"><img src="assets/icons/modal-close.svg" alt="" loading="lazy"></button>
+      <h2 class="modal__title" id="modal-consult-title">Получить<br class="br-mobile"> консультацию</h2>
+      <p class="modal__text">Оставьте свои контактные данные, менеджер перезвонит в ближайшее время</p>
+      <input class="modal__input" type="tel" name="phone" aria-label="Телефон" placeholder="+7 (000) 000-00-00" autocomplete="tel" required>
+      <p class="modal__error" data-modal-error role="alert" hidden></p>
+      <button class="btn-accent modal__btn" type="submit">Получить консультацию</button>
+      <label class="modal__agree">
+        <img src="assets/icons/checkbox-gold.svg" alt="" loading="lazy">
+        <p>Нажимая кнопку, вы даёте согласие на обработку персональных данных согласно политике конфиденциальности</p>
+      </label>
+      <div class="modal__done" data-modal-done hidden>
+        <p class="modal__done-title">Спасибо за заявку!</p>
+        <p class="modal__done-text">Менеджер перезвонит вам в ближайшее время.</p>
+      </div>
+    </form>
+  </div>
+
+  <div class="modal" id="modal-3d" role="dialog" aria-modal="true" aria-label="Модель в 3D" hidden>
+    <div class="modal__overlay" data-modal-close></div>
+    <div class="modal__box modal__box--3d">
+      <button class="modal__close" type="button" data-modal-close aria-label="Закрыть"><img src="assets/icons/modal-close.svg" alt="" loading="lazy"></button>
+      <img class="modal__model" src="assets/img/modal/model-3d.jpg" alt="Каркасная баня, вид в 3D" loading="lazy">
+      <button class="modal__ar" type="button" data-modal-open="ar"><img src="assets/icons/cube-ar.svg" alt="" loading="lazy">Смотреть в пространстве</button>
+      <p class="modal__note">*Для смартфонов и планшетов с поддержкой дополненной реальности</p>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-ar" role="dialog" aria-modal="true" aria-labelledby="modal-ar-title" hidden>
+    <div class="modal__overlay" data-modal-close></div>
+    <div class="modal__box modal__box--ar">
+      <button class="modal__close" type="button" data-modal-close aria-label="Закрыть"><img src="assets/icons/modal-close.svg" alt="" loading="lazy"></button>
+      <h2 class="modal__title" id="modal-ar-title">Смотреть<br> в пространстве</h2>
+      <p class="modal__text">Наведите камеру телефона или планшета на QR&#8209;код, чтобы посмотреть на предмет в интерьере с помощью дополненной реальности.</p>
+      <div class="modal__qr">
+        <img src="assets/img/modal/qr.png" alt="QR-код для просмотра модели в дополненной реальности" loading="lazy">
+        <p class="modal__note">*Для смартфонов и планшетов с поддержкой дополненной реальности</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/imask@7"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

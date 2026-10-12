@@ -1,0 +1,146 @@
+.menu {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  visibility: hidden;
+  transition: visibility 0s linear 0.35s;
+}
+
+.menu.is-open {
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+.menu__overlay {
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-black);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.menu.is-open .menu__overlay {
+  opacity: 0.7;
+}
+
+.menu__panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 348px;
+  max-width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: var(--color-menu-bg);
+  transform: translateX(100%);
+  transition: transform 0.35s ease;
+}
+
+.menu.is-open .menu__panel {
+  transform: none;
+}
+
+.menu__close {
+  position: absolute;
+  top: 28px;
+  right: 35px;
+  width: 32px;
+  height: 32px;
+  transition: opacity var(--transition-base), transform var(--transition-base);
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.menu__close:hover {
+  opacity: 0.6;
+}
+
+.menu__close:active {
+  transform: scale(0.9);
+}
+
+.menu__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 297px;
+  padding: 80px 0 40px 16px;
+  font-weight: var(--font-weight-light);
+}
+
+.menu__link,
+.menu__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 18px;
+  line-height: 125%;
+  text-align: left;
+  transition: color var(--transition-base), opacity var(--transition-base);
+}
+
+.menu__link:hover,
+.menu__toggle:hover {
+  color: var(--color-accent-active);
+}
+
+.menu__link:active,
+.menu__toggle:active {
+  opacity: 0.6;
+}
+
+.menu__chevron {
+  width: 30px;
+  height: 30px;
+  transform: rotate(90deg);
+  transition: transform var(--transition-base);
+}
+
+.menu__group.is-closed .menu__chevron {
+  transform: rotate(270deg);
+}
+
+/* Сворачивание списка без изменения высоты в JS */
+.menu__sub-wrap {
+  display: grid;
+  grid-template-rows: 1fr;
+  margin-top: 8px;
+  transition: grid-template-rows var(--transition-base), margin-top var(--transition-base);
+}
+
+.menu__group.is-closed .menu__sub-wrap {
+  grid-template-rows: 0fr;
+  margin-top: 0;
+}
+
+.menu__sub {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-height: 0;
+  padding-inline: 12px;
+  overflow: hidden;
+}
+
+.menu__sublink {
+  display: flex;
+  align-items: center;
+  height: 24px;
+  font-size: 16px;
+  line-height: 125%;
+  color: rgba(0, 0, 0, 0.7);
+  transition: color var(--transition-base);
+}
+
+.menu__sublink:hover {
+  color: var(--color-black);
+}
+
+.menu__sublink:active {
+  opacity: 0.6;
+}

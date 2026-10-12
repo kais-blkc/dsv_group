@@ -1,0 +1,492 @@
+/* Планшет 768–1023px: мобильная вёрстка (≤1023) доработана — шире отступы, колонки вместо одной длинной ленты.
+   До 767px остаётся чистая мобильная версия. Подключается последним, чтобы переопределять мобильные правила. */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    max-width: none;
+    padding-inline: 32px;
+  }
+
+  .section-padding {
+    padding-top: 72px;
+  }
+
+  /* Размер заголовков оставляем мобильным (28px), чтобы совпадали рукописные подчёркивания;
+     расширяем только ширину и убираем мобильные переносы строк */
+  .section-title,
+  .categories__title,
+  .reviews__title,
+  .consult__title,
+  .projects__title,
+  .profit__title,
+  .works__title,
+  .production__title,
+  .quality__title,
+  .materials__title,
+  .techmap__title,
+  .market__title {
+    max-width: none;
+  }
+
+  .br-mobile {
+    display: none;
+  }
+
+  .categories__text,
+  .market__lead,
+  .logistics__text {
+    max-width: 640px;
+  }
+
+  .hero__container {
+    padding-inline: 0;
+  }
+
+  .section-text {
+    font-size: 18px;
+  }
+
+  /* --- Шапка: добавляем телефон текстом --- */
+  .header__call {
+    display: none;
+  }
+
+  .header__phone {
+    top: 17px;
+    right: auto;
+    left: 32px;
+    display: block;
+    font-size: 18px;
+  }
+
+  .header__burger {
+    right: 32px;
+  }
+
+  /* --- Hero главной --- */
+  .hero-slide__inner {
+    padding-inline: 32px;
+  }
+
+  .hero .hero-pagination,
+  .hero-slider .hero-pagination {
+    right: 32px;
+    left: 32px;
+    width: auto;
+  }
+
+  /* --- Главная: категории в ряд --- */
+  .categories__cards {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .category-card {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .category-card__photo {
+    height: 150px;
+  }
+
+  .category-card__title {
+    font-size: 20px;
+  }
+
+  .category-card__text {
+    font-size: 14px;
+  }
+
+  .price-badge {
+    padding-inline: 12px;
+    font-size: 16px;
+  }
+
+  .categories__also {
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+    height: 84px;
+    padding: 0 24px;
+  }
+
+  .categories__also-list {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .categories__also-item {
+    width: auto;
+  }
+
+  /* --- Производство --- */
+  .production__advantages {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 32px;
+  }
+
+  .production__photos {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .production__photos a:nth-child(n + 3) {
+    display: block;
+  }
+
+  .production__btn {
+    width: 358px;
+  }
+
+  /* --- Наши работы --- */
+  .works__grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .works-card--wide {
+    aspect-ratio: auto;
+  }
+
+  .works__btn,
+  .reviews__btn {
+    width: 358px;
+    margin-inline: auto;
+  }
+
+  /* --- Отзывы --- */
+  .reviews__list {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .reviews__note {
+    grid-template-columns: 1fr;
+  }
+
+  /* --- Консультация --- */
+  .consult__visual {
+    margin-inline: -32px;
+  }
+
+  .consult__form {
+    margin-inline: 0;
+    padding: 30px 40px 32px;
+  }
+
+  .consult__form-title,
+  .consult__form-text {
+    max-width: 480px;
+  }
+
+  .consult__avatar {
+    top: 30px;
+    right: 40px;
+    left: auto;
+    display: block;
+  }
+
+  /* --- Футер --- */
+  .footer__container {
+    padding-inline: 32px;
+  }
+
+  .footer__hours {
+    right: 32px;
+  }
+
+  .footer__menu {
+    flex-direction: row;
+    gap: 48px;
+  }
+
+  /* --- Внутренние страницы --- */
+  .page-hero {
+    height: 640px;
+  }
+
+  .page-hero__bottom {
+    gap: 30px;
+    padding-bottom: 24px;
+  }
+
+  .franchise-hero {
+    height: 680px;
+  }
+
+  .franchise-hero__container {
+    padding-bottom: 74px;
+  }
+
+  .franchise-hero__bottom {
+    gap: 40px;
+  }
+
+  /* Широкие десктопные фото вместо узких мобильных + затемнение снизу для читаемости */
+  .page-hero--modular {
+    background-image:
+      linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 45%),
+      url('../assets/img/slide-3.jpg');
+    background-position: center, 65% center;
+    background-size: 100% 100%, cover;
+  }
+
+  .page-hero--karkas {
+    background-image:
+      linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 45%),
+      linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0.65) 30%, rgba(0, 0, 0, 0) 75%),
+      url('../assets/img/slide-4.jpg');
+    background-position: center, center, 60% center;
+    background-size: 100% 100%, 100% 100%, cover;
+  }
+
+  .franchise-hero {
+    background-image:
+      linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 40%),
+      url('../assets/img/franchise/hero.jpg');
+    background-position: center, 70% center;
+    background-size: 100% 100%, cover;
+  }
+
+  .page-hero__adv {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .page-hero__adv-item:nth-child(n) {
+    flex: 1;
+    width: auto;
+  }
+
+  .material-card__text br,
+  .material-card__title br {
+    display: none;
+  }
+
+  .page-hero__text,
+  .franchise-hero__text {
+    max-width: 520px;
+  }
+
+  .franchise-hero__btn {
+    width: 358px;
+  }
+
+  .steps__list {
+    flex-flow: row wrap;
+    gap: 24px 32px;
+  }
+
+  .steps .step:nth-child(n) {
+    width: calc(33.33% - 22px);
+  }
+
+  .example-main {
+    height: 340px;
+  }
+
+  .quality__cols {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .quality__photo {
+    height: 300px;
+  }
+
+  .materials__cards {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .material-card {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .material-card__photo {
+    height: 170px;
+  }
+
+  .material-card__title {
+    font-size: 20px;
+  }
+
+  .material-card__text {
+    font-size: 14px;
+  }
+
+  .projects-slider {
+    margin-right: calc(-32px);
+  }
+
+  .cta__card {
+    margin-inline: 0;
+  }
+
+  .franchise-cta__card {
+    margin-inline: 0;
+  }
+
+  .format__cards {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .format-card {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .role-card__photo {
+    height: 240px;
+  }
+
+  .timeline__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 32px;
+  }
+
+  .market__stats {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .market__stats .stat {
+    flex: 1;
+  }
+
+  .market__photo,
+  .logistics__photo {
+    height: 380px;
+  }
+
+  .final-note {
+    max-width: 640px;
+  }
+
+  /* --- Отзывы --- */
+  .rv-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 32px;
+  }
+
+  /* На планшете заголовок в одну строку — подчёркиваем «за качество и сервис» */
+  .rv__subtitle:not(.rv__subtitle--vk) .section-title__line {
+    top: 31px;
+    left: 276px;
+    width: 290px;
+  }
+
+  .rv-list--vk > :nth-child(2) {
+    display: flex;
+  }
+
+  .reviews__list--page {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  /* --- Консультация (пиломатериалы / комплектующие) --- */
+  .cp__photo {
+    height: 240px;
+  }
+
+  .cp-list__items {
+    flex-direction: row;
+    gap: 24px 32px;
+  }
+
+  .cp-list__item:nth-child(n) {
+    width: calc(50% - 16px);
+  }
+
+  /* --- Дополнительные опции: две колонки, все карточки сразу --- */
+  .opt-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 24px;
+  }
+
+  .opt-card--extra {
+    display: flex;
+  }
+
+  .opt-more {
+    display: none;
+  }
+
+  .opt-card__media {
+    height: 240px;
+  }
+
+  /* --- Бани-бочки --- */
+  .page-hero--bochki {
+    height: 720px;
+    background-image:
+      linear-gradient(90deg, rgba(0, 0, 0, 0.8) 1.22%, rgba(0, 0, 0, 0.324) 37.78%, rgba(0, 0, 0, 0) 55.39%),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.8) 5.15%, rgba(0, 0, 0, 0.324) 25.68%, rgba(0, 0, 0, 0) 34.26%),
+      url('../assets/img/bochki/hero.jpg');
+    background-position: center, center, 70% center;
+    background-size: 100% 100%, 100% 100%, cover;
+  }
+
+  .bb-feat__grid,
+  .bb-feat--quality .bb-feat__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 32px;
+  }
+
+  .bb-works .works__grid,
+  .bb-works__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .bb-quiz,
+  .bb-credit__card,
+  .bb-visit__card,
+  .bb-faq__list {
+    margin-inline: 0;
+  }
+
+  .bb-quiz {
+    padding-inline: 40px;
+  }
+
+  .bb-quiz__answers {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bb-quiz__cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .bb-diag__stage,
+  .bb-diag__legend {
+    width: 358px;
+    margin-inline: auto;
+    padding-inline: 0;
+  }
+
+  .bb-opt {
+    width: calc(25% - 7.5px);
+  }
+
+  .bb-opt:nth-child(5) {
+    display: none;
+  }
+
+  .bb-steps__list {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 32px;
+  }
+
+  .bb-credit__card {
+    height: 460px;
+  }
+
+  .bb-faq__photo {
+    margin-top: 30px;
+  }
+}

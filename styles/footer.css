@@ -1,0 +1,374 @@
+.footer {
+  position: relative;
+  height: 349px;
+  overflow: hidden;
+  color: var(--color-white);
+  background-color: #222222;
+
+  @media (max-width: 1023px) {
+    height: auto;
+  }
+}
+
+/* SVG логотипа шире экрана: внутри него и логотип, и линия на всю ширину */
+.footer__logo {
+  position: absolute;
+  top: 31px;
+  left: calc(50% - 965.8px);
+  width: 1936.53px;
+  height: 48px;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+  }
+
+  @media (max-width: 1023px) {
+    top: 30px;
+    left: calc(50% - 319.8px);
+    width: 516.5px;
+  }
+}
+
+.footer__copyright {
+  position: absolute;
+  top: 56px;
+  left: calc(50% + 90px);
+  font-family: var(--font-header);
+  font-size: 14px;
+  line-height: 120%;
+  color: #c1c1c1;
+  white-space: nowrap;
+  opacity: 0.5;
+
+  @media (max-width: 1023px) {
+    top: 81px;
+    left: 15px;
+  }
+}
+
+.footer__container {
+  position: relative;
+  height: 100%;
+
+  @media (max-width: 1023px) {
+    height: auto;
+    padding-top: 118px;
+    padding-bottom: 30px;
+  }
+}
+
+.footer__hours {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 197px;
+  font-weight: var(--font-weight-light);
+  font-size: 14px;
+  line-height: 120%;
+
+  @media (max-width: 1023px) {
+    top: 34px;
+    right: 16px;
+    left: auto;
+    width: auto;
+    text-align: right;
+  }
+}
+
+.footer__contact {
+  position: absolute;
+  top: 119px;
+  left: 0;
+  width: 452px;
+
+  @media (max-width: 1023px) {
+    position: static;
+    width: auto;
+    padding-bottom: 21px;
+  }
+}
+
+.footer__contact-row {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-weight: var(--font-weight-medium);
+  font-size: 24px;
+  line-height: 115%;
+  white-space: nowrap;
+
+  a {
+    transition: color var(--transition-base);
+  }
+
+  a:hover {
+    color: var(--color-accent);
+  }
+
+  a:active {
+    color: var(--color-accent-active);
+  }
+
+  @media (max-width: 1023px) {
+    justify-content: space-between;
+    font-size: 18px;
+    line-height: 125%;
+  }
+}
+
+.footer__contact-label {
+  margin-top: 16px;
+  font-weight: var(--font-weight-light);
+  font-size: 16px;
+  line-height: 125%;
+
+  @media (max-width: 1023px) {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+}
+
+.footer__contact-address {
+  margin-top: 8px;
+  font-weight: var(--font-weight-medium);
+  font-size: 24px;
+  line-height: 115%;
+  white-space: nowrap;
+
+  @media (max-width: 1023px) {
+    font-size: 18px;
+    line-height: 125%;
+    white-space: normal;
+  }
+}
+
+.footer__menu {
+  position: absolute;
+  top: 119px;
+  left: 616px;
+  display: flex;
+  gap: 69px;
+  width: 744px;
+
+  @media (max-width: 1023px) {
+    position: static;
+    flex-direction: column;
+    gap: 20px;
+    width: auto;
+    padding-block: 20px;
+    border-top: 1px solid var(--color-line);
+  }
+}
+
+.footer__menu-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @media (max-width: 1023px) {
+    gap: 12px;
+  }
+}
+
+.footer__menu-col--about {
+  flex-shrink: 0;
+  width: 284px;
+
+  @media (max-width: 1023px) {
+    width: 259px;
+  }
+}
+
+.footer__menu-col--services {
+  flex: 1;
+}
+
+.footer__menu-title {
+  font-weight: var(--font-weight-medium);
+  font-size: 24px;
+  line-height: 115%;
+
+  @media (max-width: 1023px) {
+    font-size: 18px;
+    line-height: 125%;
+  }
+}
+
+.footer__menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 15px;
+  font-weight: var(--font-weight-light);
+  font-size: 18px;
+  line-height: 125%;
+  white-space: nowrap;
+
+  a {
+    transition: color var(--transition-base);
+  }
+
+  a:hover {
+    color: var(--color-accent);
+  }
+
+  a:active {
+    color: var(--color-accent-active);
+  }
+
+  @media (max-width: 1023px) {
+    font-size: 16px;
+  }
+}
+
+.footer__menu-col--services .footer__menu-list {
+  width: 408px;
+
+  @media (max-width: 1023px) {
+    width: auto;
+  }
+}
+
+.footer__legal {
+  position: absolute;
+  top: 259px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 812px;
+  font-family: var(--font-header);
+  font-weight: var(--font-weight-medium);
+  font-size: 14px;
+  line-height: 120%;
+  color: #c1c1c1;
+  white-space: nowrap;
+
+  a {
+    transition: color var(--transition-base);
+  }
+
+  a:hover {
+    color: var(--color-white);
+  }
+
+  a:active {
+    color: var(--color-accent);
+  }
+
+  @media (max-width: 1023px) {
+    position: static;
+    gap: 26px;
+    width: auto;
+    padding-top: 20px;
+    white-space: normal;
+    border-top: 1px solid var(--color-line);
+  }
+}
+
+.footer__legal-row {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+
+  @media (max-width: 1023px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+}
+
+.footer__legal-row--links {
+  gap: 21px;
+
+  @media (max-width: 1023px) {
+    gap: 23px;
+  }
+}
+
+.footer__reg {
+  display: flex;
+
+  @media (max-width: 1023px) {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+
+.footer__reg-ip {
+  width: 164px;
+
+  @media (max-width: 1023px) {
+    width: auto;
+  }
+}
+
+.footer__reg-ogrn {
+  width: 160px;
+
+  @media (max-width: 1023px) {
+    width: auto;
+  }
+}
+
+/* ОГРН и ИНН в мобильной версии стоят в одну строку */
+.footer__reg-numbers {
+  display: contents;
+
+  @media (max-width: 1023px) {
+    display: flex;
+    gap: 12px;
+    white-space: nowrap;
+  }
+}
+
+.footer__social {
+  position: absolute;
+  top: 265px;
+  left: 969px;
+  display: flex;
+  align-items: center;
+  gap: 45px;
+
+  @media (max-width: 1023px) {
+    position: static;
+    justify-content: space-between;
+    gap: 0;
+    padding-block: 20px;
+    border-top: 1px solid var(--color-line);
+  }
+}
+
+.footer__social-text {
+  width: 149px;
+  font-weight: var(--font-weight-light);
+  font-size: 16px;
+  line-height: 125%;
+}
+
+.footer__social-list {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer__social-list a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  opacity: 0.6;
+  transition: opacity var(--transition-base), transform var(--transition-base);
+}
+
+.footer__social-list a:hover {
+  opacity: 1;
+}
+
+.footer__social-list a:active {
+  opacity: 1;
+  transform: scale(0.92);
+}

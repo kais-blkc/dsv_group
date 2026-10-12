@@ -1,0 +1,5 @@
+# Из браузера доступен только обработчик форм; остальное (PHPMailer, логи, шаблоны) закрыто
+<FilesMatch "^(?!formProcessor\.php$).*$">
+    Require all denied
+</FilesMatch>
+Options -Indexes

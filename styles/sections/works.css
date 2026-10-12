@@ -1,0 +1,153 @@
+.works__title {
+  max-width: 855px;
+
+  @media (max-width: 1023px) {
+    max-width: none;
+  }
+}
+
+.works__title .section-title__line {
+  top: 50.5px;
+  left: 1.2px;
+  width: 544px;
+  height: 12px;
+
+  @media (max-width: 1023px) {
+    top: 29px;
+    left: 1px;
+    width: 294px;
+    height: 8px;
+  }
+}
+
+.works__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 325px);
+  gap: 20px;
+  margin-top: 40px;
+
+  @media (max-width: 1023px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 30px;
+  }
+}
+
+.works-card {
+  position: relative;
+  height: 325px;
+  overflow: hidden;
+  border-radius: var(--radius-l);
+
+  @media (max-width: 1023px) {
+    height: auto;
+    aspect-ratio: 1;
+  }
+}
+
+.works-card--wide {
+  grid-column: span 2;
+
+  @media (max-width: 1023px) {
+    aspect-ratio: 358 / 174;
+  }
+}
+
+.works-card__img {
+  position: absolute;
+  max-width: none;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.works-card:hover .works-card__img {
+  transform: scale(1.05);
+}
+
+.works-card:active .works-card__img {
+  transform: scale(1.02);
+}
+
+.works-card__img--1 {
+  top: -16.04%;
+  left: 0;
+  width: 100%;
+  height: 154.62%;
+
+  @media (max-width: 1023px) {
+    top: -20.31%;
+  }
+}
+
+.works-card__img--2 {
+  top: -17.03%;
+  left: -9.4%;
+  width: 111.28%;
+  height: 117.1%;
+}
+
+.works-card__img--3 {
+  top: 0;
+  left: -19.62%;
+  width: 139.25%;
+  height: 104.44%;
+}
+
+.works-card__img--4 {
+  top: -16.95%;
+  left: -4.93%;
+  width: 124.8%;
+  height: 160.23%;
+}
+
+.works-card__img--5 {
+  top: 0;
+  left: -0.14%;
+  width: 133.41%;
+  height: 100%;
+}
+
+.works-card__img--6 {
+  top: -15.63%;
+  left: 0;
+  width: 100%;
+  height: 115.56%;
+}
+
+.works-card__more {
+  position: absolute;
+  right: 23px;
+  bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 10px 6px;
+  font-size: 18px;
+  line-height: 125%;
+  color: var(--color-white);
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: var(--radius-s);
+  backdrop-filter: blur(2px);
+  transition: background-color var(--transition-base);
+
+  @media (max-width: 1023px) {
+    right: 10px;
+    bottom: 10px;
+    gap: 4px;
+    padding: 4px 12px;
+    font-size: 16px;
+    line-height: 120%;
+  }
+}
+
+.works-card:hover .works-card__more {
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+.works__btn {
+  margin: 50px auto 0;
+
+  @media (max-width: 1023px) {
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,263 @@
+.hero {
+  position: relative;
+  height: 950px;
+  background-color: var(--color-bg);
+
+  @media (max-width: 1023px) {
+    height: 532px;
+  }
+}
+
+.hero__container {
+  max-width: none;
+  height: 100%;
+  padding-inline: 0;
+}
+
+.hero-slider {
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero-slide {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Слайд 1: человек на фоне бани */
+.hero-slide--main {
+  background: var(--color-bg) url('../../assets/img/hero-bg.jpg') center -619px / max(100%, 1920px) auto no-repeat;
+
+  @media (max-width: 1023px) {
+    background-position: calc(50% + 96px) -218.7px;
+    background-size: max(866px, 100%) auto;
+  }
+}
+
+.hero-slide__shadow {
+  position: absolute;
+  top: 697px;
+  left: calc(50% - 924px);
+  width: 1744px;
+  max-width: none;
+  height: 561px;
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
+
+.hero-slide__man {
+  position: absolute;
+  top: 123px;
+  left: max(0px, calc(50% - 801px));
+  width: 497px;
+  height: 966px;
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    top: -6.24%;
+    left: -92.66%;
+    width: 309.6%;
+    max-width: none;
+    height: 106.24%;
+  }
+
+  @media (max-width: 1023px) {
+    top: 126px;
+    left: calc(50% - 199px);
+    width: 209px;
+    height: 406px;
+  }
+}
+
+.hero-slide__badge {
+  position: absolute;
+  top: 551px;
+  left: calc(50% + 410px);
+  width: 267px;
+  height: 293px;
+
+  @media (max-width: 1023px) {
+    top: 344px;
+    left: calc(50% + 29px);
+    width: 137px;
+    height: 150.5px;
+  }
+}
+
+/* Слайды 2–4: фото направления */
+.hero-slide__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-slide__bg--wide {
+  inset: auto;
+  top: 0;
+  left: calc(50% - 1401px);
+  width: 2361px;
+  max-width: none;
+  height: 986px;
+
+  @media (max-width: 1023px) {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-position: 62.3% center;
+  }
+}
+
+.hero-slide__bg--left {
+  @media (max-width: 1023px) {
+    object-position: 37.7% center;
+  }
+}
+
+/* Затемнение снизу для читаемости текста */
+.hero-slide__shade {
+  position: absolute;
+  inset: 0;
+  display: none;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 12.4%, rgba(0, 0, 0, 0.32) 30.8%, rgba(0, 0, 0, 0) 38.5%);
+
+  @media (max-width: 1023px) {
+    display: block;
+  }
+}
+
+.hero-slide__shade--desktop {
+  display: block;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 5.1%, rgba(0, 0, 0, 0.32) 25.7%, rgba(0, 0, 0, 0) 34.3%);
+
+  @media (max-width: 1023px) {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 12.4%, rgba(0, 0, 0, 0.32) 30.8%, rgba(0, 0, 0, 0) 38.5%);
+  }
+}
+
+/* Текст слайда идёт по потоку: слева заголовок и цена, справа кнопка, всё прижато к низу */
+.hero-slide__inner {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 1360px;
+  height: 100%;
+  margin-inline: auto;
+  padding-bottom: 162px;
+  color: var(--color-white);
+
+  @media (max-width: 1023px) {
+    padding-inline: 16px;
+    padding-bottom: 46px;
+  }
+}
+
+.hero-slide__title {
+  max-width: 868px;
+  font-weight: var(--font-weight-medium);
+  font-size: 52px;
+  line-height: 100%;
+
+  @media (max-width: 1023px) {
+    font-size: 36px;
+    line-height: 111%;
+  }
+}
+
+.hero-slide__price {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+  font-weight: var(--font-weight-medium);
+  font-size: 36px;
+  line-height: 120%;
+  color: var(--color-accent);
+  white-space: nowrap;
+
+  @media (max-width: 1023px) {
+    gap: 10px;
+    margin-top: 29px;
+    font-size: 24px;
+
+    span:first-child {
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.hero-slide__btn {
+  flex-shrink: 0;
+  margin-bottom: 8px;
+  padding-inline: 48px;
+
+  @media (max-width: 1023px) {
+    width: auto;
+    height: auto;
+    margin-bottom: 0;
+    padding: 10px 20px;
+    font-weight: var(--font-weight-regular);
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--color-black);
+  }
+}
+
+/* Индикатор слайдов: 4 линии, активная заполняется за время показа слайда */
+.hero-slider .hero-pagination {
+  position: absolute;
+  bottom: 57px;
+  left: 50%;
+  z-index: 5;
+  display: flex;
+  gap: 10px;
+  width: 690px;
+  transform: translateX(-50%);
+
+  @media (max-width: 1023px) {
+    bottom: 13px;
+    left: 16px;
+    width: calc(100% - 32px);
+    transform: none;
+  }
+}
+
+.hero-pagination .swiper-pagination-bullet {
+  position: relative;
+  flex: 1;
+  height: 3px;
+  margin: 0;
+  overflow: hidden;
+  background-color: rgba(202, 202, 202, 0.6);
+  border-radius: 2px;
+  opacity: 1;
+}
+
+.hero-pagination .swiper-pagination-bullet::after {
+  position: absolute;
+  inset: 0;
+  content: '';
+  background-color: var(--color-white);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.hero-pagination .swiper-pagination-bullet-active::after {
+  animation: hero-progress 5s linear forwards;
+}
+
+@keyframes hero-progress {
+  to {
+    transform: scaleX(1);
+  }
+}

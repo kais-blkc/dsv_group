@@ -1,0 +1,150 @@
+.techmap {
+  overflow-x: clip;
+}
+
+.techmap__container {
+  position: relative;
+  min-height: 484px;
+
+  @media (max-width: 1023px) {
+    min-height: 0;
+  }
+}
+
+.techmap__title {
+  max-width: 806px;
+}
+
+.techmap__title .section-title__line {
+  top: 50px;
+  left: 0;
+  width: 440px;
+  height: 12px;
+
+  @media (max-width: 1023px) {
+    top: 28px;
+    left: 1px;
+    width: 237px;
+    height: 8px;
+  }
+}
+
+.techmap__text {
+  max-width: 806px;
+  margin-top: 24px;
+}
+
+.techmap__steps-title {
+  margin-top: 40px;
+  font-weight: var(--font-weight-medium);
+  font-size: 24px;
+  line-height: 125%;
+
+  @media (max-width: 1023px) {
+    margin-top: 30px;
+    font-size: 20px;
+  }
+}
+
+.techmap__steps {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 626px;
+  margin-top: 16px;
+}
+
+.techmap__steps li {
+  padding-left: 22px;
+  font-weight: var(--font-weight-light);
+  font-size: 20px;
+  line-height: 125%;
+  --bar-w: 6px;
+  border-left: 6px solid transparent;
+
+  @media (max-width: 1023px) {
+    padding-left: 12px;
+  }
+}
+
+.techmap__result {
+  position: relative;
+  z-index: 1;
+  max-width: 670px;
+  margin-top: 40px;
+  padding: 14px 24px 16px;
+  font-weight: var(--font-weight-medium);
+  font-size: 20px;
+  line-height: 125%;
+  color: var(--color-white);
+  background-color: #2a2a2a;
+  border-radius: var(--radius-m);
+
+  @media (max-width: 1023px) {
+    max-width: none;
+    margin-top: 30px;
+    padding: 12px 16px;
+    font-size: 16px;
+    line-height: 120%;
+  }
+}
+
+.techmap__image {
+  position: absolute;
+  top: 6px;
+  left: 772px;
+  width: 735px;
+  height: 490px;
+  object-fit: cover;
+
+  @media (max-width: 1023px) {
+    position: static;
+    width: 100%;
+    height: 238px;
+    margin-top: 22px;
+  }
+}
+
+/* Декор рядом с итогом */
+.techmap__branch {
+  position: absolute;
+  top: 346px;
+  left: -95px;
+  width: 207px;
+  height: 163px;
+  max-width: none;
+  pointer-events: none;
+  transform: rotate(21.15deg);
+
+  @media (max-width: 1023px) {
+    top: 396px;
+    left: -91px;
+  }
+}
+
+.techmap__leaf {
+  position: absolute;
+  top: 336px;
+  left: 639px;
+  width: 65.6px;
+  height: 76.4px;
+  overflow: hidden;
+  pointer-events: none;
+  transform: rotate(83.92deg);
+
+  img {
+    position: absolute;
+    top: -260.39%;
+    left: -693.61%;
+    width: 951.14%;
+    max-width: none;
+    height: 391.37%;
+  }
+
+  @media (max-width: 1023px) {
+    top: 393px;
+    left: 345px;
+    width: 39.3px;
+    height: 45.7px;
+  }
+}
