@@ -8,6 +8,10 @@ body {
   overflow-x: clip;
 }
 
+section {
+  overflow: hidden;
+}
+
 body.is-locked {
   overflow: hidden;
 }

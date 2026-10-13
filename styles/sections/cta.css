@@ -16,7 +16,11 @@
   border-radius: var(--radius-l);
 
   @media (max-width: 1023px) {
-    height: 660px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 24px 24px 0;
     margin-inline: -16px;
   }
 }
@@ -35,9 +39,10 @@
   }
 
   @media (max-width: 1023px) {
-    top: 24px;
-    left: 24px;
-    width: 342px;
+    position: static;
+    order: 1;
+    width: 100%;
+    max-width: 342px;
     font-size: 24px;
     line-height: 125%;
   }
@@ -53,9 +58,11 @@
   line-height: 125%;
 
   @media (max-width: 1023px) {
-    top: 131px;
-    left: 24px;
-    width: 342px;
+    position: static;
+    order: 2;
+    width: 100%;
+    max-width: 342px;
+    margin-top: 17px;
   }
 }
 
@@ -69,12 +76,14 @@
   width: 590px;
 
   @media (max-width: 1023px) {
-    top: 223px;
-    left: 24px;
+    position: static;
+    order: 3;
     flex-direction: column;
     flex-wrap: nowrap;
     gap: 10px;
-    width: 342px;
+    width: 100%;
+    max-width: 342px;
+    margin-top: 25px;
   }
 }
 
@@ -117,10 +126,14 @@
   object-fit: cover;
 
   @media (max-width: 1023px) {
-    top: 425px;
-    left: -95px;
+    position: relative;
+    top: auto;
+    left: auto;
+    order: 4;
+    flex-shrink: 0;
     width: 512px;
     height: 267px;
+    margin: 18px 0 -32px;
   }
 }
 
@@ -151,10 +164,14 @@
   }
 
   @media (max-width: 1023px) {
-    top: 376px;
-    left: -147px;
+    position: relative;
+    top: auto;
+    left: auto;
+    order: 4;
+    flex-shrink: 0;
     width: 555px;
     height: 522px;
+    margin: -30px 0 -238px;
   }
 }
 
@@ -172,10 +189,14 @@
   transform: rotate(-30deg);
 
   @media (max-width: 1023px) {
-    top: 419.5px;
-    left: 314.7px;
+    position: relative;
+    top: -241px;
+    left: 195px;
+    order: 5;
+    flex-shrink: 0;
     width: 151px;
     height: 151px;
+    margin-bottom: -151px;
   }
 }
 
@@ -187,8 +208,12 @@
   transform: rotate(30deg);
 
   @media (max-width: 1023px) {
-    top: 383.7px;
-    left: -108.4px;
+    position: relative;
+    top: -276.3px;
+    left: -198px;
+    order: 5;
+    flex-shrink: 0;
+    margin-bottom: -210.6px;
   }
 }
 
@@ -203,10 +228,10 @@
 
 @media (max-width: 1023px) {
   .cta--karkas .cta__pine--right {
-    top: 450.5px;
+    top: -209.5px;
   }
 
   .cta--karkas .cta__pine--left {
-    top: 414.7px;
+    top: -245.3px;
   }
 }

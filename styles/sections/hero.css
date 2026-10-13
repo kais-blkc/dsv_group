@@ -100,8 +100,8 @@
 .hero-slide__bg--wide {
   inset: auto;
   top: 0;
-  left: calc(50% - 1401px);
-  width: 2361px;
+  left: min(0px, max(calc(50% - 1401px), calc(100% - 2361px)));
+  width: max(2361px, 100%);
   max-width: none;
   height: 986px;
 

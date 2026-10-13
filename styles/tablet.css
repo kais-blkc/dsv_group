@@ -321,7 +321,60 @@
   }
 
   .cta__card {
+    align-items: flex-start;
+    min-height: 440px;
+    padding-bottom: 24px;
     margin-inline: 0;
+  }
+
+  /* Фото справа от формы: правая половина карточки на всю высоту */
+  .cta--modular .cta__house {
+    position: absolute;
+    margin: 0;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left bottom;
+  }
+
+  .cta--karkas .cta__house-frame {
+    position: absolute;
+    margin: 0;
+    top: -90px;
+    left: 45%;
+    width: 57%;
+    height: 150%;
+
+    img {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: right bottom;
+    }
+  }
+
+  .cta__pine--right,
+  .cta--karkas .cta__pine--right {
+    position: absolute;
+    margin: 0;
+    top: 40px;
+    left: max(600px, calc(100% - 140px));
+    width: 120px;
+    height: 120px;
+  }
+
+  .cta__pine--left,
+  .cta--karkas .cta__pine--left {
+    position: absolute;
+    margin: 0;
+    top: 14px;
+    left: max(410px, calc(100% - 350px));
+    width: 100px;
+    height: 100px;
   }
 
   .franchise-cta__card {
@@ -395,6 +448,7 @@
 
   .cp-list__items {
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 24px 32px;
   }
 
